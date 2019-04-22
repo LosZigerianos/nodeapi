@@ -6,8 +6,8 @@ const Location = require('./model/Location');
 const User = require('./model/User');
 const crypto = require('crypto');
 
-// Función para eliminar los documentos existentes de la colección
-function eliminarDocumento(documento) {
+// Function to remove all documents from collection
+function removeDocument(documento) {
     return documento.remove(function(err, removed) {
         if (err) {
             console.log('No ha sido posible eliminar los documentos:', err);
@@ -18,13 +18,13 @@ function eliminarDocumento(documento) {
     });
 }
 
-// Función que retorna un array de objetos del fichero
-function extraerModelos(nombreFichero) {
+// Function that return array of objects from json file
+function extractModels(nombreFichero) {
     return new Promise(resolve => {
 
         const fichero = path.join(__dirname, './model/', nombreFichero + '.json');
 
-        fs.readFile(fichero, 'utf8', (err, data) => { // esta es la opción ASINCRONA! fs.readFile(path, 'utf8' (las opciones), callback);
+        fs.readFile(fichero, 'utf8', (err, data) => {
 
             if (err) {
                 console.log('No ha sido posible extraer los modelos', err);
@@ -38,30 +38,30 @@ function extraerModelos(nombreFichero) {
     });
 }
 
-// Función para cargar los modelos en la base de datos del servidor MongoDB
-const cargarModelos = async function() {
+// Function to upload data at mongoDB database
+const uploadData = async function() {
     try {
-        // Conexión de Mongoose
+        // Connect to database
         const conn = await require('./lib/connectMongoose');
-        console.log('Conectado a la base de datos');
+        console.log('Database connected');
 
-        // Eliminar documentos existentes de la colección
-        await eliminarDocumento(Location);
-        await eliminarDocumento(User);
+        // Remove all documents from collection
+        await removeDocument(Location);
+        await removeDocument(User);
         console.log('Se han eliminado los documentos existentes');
 
-        // Genera un array con todos los modelos
-        const arrLocations = await extraerModelos('locations');
+        // Return array with data
+        const arrLocations = await extractModels('locations');
         console.log('Se han eliminado los documentos existentes');
-        // Guardar documento en la base de datos
+        // Store data in database
         for (const location of arrLocations) {
             const saveLocation = new Location(location);
             await saveLocation.save();
         }
 
-        // Genera un array con todos los modelos
-        const arrUsers = await extraerModelos('users');
-        // Guardar documento en la base de datos
+        // Return array with data
+        const arrUsers = await extractModels('users');
+        // Store data in database
         for (const user of arrUsers) {
             let saveUser = new User(user);
             saveUser.password = crypto.createHash('sha256').update(saveUser.password).digest('base64');
@@ -69,9 +69,9 @@ const cargarModelos = async function() {
         }
         console.log('Se han guardado los documentos en la base de datos');
 
-        // Se desconecta de la base de datos
+        // Disconnect from database
         conn.close(function () {
-            console.log('Mongoose connection disconnected');
+            console.log('Database disconnected');
         });
 
     } catch(err) {
@@ -80,5 +80,4 @@ const cargarModelos = async function() {
     
 };
 
-// Ejecutamos la función
-cargarModelos();
+uploadData();
