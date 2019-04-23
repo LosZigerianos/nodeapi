@@ -23,7 +23,7 @@ router.get('/', jwtAuth(), async (req, res, next) => {
         const filter = {};
 
         if (name) {
-            filter.name = name;
+            filter.name = new RegExp('^' + name, "i");
         }
 
         if (city) {
@@ -37,6 +37,7 @@ router.get('/', jwtAuth(), async (req, res, next) => {
             fields,
             sort
         );
+        
         res.json({ success: true, data: locations });
     } catch(err) {
         next(err);

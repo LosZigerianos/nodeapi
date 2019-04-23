@@ -94,7 +94,7 @@ Insert the followings fields:
     - email
     - password
 
-#### Authentication - POST Method
+#### Local authentication - POST Method
 
 To obtain a token, make a POST to: /login
 
@@ -106,5 +106,51 @@ Use that token in the rest of request in:
     - body: token
     - query string: token=###tokenValue###
 
+#### Google authentication - POST Method
+
+To obtain a token, make a POST to: /login/google
+
+http://localhost:3000/apiv1/users/login/google
+
+Use that token in the rest of request in:
+
+    - header: 'x-access-token'
+    - body: token
+    - query string: token=###tokenValue###
+
 
 ### LOCATIONS
+
+#### Base URL
+
+To go to the base URL, you can use:
+
+http://localhost:3000/apiv1/locations?token=###tokenValue###
+
+#### Searching - GET Method
+
+To view all locations, make a GET adding the token to: ?token=###tokenValue###
+
+http://localhost:3000/apiv1/locations?token=###tokenValue###
+
+To find that you want, you can search directly on the list of the all locations.
+
+Or you can add the following filters:
+
+    - To filter by name, you can use: &name=Bicicleta
+    http://localhost:3000/apiv1/locations?token=###tokenValue###&nombre=Bicicleta
+
+    - To paginate results, you can use: &skip=3&limit=2
+    http://localhost:3000/apiv1/locations?token=###tokenValue###&skip=3&limit=2
+
+    - To choose/show only some fields as shown: &fields=nombre tags foto -_id
+    http://localhost:3000/apiv1/locations?token=###tokenValue###&fields=nombre tags foto -_id
+
+    - (*) To order the list by name, you can use: &sort=nombre
+    http://localhost:3000/apiv1/locations?token=###tokenValue###&sort=precio
+
+Warning (*): If you use this filter, first will be executed this filter and after the rest of the filters regardless of the order. The final result can be different than excepted.
+
+Note: The filters can be combined with each other:
+
+http://localhost:3000/apiv1/locations?token=###tokenValue###&fields=name%20city%20-_id&sort=city

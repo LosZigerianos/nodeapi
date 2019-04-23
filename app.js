@@ -29,7 +29,7 @@ require('./lib/passportSetup');
 app.use(passport.initialize());
 //app.use(passport.session());
 
-app.get('/auth/google',
+app.get('/login/google',
   passport.authenticate('google', { scope:
   	[ 'email', 'profile' ] }
 ));
@@ -42,7 +42,7 @@ app.get('/auth/google/callback',
     session: false
   }
   ), (req, res, next) => {
-    res.redirect(`/apiv1/locations?token=${req.user.token}`)
+    res.json({ success: true, token: req.user.token });
   });
 
 /**
