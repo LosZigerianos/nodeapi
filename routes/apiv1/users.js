@@ -5,8 +5,21 @@ const crypto = require('crypto');
 
 const User = require('../../model/User');
 const localConfig = require('../../localConfig');
+const i18n = require('../../lib/i18n');
 
 router.post('/login', async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    if (!req.body.email) {
+        res.json({ success: true, message: i18n.__('invalid_credentials') });
+        return;
+    }
+
+    if (!req.body.password) {
+        res.json({ success: true, message: i18n.__('invalid_credentials') });
+        return;
+    }
+
     const email = req.body.email;
     const password = crypto.createHash('sha256').update(req.body.password).digest('base64');
 
@@ -14,12 +27,12 @@ router.post('/login', async (req, res, next) => {
         const user = await User.findOne({ email }).exec();
 
         if (!user) {
-            res.json({ success: true, message: 'Invalid credentials' });
+            res.json({ success: true, message: i18n.__('invalid_credentials') });
             return;
         }
 
         if (password !== user.password) {
-            res.json({ success: true, message: 'Invalid credentials' });
+            res.json({ success: true, message: i18n.__('invalid_credentials') });
             return;
         }
 
@@ -43,11 +56,20 @@ router.post('/login', async (req, res, next) => {
 });
 
 router.post('/signin', async (req, res, next) => {
+    i18n.checkLanguage(req);
+    
+    if (!req.body.email || !req.body.password) {
+        const err = new Error(i18n.__('field_requiered'));
+        err.status = 404;
+        next(err);
+        return;
+    }
+
     try {
         const user = User.findOne({ email: req.body.email });
 
-        if (!user) {
-            const err = new Error('Email already registered');
+        if (user) {
+            const err = new Error(i18n.__('email_registered'));
             err.status = 422;
             next(err);
             return;
@@ -58,6 +80,7 @@ router.post('/signin', async (req, res, next) => {
         const newUser = new User(req.body);
 
         const userStored = await newUser.save();
+        
         res.json({ success: true, result: userStored});
 
     } catch(err) {

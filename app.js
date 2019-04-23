@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const passport = require('passport');
+var i18n = require("./lib/i18n");
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(i18n.init);
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/media',express.static(''d:\media))); // ejemplo para obtener ficheros de otro disco
 require('./lib/passportSetup');

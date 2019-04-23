@@ -9,6 +9,16 @@ const locationScheme = mongoose.Schema({
     address: { type: String }
 });
 
+const tags = [
+    'history',
+    'entertainment',
+    'motor',
+    'relax',
+    'landscape'
+];
+
+locationScheme.statics.showTags = () => tags;
+
 // Static method
 locationScheme.statics.getAll =
 function(

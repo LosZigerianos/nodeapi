@@ -4,6 +4,7 @@ const router = express.Router();
 const Location = require('../../model/Location');
 
 const jwtAuth = require('../../lib/jwtAuth');
+const i18n = require('../../lib/i18n');
 
 /**
  * GET /locations
@@ -37,7 +38,7 @@ router.get('/', jwtAuth(), async (req, res, next) => {
             fields,
             sort
         );
-        
+
         res.json({ success: true, data: locations });
     } catch(err) {
         next(err);
@@ -50,27 +51,8 @@ router.get('/', jwtAuth(), async (req, res, next) => {
  * Create location
  */
 router.post('/', async (req, res, next) => {
-    console.log('req.body: ', req.body);
-    // Create location in memory
     const location = new Location(req.body);
 
-    // Save in database
-    // 1 - Callback
-    /*location.save((err, locationStored) => {
-        if (err) {
-            next(err);
-            return;
-        }
-
-        res.json({ success: true, data: locationStored });
-    });*/
-
-    // 2 - Promesa
-    /*location.save().then(locationStored => {
-        res.json({ success: true, data: locationStored });
-    }).catch(next);*/
-
-    // 3 - Async / Await
     try {
         const locationStored = await location.save();
         res.json({ success: true, data: locationStored });
@@ -94,6 +76,20 @@ router.put('/:id', async (req, res, next) => {
     } catch(err) { // Recoge todos los errores: síncronos y asíncronos
         next(err);
         return;
+    }
+});
+
+/**
+ * GET /locations
+ * Return a tags list.
+ */
+router.get('/tags', async (req, res, next) => {
+    i18n.checkLanguage(req);
+    try {
+        const tags = await Location.showTags().map( tag => i18n.__(tag) );
+        res.json({ success: true, result: tags });
+    } catch(err) {
+        next(err);
     }
 });
 

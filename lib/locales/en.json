@@ -1,0 +1,11 @@
+{
+	"invalid_credentials": "invalid credentials",
+	"email_registered": "e-mail already registered",
+	"field_requiered": "field requiered",
+
+	"history": "History",
+	"entertainment": "Entertainment",
+    "motor": "Motor",
+    "relax": "Relax",
+    "landscape": "Landscape"
+}
