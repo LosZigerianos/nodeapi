@@ -25,9 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/media',express.static(''d:\media))); // ejemplo para obtener ficheros de otro disco
-const passportSetup = require('./lib/passportSetup');
+require('./lib/passportSetup');
 app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.session());
 
 app.get('/auth/google',
   passport.authenticate('google', { scope:
@@ -35,11 +35,14 @@ app.get('/auth/google',
 ));
 
 app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/login' }),
-  function(req, res) {
-    //res.redirect('/');
-    console.log('Pasa por app.get(/auth/google/callback');
-    res.json('Pasa por app.get(/auth/google/callback')
+  passport.authenticate('google',
+  {
+    /*successRedirect : '/apiv1/locations',
+    failureRedirect : '/',*/
+    session: false
+  }
+  ), (req, res, next) => {
+    res.redirect(`/apiv1/locations?token=${req.user.token}`)
   });
 
 /**
