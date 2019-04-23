@@ -14,15 +14,15 @@ function removeDocument(documento) {
             return;
         }
         // where removed is the count of removed documents
-        removed.n === 1 ? console.log(`Se ha eliminado ${removed.n} user`) : console.log(`Se han eliminado ${removed.n} users`);
+        removed.n === 1 ? console.log(`Se ha eliminado ${removed.n} user`) : console.log(`Se han eliminado ${removed.n} documentos`);
     });
 }
 
 // Function that return array of objects from json file
-function extractModels(nombreFichero) {
+function extractModels(fileName) {
     return new Promise(resolve => {
 
-        const fichero = path.join(__dirname, './model/', nombreFichero + '.json');
+        const fichero = path.join(__dirname, './model/', fileName + '.json');
 
         fs.readFile(fichero, 'utf8', (err, data) => {
 
@@ -51,12 +51,38 @@ const uploadData = async function() {
         console.log('Se han eliminado los documentos existentes');
 
         // Return array with data
-        const arrLocations = await extractModels('locations');
+        /*const arrLocations = await extractModels('locations');
         console.log('Se han eliminado los documentos existentes');
         // Store data in database
         for (const location of arrLocations) {
             const saveLocation = new Location(location);
             await saveLocation.save();
+
+            await saveLocation.save();
+        }*/
+
+        // Return array with data
+        const zaragozaPlaces = await extractModels('zaragoza');
+        const madridPlaces = await extractModels('madrid');
+        const vigoPlaces = await extractModels('vigo');
+        const serenaPlaces = await extractModels('la_serena');
+        const arrPlaces = zaragozaPlaces.concat(madridPlaces).concat(vigoPlaces).concat(serenaPlaces)
+        // Store data in database
+        for (const place of arrPlaces) {
+            const newLocation = new Location();
+            newLocation.id = place.id;
+            newLocation.place_id = place.place_id;
+            newLocation.name = place.name;
+            newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
+            newLocation.address = place.vicinity;
+            newLocation.coordinates.latitude = place.geometry.location.lat;
+            newLocation.coordinates.longitude = place.geometry.location.lng;
+            newLocation.rating = place.rating;
+            newLocation.photos = [];
+            newLocation.tags = place.types;
+            newLocation.comments = [];
+            
+            await newLocation.save();
         }
 
         // Return array with data

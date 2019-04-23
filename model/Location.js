@@ -4,10 +4,22 @@ const mongoose = require('mongoose');
 
 // Definition of scheme
 const locationScheme = mongoose.Schema({
-    name: { type: String, required: true, unique: true },
-    city: { type: String },
-    address: { type: String }
+    id: { type: String, unique: true },
+    place_id: { type: String, unique: true },
+    name: { type: String },
+    description: { type: String },
+    address: { type: String },
+    coordinates: {
+        latitude: { type: String },
+        longitude:  { type: String }
+    },
+    rating: { type: Number },
+    photos: { type: [String] },
+    tags: { type: [String] },
+    comments:  { type: [String] }
 });
+
+locationScheme.index({ name: 1 });
 
 const tags = [
     'history',

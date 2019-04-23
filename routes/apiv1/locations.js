@@ -10,7 +10,8 @@ const i18n = require('../../lib/i18n');
  * GET /locations
  * Return a locations list.
  */
-router.get('/', jwtAuth(), async (req, res, next) => {
+// router.get('/', jwtAuth(), async (req, res, next) => {
+router.get('/', async (req, res, next) => {
     try {
         const name = req.query.name;
         const city = req.query.city;
