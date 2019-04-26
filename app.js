@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const passport = require('passport');
 var i18n = require("./lib/i18n");
+const api = require('./webservice/api');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 require('./lib/passportSetup');
 app.use(passport.initialize());
 //app.use(passport.session());
+app.use(api.configureAxios);
 
 app.get('/login/google',
   passport.authenticate('google', { scope:

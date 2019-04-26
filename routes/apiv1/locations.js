@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Location = require('../../model/Location');
+const api = require('../../webservice/api');
 
 const jwtAuth = require('../../lib/jwtAuth');
 const i18n = require('../../lib/i18n');
@@ -45,6 +46,15 @@ router.get('/', async (req, res, next) => {
         next(err);
         return;
     }
+});
+
+router.get('/foursquare', async (req, res, next) => {
+    try {
+        const response = await api.fetchLocations();
+        res.json({ success: true, data: response.data });
+      } catch (error) {
+        console.error(error);
+      }
 });
 
 /**

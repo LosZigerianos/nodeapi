@@ -20,5 +20,9 @@ module.exports = {
         'clientID'      : '848107477754-j43pmg0gsouv869f7etvi6acqghjq3tf.apps.googleusercontent.com',
         'clientSecret'  : 'FXQlbQWuSQDDIRehUPOyDWAC',
         'callbackURL'   : 'http://127.0.0.1:3000/auth/google/callback'
+    },
+    fourSquare : {
+        'clientID'       : 'L5DDPYKZNXMEK0STLKVNTETOSXXEXC3LJNVRBDTMRKZIJOQE',
+        'clientSecret'    : '1ZFJDO43IVUHNEVS4ME21UKJJNOFANCGGHENJBFG2RIGOZ5O',
     }
 };
