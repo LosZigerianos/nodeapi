@@ -48,9 +48,36 @@ router.get('/', async (req, res, next) => {
     }
 });
 
-router.get('/foursquare', async (req, res, next) => {
+/**
+ * GET /city
+ * Return a places list from city.
+ */
+router.get('/:city', async (req, res, next) => {
     try {
-        const response = await api.fetchLocations();
+        const limit = req.query.limit;
+
+        const city = req.params.city;
+        const response = await api.fetchLocationsByCity(city, limit);
+
+        parseArrayFourSquareToLocations(response.data.response.venues);
+
+        res.json({ success: true, data: response.data });
+      } catch (error) {
+        console.error(error);
+      }
+});
+
+/**
+ * GET /locations
+ * Return a places list from city.
+ */
+router.get('/:city/:place', async (req, res, next) => {
+    try {
+        const limit = req.query.limit;
+
+        const city = req.params.city;
+        const place = req.params.place;
+        const response = await api.fetchLocationsByName(city, place, limit);
         res.json({ success: true, data: response.data });
       } catch (error) {
         console.error(error);
@@ -103,5 +130,23 @@ router.get('/tags', async (req, res, next) => {
         next(err);
     }
 });
+
+// TODO: CONTINUAR CON LA FUNCION
+const parseArrayFourSquareToLocations = arrPlaces => {
+        for (const place of arrPlaces) {
+            const newLocation = new Location();
+            newLocation.id = place.id;
+            newLocation.name = place.name;
+            /*newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
+            newLocation.address = place.vicinity;
+            newLocation.coordinates.latitude = place.geometry.location.lat;
+            newLocation.coordinates.longitude = place.geometry.location.lng;
+            newLocation.rating = place.rating;
+            newLocation.photos = [];
+            newLocation.tags = place.types;
+            newLocation.comments = [];*/
+            console.log('newLocation: ', newLocation)
+        }
+}
 
 module.exports = router;
