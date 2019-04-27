@@ -26,7 +26,7 @@ router.get('/', async (req, res, next) => {
         const filter = {};
 
         if (name) filter.name = new RegExp(name, "i");
-        // filter.name = new RegExp('^' + name, "i"); // comienza por
+        // new RegExp('^' + name, "i"); // comienza por
 
         if (city) filter.city = city;
 
@@ -50,23 +50,13 @@ router.get('/', async (req, res, next) => {
  * Return a places list from city.
  */
 router.get('/:city', async (req, res, next) => {
-    /*try {
-        const limit = req.query.limit;
-        const city = req.params.city;
-        const response = await api.fetchLocationsByCity(city, limit);
-        //const locations = parseArrayFourSquareToLocations(response.data.response.venues);
-        const locations = parseArrayFourSquareToLocations(); // TODO: CAMBIAR
-        res.json({ success: true, data: locations });
-      } catch (error) {
-        console.error(error);
-      }*/
     try {
         const city = req.params.city;
         const skip = req.query.skip; // DDBB
         const limit = req.query.limit; // DDBB
         const fields = req.query.fields; // DDBB
         const sort = req.query.sort; // DDBB
-        const filter = {};
+        const filter = {}; // DDBB
 
         if (city) filter.city = new RegExp(city, "i");
 
@@ -78,16 +68,47 @@ router.get('/:city', async (req, res, next) => {
             sort
         );
 
-        console.log('Recibido: ', locations);
-
         if (locations.length > 0) {
             res.json({ success: true, data: locations });
         } else {
             console.log('Llamar a la API');
-            res.json({ success: true, data: 'NO HAY DATOS EN LA BASE DE DATOS PARA' });
-            //const response = await api.fetchLocationsByCity(city, limit);
+            //res.json({ success: true, data: 'NO HAY DATOS EN LA BASE DE DATOS PARA' });
+            const response = await api.fetchLocationsByCity(city, limit);
+            for (const place of response.data.response.venues) {
+                const newLocation = new Location(place);
+                newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
+                newLocation.coordinates.latitude = place.location.lat;
+                newLocation.coordinates.longitude = place.location.lng;
+                newLocation.address = place.location.address;
+                newLocation.postalCode = place.location.postalCode;
+                newLocation.cc = place.location.cc;
+                newLocation.city = place.location.city;
+                newLocation.state = place.location.state;
+                newLocation.country = place.location.country;
+                newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+                newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
+                newLocation.comments = [];
+                if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
+                    newLocation.rating.value = newLocation.rating.totalValues / newLocation.rating.totalVotes;
+                } else {
+                    newLocation.rating.value = 0;
+                }
+    
+                newLocation.photos = [];
+                console.log('Guardando localizacion');
+                
+                await newLocation.save();
+            }
             //const locations = parseArrayFourSquareToLocations(response.data.response.venues);
-            //res.json({ success: true, data: locations });
+            const locations = await Location.getAll(
+                filter,
+                skip,
+                limit,
+                fields,
+                sort
+            );
+
+            res.json({ success: true, data: locations });
         }
     } catch (error) {
         console.error(error);
@@ -159,7 +180,6 @@ router.get('/tags', async (req, res, next) => {
     }
 });
 
-// TODO: CONTINUAR CON LA FUNCION
 const parseArrayFourSquareToLocations = async arrPlaces => {
     let locations = [];
     for (const place of arrPlaces) {
@@ -197,7 +217,6 @@ const getPhotosFromFourSquareLocations = async id => {
     try {
         //const result = await api.fetchPhotosByLocationId(id);
         //const items = result.data.response.photos.items;
-        const items = example.response.photos.items;
 
         let arrPhotos = [];
         for (const item of items) {

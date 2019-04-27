@@ -1,0 +1,1762 @@
+{
+    "meta":{
+       "code":200,
+       "requestId":"5cc47fc86a60712127e52f75"
+    },
+    "data":{
+       "venues":[
+          {
+             "id":"4c707987fa49a1cd7460a6e3",
+             "name":"Pub Rock & Sicodelia",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Eduardo de la Barra 583",
+                "crossStreet":"Bernardo O'Higgins",
+                "lat":-29.904453298021586,
+                "lng":-71.2487954481549,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904453298021586,
+                      "lng":-71.2487954481549
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Eduardo de la Barra 583 (Bernardo O'Higgins)",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d116941735",
+                   "name":"Bar",
+                   "pluralName":"Bares",
+                   "shortName":"Bar",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d42222933a43704b1e09f92",
+             "name":"Duna's Rock Bar",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Bernardo O'Higgins 633",
+                "lat":-29.90469918769497,
+                "lng":-71.24872472843346,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90469918769497,
+                      "lng":-71.24872472843346
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Bernardo O'Higgins 633",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d116941735",
+                   "name":"Bar",
+                   "pluralName":"Bares",
+                   "shortName":"Bar",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"51eb463c498e00c8de8b5d40",
+             "name":"La Rocca",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Eduardo de la Barra #569",
+                "crossStreet":"Balmaceda",
+                "lat":-29.904577206603854,
+                "lng":-71.24916098780741,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904577206603854,
+                      "lng":-71.24916098780741
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Eduardo de la Barra #569 (Balmaceda)",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11b941735",
+                   "name":"Pub",
+                   "pluralName":"Pubs",
+                   "shortName":"Pub",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"503fcbbae4b072dc9522214b",
+             "name":"Publifoto",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"O'higgins 575",
+                "crossStreet":"Eduardo De La Barra",
+                "lat":-29.904643657611395,
+                "lng":-71.24871789192996,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904643657611395,
+                      "lng":-71.24871789192996
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "O'higgins 575 (Eduardo De La Barra)",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1f4941735",
+                   "name":"Estudio de diseño",
+                   "pluralName":"Estudios de diseño",
+                   "shortName":"Diseño",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/design_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d584aa761e92d437da27768",
+             "name":"Pub Boicot",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Libertador Bernardo O'higgins",
+                "crossStreet":"Eduardo de la Barra",
+                "lat":-29.904534916966057,
+                "lng":-71.24879073870831,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904534916966057,
+                      "lng":-71.24879073870831
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Libertador Bernardo O'higgins (Eduardo de la Barra)",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11b941735",
+                   "name":"Pub",
+                   "pluralName":"Pubs",
+                   "shortName":"Pub",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f3b0ddae4b03e9c3697c6d6",
+             "name":"Takuba Resto Bar",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"La Serena",
+                "lat":-29.904372082802304,
+                "lng":-71.24861098329329,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904372082802304,
+                      "lng":-71.24861098329329
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "La Serena",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11e941735",
+                   "name":"Bar de cócteles",
+                   "pluralName":"Bares de cócteles",
+                   "shortName":"Cóctel",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/cocktails_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d5ae3e223e0a0938c145449",
+             "name":"Diavoletto",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.904337550003653,
+                "lng":-71.24858969701985,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904337550003653,
+                      "lng":-71.24858969701985
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1d0941735",
+                   "name":"Confitería",
+                   "pluralName":"Confiterías",
+                   "shortName":"Postres",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/dessert_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d55db47d0a72c0f6718217c",
+             "name":"Telepizza",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Libertador Bernardo O'Higgins 555",
+                "crossStreet":"Gregorio Cordovez",
+                "lat":-29.90393088223905,
+                "lng":-71.24864966808657,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90393088223905,
+                      "lng":-71.24864966808657
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Libertador Bernardo O'Higgins 555 (Gregorio Cordovez)",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1ca941735",
+                   "name":"Pizzería",
+                   "pluralName":"Pizzerías",
+                   "shortName":"Pizza",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f2c5301e4b05d297cb05e4f",
+             "name":"Museo Colonial La Serena",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.90470844982331,
+                "lng":-71.2479348002187,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90470844982331,
+                      "lng":-71.2479348002187
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d190941735",
+                   "name":"Museo histórico",
+                   "pluralName":"Museo de historia",
+                   "shortName":"Museo histórico",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/museum_history_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ea231a002d529c116877987",
+             "name":"Pub La Pasarela",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.905099628576927,
+                "lng":-71.24871651080396,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.905099628576927,
+                      "lng":-71.24871651080396
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11b941735",
+                   "name":"Pub",
+                   "pluralName":"Pubs",
+                   "shortName":"Pub",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"552657aa498ef11fa21190cf",
+             "name":"Colegio San Antonio, Comunidad Franciscana",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.904443,
+                "lng":-71.24906,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904443,
+                      "lng":-71.24906
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1a2941735",
+                   "name":"Colegio terciario",
+                   "pluralName":"Institutos terciarios",
+                   "shortName":"Colegio terciario",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/communitycollege_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"539b6e7a498eb12d43beede6",
+             "name":"Pub La Roca",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.904652895946768,
+                "lng":-71.24926315484115,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904652895946768,
+                      "lng":-71.24926315484115
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11b941735",
+                   "name":"Pub",
+                   "pluralName":"Pubs",
+                   "shortName":"Pub",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d3713de0a0b721e48a1979b",
+             "name":"Rincón Oriental",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Libertador Bernardo O'Higgins 430",
+                "lat":-29.903905517371665,
+                "lng":-71.24853645970205,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.903905517371665,
+                      "lng":-71.24853645970205
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Libertador Bernardo O'Higgins 430",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d142941735",
+                   "name":"Restaurante asiático",
+                   "pluralName":"Restaurantes asiáticos",
+                   "shortName":"Asiática",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/asian_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"52abaafa11d20b8760d7b251",
+             "name":"Ta Thoa",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Eduardo de la Barra",
+                "lat":-29.905157119655826,
+                "lng":-71.24824803709562,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.905157119655826,
+                      "lng":-71.24824803709562
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Eduardo de la Barra",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4b7b0579f964a520b54c2fe3",
+             "name":"PC Factory",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Arturo Prat 260",
+                "crossStreet":"Bernardo O'Higgins",
+                "lat":-29.90198852773073,
+                "lng":-71.24815633107654,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90198852773073,
+                      "lng":-71.24815633107654
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Arturo Prat 260 (Bernardo O'Higgins)",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d122951735",
+                   "name":"Tienda de electrónica",
+                   "pluralName":"Tiendas de electrónica",
+                   "shortName":"Electrónica",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/technology_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"506f60b4e4b0d72c9e35e4e0",
+             "name":"Academia Baladi",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.904440882766277,
+                "lng":-71.2487758986596,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904440882766277,
+                      "lng":-71.2487758986596
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1f1931735",
+                   "name":"Entretenimiento general",
+                   "pluralName":"Entretenimiento general",
+                   "shortName":"Entretenimiento",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"57dacfab498ed9829d16167f",
+             "name":"Distribuidora Azabache",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Balmaceda 599",
+                "crossStreet":"Eduardo de la Barra",
+                "lat":-29.904428,
+                "lng":-71.25017,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904428,
+                      "lng":-71.25017
+                   }
+                ],
+                "postalCode":"1700000",
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Balmaceda 599 (Eduardo de la Barra)",
+                   "1700000 La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"52f2ab2ebcbc57f1066b8b46",
+                   "name":"Supermercado",
+                   "pluralName":"Supermercados",
+                   "shortName":"Supermercado",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/food_grocery_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"55c17520498ee7997de9484b",
+             "name":"Buda Bar",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.90488008140349,
+                "lng":-71.24883390538044,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90488008140349,
+                      "lng":-71.24883390538044
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11b941735",
+                   "name":"Pub",
+                   "pluralName":"Pubs",
+                   "shortName":"Pub",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"504236a9e4b05127f80ebcf3",
+             "name":"Impacto Tela",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.903971792596675,
+                "lng":-71.24843945950522,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.903971792596675,
+                      "lng":-71.24843945950522
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1ff941735",
+                   "name":"Tienda miscelánea",
+                   "pluralName":"Tiendas misceláneas",
+                   "shortName":"Tienda",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"56fc2d1f498e60ebf3a9c1c2",
+             "name":"pet shop",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"O'Higgins 650",
+                "lat":-29.904873,
+                "lng":-71.248688,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904873,
+                      "lng":-71.248688
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "O'Higgins 650",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d100951735",
+                   "name":"Tienda de mascotas",
+                   "pluralName":"Tiendas de mascotas",
+                   "shortName":"Tienda de mascotas",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/pet_store_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d154dd2302da1cd8703af93",
+             "name":"Iglesia San Francisco",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.9045762478978,
+                "lng":-71.25024926664162,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.9045762478978,
+                      "lng":-71.25024926664162
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d132941735",
+                   "name":"Iglesia",
+                   "pluralName":"Iglesias",
+                   "shortName":"Iglesia",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/religious_church_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4cf47009e9425481be0f7bc5",
+             "name":"El Callejón",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"O'Higgins",
+                "lat":-29.90489034918132,
+                "lng":-71.2489889826745,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90489034918132,
+                      "lng":-71.2489889826745
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "O'Higgins",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11b941735",
+                   "name":"Pub",
+                   "pluralName":"Pubs",
+                   "shortName":"Pub",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4fb03ab4e4b0afbb67986256",
+             "name":"Don Humberto, restaurant",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Serena Centro",
+                "lat":-29.904000177176087,
+                "lng":-71.24855332391743,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904000177176087,
+                      "lng":-71.24855332391743
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Serena Centro",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1df931735",
+                   "name":"Parrilla",
+                   "pluralName":"Parrillas",
+                   "shortName":"Asador",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/bbqalt_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4efe92f40e618ea7658b8efb",
+             "name":"Pub Bossa Blu",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Ohiggin's",
+                "lat":-29.90403980267146,
+                "lng":-71.24873908668766,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90403980267146,
+                      "lng":-71.24873908668766
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Ohiggin's",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11b941735",
+                   "name":"Pub",
+                   "pluralName":"Pubs",
+                   "shortName":"Pub",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4fdfc9eee4b0690a865564e4",
+             "name":"cafe colombiano",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.904414945934114,
+                "lng":-71.24938496878949,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904414945934114,
+                      "lng":-71.24938496878949
+                   }
+                ],
+                "cc":"CL",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d143941735",
+                   "name":"Café",
+                   "pluralName":"Cafés",
+                   "shortName":"Desayuno",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/breakfast_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"50991abee4b0816f78e41e77",
+             "name":"Colegio San Antonio",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Eduardo de La Barra #555",
+                "lat":-29.90498578741846,
+                "lng":-71.24946617806684,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90498578741846,
+                      "lng":-71.24946617806684
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Eduardo de La Barra #555",
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d13b941735",
+                   "name":"Colegio",
+                   "pluralName":"Escuelas",
+                   "shortName":"Colegio",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/school_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d4d9e859aaab60cde4b3a29",
+             "name":"Restaurantes Astoria",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.904371418904365,
+                "lng":-71.2495705899695,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904371418904365,
+                      "lng":-71.2495705899695
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4dda8ca7d1647fcf3e93ef32",
+             "name":"Salon De Belleza Marcela",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":-29.904491,
+                "lng":-71.250244,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904491,
+                      "lng":-71.250244
+                   }
+                ],
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d10c951735",
+                   "name":"Tienda de cosméticos",
+                   "pluralName":"Tiendas de cosméticos",
+                   "shortName":"Cosméticos",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/beauty_cosmetic_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"50fe1239e4b0c8673ec2012c",
+             "name":"Yesterday Pub's",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Eduardo de La Barra 628",
+                "crossStreet":"Ohiggins",
+                "lat":-29.90428125472095,
+                "lng":-71.24830294352935,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.90428125472095,
+                      "lng":-71.24830294352935
+                   }
+                ],
+                "postalCode":"1700000",
+                "cc":"CL",
+                "neighborhood":"Centro de La Serena",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Eduardo de La Barra 628 (Ohiggins)",
+                   "1700000 La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d116941735",
+                   "name":"Bar",
+                   "pluralName":"Bares",
+                   "shortName":"Bar",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"5a31b75a1b0ea56e2d4f6b17",
+             "name":"Pedro, Juan & Diego - O\u2019Higgins",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Libertador Bernardo O\u2019Higgins",
+                "crossStreet":"Eduardo De La Barra",
+                "lat":-29.904003,
+                "lng":-71.248701,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":-29.904003,
+                      "lng":-71.248701
+                   }
+                ],
+                "postalCode":"1700000",
+                "cc":"CL",
+                "city":"La Serena",
+                "state":"Coquimbo",
+                "country":"Chile",
+                "formattedAddress":[
+                   "Libertador Bernardo O\u2019Higgins (Eduardo De La Barra)",
+                   "1700000 La Serena",
+                   "Coquimbo",
+                   "Chile"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d16e941735",
+                   "name":"Restaurante de comida rápida",
+                   "pluralName":"Restaurantes de comida rápida",
+                   "shortName":"Comida rápida",
+                   "icon":{
+                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/fastfood_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556381640",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          }
+       ],
+       "confident":false,
+       "geocode":{
+          "what":"",
+          "where":"la serena",
+          "feature":{
+             "cc":"CL",
+             "name":"La Serena",
+             "displayName":"La Serena, Coquimbo, Chile",
+             "matchedName":"La Serena, Coquimbo, Chile",
+             "highlightedName":"<b>La Serena<\/b>, Coquimbo, Chile",
+             "woeType":7,
+             "slug":"la-serena-chile",
+             "id":"geonameid:3884373",
+             "longId":"72057594041812309",
+             "geometry":{
+                "center":{
+                   "lat":-29.90453,
+                   "lng":-71.24894
+                },
+                "bounds":{
+                   "ne":{
+                      "lat":-29.71243414592908,
+                      "lng":-71.03272931222232
+                   },
+                   "sw":{
+                      "lat":-30.0067784601421,
+                      "lng":-71.33907020602516
+                   }
+                }
+             }
+          },
+          "parents":[
+ 
+          ]
+       }
+    }
+ }

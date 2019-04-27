@@ -62,9 +62,14 @@ const uploadData = async function() {
         }*/
         const zaragozaPlaces = await extractModels('locations_zaragoza');
         const madridPlaces = await extractModels('locations_madrid');
-        const arrPlaces = (zaragozaPlaces.venues).concat(madridPlaces.venues);
+        const vigoPlaces = await extractModels('locations_vigo');
+        const serenaPlaces = await extractModels('locations_la_serena');
+        const arrPlaces = (zaragozaPlaces.venues)
+        .concat(madridPlaces.venues)
+        .concat(vigoPlaces.venues)
+        .concat(serenaPlaces.venues);
 
-        for (const place of madridPlaces.venues) {
+        for (const place of arrPlaces) {
             const newLocation = new Location(place);
             newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
             newLocation.coordinates.latitude = place.location.lat;
