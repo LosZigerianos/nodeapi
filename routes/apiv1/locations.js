@@ -72,7 +72,6 @@ router.get('/:city', async (req, res, next) => {
             res.json({ success: true, data: locations });
         } else {
             console.log('Llamar a la API');
-            //res.json({ success: true, data: 'NO HAY DATOS EN LA BASE DE DATOS PARA' });
             const response = await api.fetchLocationsByCity(city, limit);
             for (const place of response.data.response.venues) {
                 const newLocation = new Location(place);
@@ -95,7 +94,7 @@ router.get('/:city', async (req, res, next) => {
                 }
     
                 newLocation.photos = [];
-                console.log('Guardando localizacion');
+                console.log('Guardando localizacion: ', newLocation.name);
                 
                 await newLocation.save();
             }
@@ -119,18 +118,71 @@ router.get('/:city', async (req, res, next) => {
  * GET /locations
  * Return a places list from city.
  */
-router.get('/:city/:place', async (req, res, next) => {
+router.get('/:city/:name', async (req, res, next) => {
     try {
-        const limit = req.query.limit;
-
         const city = req.params.city;
-        const place = req.params.place;
-        const response = await api.fetchLocationsByName(city, place, limit);
-        const locations = await parseArrayFourSquareToLocations(response.data.response.venues);
-        res.json({ success: true, data: locations });
-      } catch (error) {
+        const name = req.params.name;
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        const fields = req.query.fields;
+        const sort = req.query.sort;
+        const filter = {};
+
+        if (city) filter.city = new RegExp(city, "i");
+        if (name) filter.name = new RegExp(name, "i");
+
+        const locations = await Location.getAll(
+            filter,
+            skip,
+            limit,
+            fields,
+            sort
+        );
+
+        if (locations.length > 0) {
+            res.json({ success: true, data: locations });
+        } else {
+            console.log('Llamar a la API');
+            const response = await api.fetchLocationsByName(city, name, limit);
+            for (const place of response.data.response.venues) {
+                const newLocation = new Location(place);
+                newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
+                newLocation.coordinates.latitude = place.location.lat;
+                newLocation.coordinates.longitude = place.location.lng;
+                newLocation.address = place.location.address;
+                newLocation.postalCode = place.location.postalCode;
+                newLocation.cc = place.location.cc;
+                newLocation.city = place.location.city;
+                newLocation.state = place.location.state;
+                newLocation.country = place.location.country;
+                newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+                newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
+                newLocation.comments = [];
+                if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
+                    newLocation.rating.value = newLocation.rating.totalValues / newLocation.rating.totalVotes;
+                } else {
+                    newLocation.rating.value = 0;
+                }
+    
+                newLocation.photos = [];
+                console.log('Guardando localizacion: ', newLocation.name);
+                
+                await newLocation.save();
+            }
+            //const locations = parseArrayFourSquareToLocations(response.data.response.venues);
+            const locations = await Location.getAll(
+                filter,
+                skip,
+                limit,
+                fields,
+                sort
+            );
+
+            res.json({ success: true, data: locations });
+        }
+    } catch (error) {
         console.error(error);
-      }
+    }
 });
 
 /**
