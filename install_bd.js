@@ -51,18 +51,57 @@ const uploadData = async function() {
         console.log('Se han eliminado los documentos existentes');
 
         // Return array with data
-        /*const arrLocations = await extractModels('locations');
+        const arrLocations = await extractModels('locations_zaragoza');
+        //const arrLocations = await extractModels('locations_zaragoza');
         console.log('Se han eliminado los documentos existentes');
         // Store data in database
-        for (const location of arrLocations) {
+        /*for (const location of arrLocations.venues) {
             const saveLocation = new Location(location);
-            await saveLocation.save();
 
             await saveLocation.save();
         }*/
+        const zaragozaPlaces = await extractModels('locations_zaragoza');
+        const madridPlaces = await extractModels('locations_madrid');
+        const arrPlaces = (zaragozaPlaces.venues).concat(madridPlaces.venues);
+
+        for (const place of madridPlaces.venues) {
+            const newLocation = new Location(place);
+            newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
+            newLocation.coordinates.latitude = place.location.lat;
+            newLocation.coordinates.longitude = place.location.lng;
+            newLocation.address = place.location.address;
+            newLocation.postalCode = place.location.postalCode;
+            newLocation.cc = place.location.cc;
+            newLocation.city = place.location.city;
+            newLocation.state = place.location.state;
+            newLocation.country = place.location.country;
+            newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+            newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
+            newLocation.comments = [];
+            if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
+                newLocation.rating.value = newLocation.rating.totalValues / newLocation.rating.totalVotes;
+            } else {
+                newLocation.rating.value = 0;
+            }
+
+            // Photos
+            const arrItems = await extractModels('location_photos');
+
+            let photoUrl = [];
+            for (const item of arrItems.photos.items) {
+                if (item.visibility.toLowerCase() === 'public'.toLowerCase()) {
+                    const url = `${item.prefix}${item.width}x${item.height}${item.suffix}`;
+                    photoUrl.push(url);
+                }
+            }
+            newLocation.photos = photoUrl;
+            
+            await newLocation.save();
+        }
+        
 
         // Return array with data
-        const zaragozaPlaces = await extractModels('zaragoza');
+        /*const zaragozaPlaces = await extractModels('zaragoza');
         const madridPlaces = await extractModels('madrid');
         const vigoPlaces = await extractModels('vigo');
         const serenaPlaces = await extractModels('la_serena');
@@ -71,7 +110,7 @@ const uploadData = async function() {
         for (const place of arrPlaces) {
             const newLocation = new Location();
             newLocation.id = place.id;
-            newLocation.place_id = place.place_id;
+            //newLocation.place_id = place.place_id;
             newLocation.name = place.name;
             newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
             newLocation.address = place.vicinity;
@@ -83,7 +122,7 @@ const uploadData = async function() {
             newLocation.comments = [];
             
             await newLocation.save();
-        }
+        }*/
 
         // Return array with data
         const arrUsers = await extractModels('users');

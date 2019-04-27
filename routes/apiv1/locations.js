@@ -25,13 +25,10 @@ router.get('/', async (req, res, next) => {
 
         const filter = {};
 
-        if (name) {
-            filter.name = new RegExp('^' + name, "i");
-        }
+        if (name) filter.name = new RegExp(name, "i");
+        // filter.name = new RegExp('^' + name, "i"); // comienza por
 
-        if (city) {
-            filter.city = city;
-        }
+        if (city) filter.city = city;
 
         const locations = await Location.getAll(
             filter,
@@ -53,18 +50,48 @@ router.get('/', async (req, res, next) => {
  * Return a places list from city.
  */
 router.get('/:city', async (req, res, next) => {
-    try {
+    /*try {
         const limit = req.query.limit;
-
         const city = req.params.city;
         const response = await api.fetchLocationsByCity(city, limit);
-
-        parseArrayFourSquareToLocations(response.data.response.venues);
-
-        res.json({ success: true, data: response.data });
+        //const locations = parseArrayFourSquareToLocations(response.data.response.venues);
+        const locations = parseArrayFourSquareToLocations(); // TODO: CAMBIAR
+        res.json({ success: true, data: locations });
       } catch (error) {
         console.error(error);
-      }
+      }*/
+    try {
+        const city = req.params.city;
+        const skip = req.query.skip; // DDBB
+        const limit = req.query.limit; // DDBB
+        const fields = req.query.fields; // DDBB
+        const sort = req.query.sort; // DDBB
+        const filter = {};
+
+        if (city) filter.city = new RegExp(city, "i");
+
+        const locations = await Location.getAll(
+            filter,
+            skip,
+            limit,
+            fields,
+            sort
+        );
+
+        console.log('Recibido: ', locations);
+
+        if (locations.length > 0) {
+            res.json({ success: true, data: locations });
+        } else {
+            console.log('Llamar a la API');
+            res.json({ success: true, data: 'NO HAY DATOS EN LA BASE DE DATOS PARA' });
+            //const response = await api.fetchLocationsByCity(city, limit);
+            //const locations = parseArrayFourSquareToLocations(response.data.response.venues);
+            //res.json({ success: true, data: locations });
+        }
+    } catch (error) {
+        console.error(error);
+    }
 });
 
 /**
@@ -78,7 +105,8 @@ router.get('/:city/:place', async (req, res, next) => {
         const city = req.params.city;
         const place = req.params.place;
         const response = await api.fetchLocationsByName(city, place, limit);
-        res.json({ success: true, data: response.data });
+        const locations = await parseArrayFourSquareToLocations(response.data.response.venues);
+        res.json({ success: true, data: locations });
       } catch (error) {
         console.error(error);
       }
@@ -132,21 +160,58 @@ router.get('/tags', async (req, res, next) => {
 });
 
 // TODO: CONTINUAR CON LA FUNCION
-const parseArrayFourSquareToLocations = arrPlaces => {
-        for (const place of arrPlaces) {
-            const newLocation = new Location();
-            newLocation.id = place.id;
-            newLocation.name = place.name;
-            /*newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
-            newLocation.address = place.vicinity;
-            newLocation.coordinates.latitude = place.geometry.location.lat;
-            newLocation.coordinates.longitude = place.geometry.location.lng;
-            newLocation.rating = place.rating;
-            newLocation.photos = [];
-            newLocation.tags = place.types;
-            newLocation.comments = [];*/
-            console.log('newLocation: ', newLocation)
+const parseArrayFourSquareToLocations = async arrPlaces => {
+    let locations = [];
+    for (const place of arrPlaces) {
+        const newLocation = new Location();
+        newLocation.id = place.id;
+        newLocation.name = place.name;
+        newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
+        
+        newLocation.coordinates.latitude = place.location.lat;
+        newLocation.coordinates.longitude = place.location.lng;
+        
+        newLocation.address = place.location.address;
+        newLocation.postalCode = place.location.postalCode;
+        newLocation.cc = place.location.cc;
+        newLocation.city = place.location.city;
+        newLocation.state = place.location.state;
+        newLocation.country = place.location.country;
+        newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+
+        newLocation.photos = [];
+        //const photos = await getPhotosFromFourSquareLocations(newLocation.id);
+        console.log('photos: ', photos.data.response.photos.items);
+
+        newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
+        newLocation.comments = [];
+        
+        locations.push(newLocation);
+    }
+
+    return locations;
+}
+
+// TODO: CONTINUAR CON LA FUNCION
+const getPhotosFromFourSquareLocations = async id => {
+    try {
+        //const result = await api.fetchPhotosByLocationId(id);
+        //const items = result.data.response.photos.items;
+        const items = example.response.photos.items;
+
+        let arrPhotos = [];
+        for (const item of items) {
+            if (item.visibility.toLowerCase() === 'public'.toLowerCase()) {
+                const url = `${item.prefix}${item.width}x${item.height}${item.suffix}`;
+                arrPhotos.push(url);
+            }
         }
+
+        return arrPhotos;
+    } catch(err) {
+        console.log('Error: ', err);
+        return null;
+    }
 }
 
 module.exports = router;

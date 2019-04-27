@@ -1,0 +1,5827 @@
+{
+    "meta":{
+       "code":200,
+       "requestId":"5cc42832af35f30025f60041"
+    },
+    "data":{
+       "venues":[
+          {
+             "id":"4b9f6c51f964a520b92137e3",
+             "name":"Ayuntamiento de Zaragoza",
+             "contact":{},
+             "location":{
+                "address":"Plaza del Pilar 18",
+                "lat":41.65576661846768,
+                "lng":-0.8774407226257175,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65576661846768,
+                      "lng":-0.8774407226257175
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar 18",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d129941735",
+                   "name":"Ayuntamiento",
+                   "pluralName":"Municipalidades",
+                   "shortName":"Ayuntamiento",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/cityhall_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bbcbc95a8cf76b0b7deb0fd",
+             "name":"Plaza del Pilar",
+             "contact":{},
+             "location":{
+                "address":"Plaza de Nuestra Señora del Pilar",
+                "lat":41.656224650673025,
+                "lng":-0.8788418769836426,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656224650673025,
+                      "lng":-0.8788418769836426
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza de Nuestra Señora del Pilar",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d164941735",
+                   "name":"Plaza",
+                   "pluralName":"Plazas",
+                   "shortName":"Plaza",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/plaza_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4b9a9684f964a52003c435e3",
+             "name":"Basílica de Nuestra Señora del Pilar",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza de Nuestra Señora del Pilar",
+                "lat":41.65605173559194,
+                "lng":-0.8784465636152722,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65605173559194,
+                      "lng":-0.8784465636152722
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza de Nuestra Señora del Pilar",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d132941735",
+                   "name":"Iglesia",
+                   "pluralName":"Iglesias",
+                   "shortName":"Iglesia",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/religious_church_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bbefbf330c99c74c3785411",
+             "name":"Palacio de la Lonja",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65552424505582,
+                "lng":-0.8768510126200121,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65552424505582,
+                      "lng":-0.8768510126200121
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1e2931735",
+                   "name":"Galería de arte",
+                   "pluralName":"Galerías de arte",
+                   "shortName":"Galería de arte",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/artgallery_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4dceccd2d22deadedd5bd26a",
+             "name":"Museo Foro Caesaraugusta",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza de la Seo, 1-3",
+                "lat":41.65514746314341,
+                "lng":-0.8763721641710377,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65514746314341,
+                      "lng":-0.8763721641710377
+                   }
+                ],
+                "postalCode":"50001",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza de la Seo, 1-3",
+                   "50001 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d190941735",
+                   "name":"Museo histórico",
+                   "pluralName":"Museo de historia",
+                   "shortName":"Museo histórico",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/museum_history_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e3599e818a82fdd6577f92f",
+             "name":"Plaza Del Caballito",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Paseo Echegarai",
+                "crossStreet":"Don Jaime I",
+                "lat":41.65610459503981,
+                "lng":-0.8761993307252238,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65610459503981,
+                      "lng":-0.8761993307252238
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Paseo Echegarai (Don Jaime I)",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d164941735",
+                   "name":"Plaza",
+                   "pluralName":"Plazas",
+                   "shortName":"Plaza",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/plaza_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f3d7870e4b02e3112100412",
+             "name":"Monumento a Goya",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655590072994826,
+                "lng":-0.8770421505490242,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655590072994826,
+                      "lng":-0.8770421505490242
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d166941735",
+                   "name":"Jardín de esculturas",
+                   "pluralName":"Jardines de esculturas",
+                   "shortName":"Escultura",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/sculpture_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"501aa7fce4b08d4f17b81fc5",
+             "name":"La Mañica",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655860233324304,
+                "lng":-0.8775571177889823,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655860233324304,
+                      "lng":-0.8775571177889823
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d128951735",
+                   "name":"Tienda de regalos",
+                   "pluralName":"Tiendas de regalos",
+                   "shortName":"Tienda de regalos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/giftshop_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ca9dca214c33704d405e23b",
+             "name":"Restaurante LAS PALOMAS Buffet&Tapas",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Pz. de Nuestra Señora del Pilar, 15",
+                "crossStreet":"Esquina c/Don Jaime I",
+                "lat":41.65523742464788,
+                "lng":-0.8768850890463707,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65523742464788,
+                      "lng":-0.8768850890463707
+                   }
+                ],
+                "postalCode":"50.003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Pz. de Nuestra Señora del Pilar, 15 (Esquina c/Don Jaime I)",
+                   "50.003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1db931735",
+                   "name":"Restaurante de tapas",
+                   "pluralName":"Restaurantes de tapas",
+                   "shortName":"Tapas",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/tapas_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "venuePage":{
+                "id":"41216969"
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"51251c72e4b026d48606b879",
+             "name":"Club Nautico Zaragoza",
+             "contact":{
+ 
+             },
+             "location":{
+                "crossStreet":"Paseo Echegaray y Caballero",
+                "lat":41.65684901887691,
+                "lng":-0.8768587517884676,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65684901887691,
+                      "lng":-0.8768587517884676
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "neighborhood":"Casco Antiguo",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Paseo Echegaray y Caballero",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1c4941735",
+                   "name":"Restaurante",
+                   "pluralName":"Restaurantes",
+                   "shortName":"Restaurante",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ba4bb56f964a52004b038e3",
+             "name":"Catedral del Salvador (La Seo)",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza de La Seo 2",
+                "lat":41.655350907578445,
+                "lng":-0.8761743647017648,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655350907578445,
+                      "lng":-0.8761743647017648
+                   }
+                ],
+                "postalCode":"50001",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza de La Seo 2",
+                   "50001 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d132941735",
+                   "name":"Iglesia",
+                   "pluralName":"Iglesias",
+                   "shortName":"Iglesia",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/religious_church_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d40403015a360fc55a97dbf",
+             "name":"Parking Ayuntamiento Epsa",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Calle Milagro de Calanda",
+                "crossStreet":"Paseo de Echegaray y Caballero",
+                "lat":41.65526607479592,
+                "lng":-0.8775850526775577,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65526607479592,
+                      "lng":-0.8775850526775577
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Calle Milagro de Calanda (Paseo de Echegaray y Caballero)",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4c38df4de52ce0d596b336e1",
+                   "name":"Estacionamiento",
+                   "pluralName":"Estacionamiento",
+                   "shortName":"Estacionamiento",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/parking_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4cf0f0b76195721e0b7e3ec1",
+             "name":"Oficina de Turismo Plaza del Pilar",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar s/n",
+                "lat":41.65590284120711,
+                "lng":-0.8782796433992419,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65590284120711,
+                      "lng":-0.8782796433992419
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar s/n",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4f4530164b9074f6e4fb00ff",
+                   "name":"Centro de Información Turística",
+                   "pluralName":"Centros de Información Turística",
+                   "shortName":"Información turística",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/touristinformation_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4dc25892d22dd7df9aa6642d",
+             "name":"Palacio De Montemuzo",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.6553301587533,
+                "lng":-0.8777107599127513,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.6553301587533,
+                      "lng":-0.8777107599127513
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d130941735",
+                   "name":"Edificio",
+                   "pluralName":"Edificios",
+                   "shortName":"Edificio",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ca83e1e76d3a0937c19146b",
+             "name":"Martin Martin Montecanal",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Montecanal",
+                "lat":41.656308,
+                "lng":-0.876353,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656308,
+                      "lng":-0.876353
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Montecanal",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1c7941735",
+                   "name":"Cafetería",
+                   "pluralName":"Cafeterías",
+                   "shortName":"Bocadillos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/snacks_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"5c26446ee679bc002c8d39c1",
+             "name":"Sawadika",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Santiago 26",
+                "lat":41.654917,
+                "lng":-0.877429,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.654917,
+                      "lng":-0.877429
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Santiago 26",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d149941735",
+                   "name":"Restaurante tailandés",
+                   "pluralName":"Restaurantes tailandeses",
+                   "shortName":"Tailandesa",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/thai_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"5290f4a911d224f7b0629269",
+             "name":"Café de Lolita",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655740030202814,
+                "lng":-0.8784461804858714,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655740030202814,
+                      "lng":-0.8784461804858714
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d16d941735",
+                   "name":"Café",
+                   "pluralName":"Cafés",
+                   "shortName":"Café",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bc87c3fdc55eee1607ee8ac",
+             "name":"Hotel Tibur",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza de la Seo,  2-3",
+                "lat":41.65532423401932,
+                "lng":-0.8765521909439438,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65532423401932,
+                      "lng":-0.8765521909439438
+                   }
+                ],
+                "postalCode":"50001",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza de la Seo,  2-3",
+                   "50001 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1fa931735",
+                   "name":"Hotel",
+                   "pluralName":"Hoteles",
+                   "shortName":"Hotel",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e90d0356da174e28e6ee7e9",
+             "name":"Biburga",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65517210502973,
+                "lng":-0.877031014291657,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65517210502973,
+                      "lng":-0.877031014291657
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d116941735",
+                   "name":"Bar",
+                   "pluralName":"Bares",
+                   "shortName":"Bar",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bbb90faed7776b0309d3e51",
+             "name":"Nissh",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza de Nuestra Señora del Pilar, 15",
+                "lat":41.65520157980185,
+                "lng":-0.8773827368355426,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65520157980185,
+                      "lng":-0.8773827368355426
+                   }
+                ],
+                "postalCode":"50001",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza de Nuestra Señora del Pilar, 15",
+                   "50001 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d16d941735",
+                   "name":"Café",
+                   "pluralName":"Cafés",
+                   "shortName":"Café",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d8cd9b71d06b1f71bfd223b",
+             "name":"Parking Plaza Del Pilar",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar",
+                "lat":41.65597694736397,
+                "lng":-0.8779947665732757,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65597694736397,
+                      "lng":-0.8779947665732757
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4c38df4de52ce0d596b336e1",
+                   "name":"Estacionamiento",
+                   "pluralName":"Estacionamiento",
+                   "shortName":"Estacionamiento",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/parking_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e96f0570aafdb60e0a9b0e5",
+             "name":"Paseo Echegaray y Caballero",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Echegaray y Caballero",
+                "lat":41.65617572816858,
+                "lng":-0.8759462382232761,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65617572816858,
+                      "lng":-0.8759462382232761
+                   }
+                ],
+                "cc":"ES",
+                "neighborhood":"Casco Antiguo",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Echegaray y Caballero",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d162941735",
+                   "name":"Otros lugares al aire libre",
+                   "pluralName":"Otros lugares al aire libre",
+                   "shortName":"Otros lugares al aire libre",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/outdoors_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e04fc08fa7693e8a40893fd",
+             "name":"Nautico Zaragoza",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Paseo de Echegaray y Caballero",
+                "lat":41.657099099351974,
+                "lng":-0.8768082463858959,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.657099099351974,
+                      "lng":-0.8768082463858959
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Paseo de Echegaray y Caballero",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1e7931735",
+                   "name":"Club de jazz",
+                   "pluralName":"Clubes de Jazz",
+                   "shortName":"Club de jazz",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/musicvenue_jazzclub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"506f21dce4b0f919389a281d",
+             "name":"puesto jamon asado echegaray",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Echegaray",
+                "lat":41.655788736562926,
+                "lng":-0.8761278081740155,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655788736562926,
+                      "lng":-0.8761278081740155
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "Echegaray",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1df931735",
+                   "name":"Parrilla",
+                   "pluralName":"Parrillas",
+                   "shortName":"Asador",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/bbqalt_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d19eacc7d852d432487d78a",
+             "name":"Embarcadero del Náutico",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Paseo Echegaray y Caballero s/n",
+                "lat":41.65684916041902,
+                "lng":-0.8773336393686808,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65684916041902,
+                      "lng":-0.8773336393686808
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Paseo Echegaray y Caballero s/n",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1e2941735",
+                   "name":"Playa",
+                   "pluralName":"Playas",
+                   "shortName":"Playa",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/beach_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4cd5573cab19a093627e3eeb",
+             "name":"Hostal Plaza",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar, 14",
+                "lat":41.655286,
+                "lng":-0.877301,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655286,
+                      "lng":-0.877301
+                   }
+                ],
+                "postalCode":"50001",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar, 14",
+                   "50001 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1ee931735",
+                   "name":"Albergue juvenil",
+                   "pluralName":"Albergues",
+                   "shortName":"Albergue juvenil",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hostel_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"577fbb7a498ee0e179d8479a",
+             "name":"Divino",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655035,
+                "lng":-0.87689,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655035,
+                      "lng":-0.87689
+                   }
+                ],
+                "cc":"ES",
+                "neighborhood":"Casco Antiguo",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d155941735",
+                   "name":"Gastropub",
+                   "pluralName":"Pubs gourmet",
+                   "shortName":"Gastropub",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/gastropub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"5720b378498efc039594be6e",
+             "name":"casa gulay restorant barç",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655427,
+                "lng":-0.877264,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655427,
+                      "lng":-0.877264
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d150941735",
+                   "name":"Restaurante español",
+                   "pluralName":"Restaurantes españoles",
+                   "shortName":"Española",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/spanish_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"5a195c80234724670558f713",
+             "name":"La Bienvenida",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655342,
+                "lng":-0.87693346,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655342,
+                      "lng":-0.87693346
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1e0931735",
+                   "name":"Cafetería",
+                   "pluralName":"Cafeterías",
+                   "shortName":"Cafetería",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"537fd932498e907db33fe7e7",
+             "name":"Bar Boulevard",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65634104620446,
+                "lng":-0.8783486137020663,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65634104620446,
+                      "lng":-0.8783486137020663
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d116941735",
+                   "name":"Bar",
+                   "pluralName":"Bares",
+                   "shortName":"Bar",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"51d99af1498e6fad5a967e16",
+             "name":"Ferretti Gelato E Caffe",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65551455861354,
+                "lng":-0.8769751452920378,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65551455861354,
+                      "lng":-0.8769751452920378
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1c9941735",
+                   "name":"Heladería",
+                   "pluralName":"Heladerías",
+                   "shortName":"Helado",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/icecream_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"5576bde7498e8adf9f1ad411",
+             "name":"Hotel Pilar Plaza",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655861,
+                "lng":-0.878675,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655861,
+                      "lng":-0.878675
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1fa931735",
+                   "name":"Hotel",
+                   "pluralName":"Hoteles",
+                   "shortName":"Hotel",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ee09ccd6c2524fcdd7d95dc",
+             "name":"Pista De Hielo Pza. Pilar",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Pza del Pilar",
+                "lat":41.65554342324811,
+                "lng":-0.8781577221067942,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65554342324811,
+                      "lng":-0.8781577221067942
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Pza del Pilar",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d168941735",
+                   "name":"Pista de patinaje",
+                   "pluralName":"Pistas de patinaje",
+                   "shortName":"Pista de patinaje",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/skatingrink_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"56ec75a9cd101850eb662f0b",
+             "name":"Hotel Don Jaime 54",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Don Jaime I, 56",
+                "lat":41.654955,
+                "lng":-0.876615,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.654955,
+                      "lng":-0.876615
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Don Jaime I, 56",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1fa931735",
+                   "name":"Hotel",
+                   "pluralName":"Hoteles",
+                   "shortName":"Hotel",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e6a096381306988e663384d",
+             "name":"Bus Turístico diurno Zaragoza",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"C/ Don Jaime",
+                "lat":41.65543106086653,
+                "lng":-0.8765888214111328,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65543106086653,
+                      "lng":-0.8765888214111328
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "C/ Don Jaime",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1fe931735",
+                   "name":"Estación de autobuses",
+                   "pluralName":"Estaciones de autobuses",
+                   "shortName":"Estación de autobuses",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/busstation_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ba20823f964a5205fd737e3",
+             "name":"Ayuntamiento Salón De Plenos",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"plaza pilar",
+                "lat":41.65575011781527,
+                "lng":-0.8771008506487297,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65575011781527,
+                      "lng":-0.8771008506487297
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "plaza pilar",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"509028607e27d69d8b25674d",
+             "name":"Centro de Estudios Reina Victoria",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"C/ Pedro Joaquín Soler 8",
+                "lat":41.65606,
+                "lng":-0.87734,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65606,
+                      "lng":-0.87734
+                   }
+                ],
+                "postalCode":"50001",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "C/ Pedro Joaquín Soler 8",
+                   "50001 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4d4b7105d754a06372d81259",
+                   "name":"Facultad y Universidad",
+                   "pluralName":"Facultades y Universidades",
+                   "shortName":"Universidad y educación",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/education/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"509028607e27d69d8b256791",
+             "name":"Fasenet",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"C/ San Antonio Abad 21 Local",
+                "lat":41.65606,
+                "lng":-0.87734,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65606,
+                      "lng":-0.87734
+                   }
+                ],
+                "postalCode":"50010",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "C/ San Antonio Abad 21 Local",
+                   "50010 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4d4b7105d754a06372d81259",
+                   "name":"Facultad y Universidad",
+                   "pluralName":"Facultades y Universidades",
+                   "shortName":"Universidad y educación",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/education/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"509028617e27d69d8b2567c5",
+             "name":"Plus Ultra Seguros",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza La Seo, 16",
+                "lat":41.655433,
+                "lng":-0.876079,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655433,
+                      "lng":-0.876079
+                   }
+                ],
+                "postalCode":"50500",
+                "cc":"ES",
+                "city":"Tarazona",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza La Seo, 16",
+                   "50500 Tarazona Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"58daa1558bbb0b01f18ec1f1",
+                   "name":"Oficina de seguros",
+                   "pluralName":"Oficinas de seguros",
+                   "shortName":"Oficina de seguros",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/financial_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"57c838d2498e207618f359c5",
+             "name":"Marco Aldany - Don Jaime",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.654981,
+                "lng":-0.877034,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.654981,
+                      "lng":-0.877034
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d110951735",
+                   "name":"Peluquería",
+                   "pluralName":"Salones de belleza/Peluquerías",
+                   "shortName":"Peluquería",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/salon_barber_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"501aa7bae4b095d8982302da",
+             "name":"Juancho",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.6555,
+                "lng":-0.8767,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.6555,
+                      "lng":-0.8767
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d128951735",
+                   "name":"Tienda de regalos",
+                   "pluralName":"Tiendas de regalos",
+                   "shortName":"Tienda de regalos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/giftshop_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"595bc01e772fbc4ee0915ccf",
+             "name":"El Maño",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655244,
+                "lng":-0.876656,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655244,
+                      "lng":-0.876656
+                   }
+                ],
+                "postalCode":"50001",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "50001 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d128951735",
+                   "name":"Tienda de regalos",
+                   "pluralName":"Tiendas de regalos",
+                   "shortName":"Tienda de regalos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/giftshop_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e53be2a18381367473234a0",
+             "name":"Casa Natal Goya",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65577192942889,
+                "lng":-0.877645578335062,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65577192942889,
+                      "lng":-0.877645578335062
+                   }
+                ],
+                "cc":"ES",
+                "city":"Fuendetodos",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Fuendetodos Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1e2931735",
+                   "name":"Galería de arte",
+                   "pluralName":"Galerías de arte",
+                   "shortName":"Galería de arte",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/artgallery_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d5b00d8d6078eec4bf24f75",
+             "name":"AyE consultores software",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Pza. Ntra. Sra. del Pilar 16",
+                "lat":41.655526757240295,
+                "lng":-0.877232551574707,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655526757240295,
+                      "lng":-0.877232551574707
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Pza. Ntra. Sra. del Pilar 16",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d124941735",
+                   "name":"Oficina",
+                   "pluralName":"Oficinas",
+                   "shortName":"Oficina",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f7dbb0fe4b07071b5aab4ac",
+             "name":"Meeting Point Universal Places El Pilar",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65570012426392,
+                "lng":-0.8768447845903455,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65570012426392,
+                      "lng":-0.8768447845903455
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4f4530164b9074f6e4fb00ff",
+                   "name":"Centro de Información Turística",
+                   "pluralName":"Centros de Información Turística",
+                   "shortName":"Información turística",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/touristinformation_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f9fc384e4b01729ff711906",
+             "name":"Museo Ibercaja",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65470203684864,
+                "lng":-0.8784417318773814,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65470203684864,
+                      "lng":-0.8784417318773814
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1e2931735",
+                   "name":"Galería de arte",
+                   "pluralName":"Galerías de arte",
+                   "shortName":"Galería de arte",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/artgallery_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4fa24600e4b01ab96aa2027f",
+             "name":"Taberna Rosario",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65597234769357,
+                "lng":-0.8775384945405537,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65597234769357,
+                      "lng":-0.8775384945405537
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d116941735",
+                   "name":"Bar",
+                   "pluralName":"Bares",
+                   "shortName":"Bar",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ee31d12823180a98a0b8dec",
+             "name":"Whataburger",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Saragossa",
+                "lat":41.656288146972656,
+                "lng":-0.8765379190444946,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656288146972656,
+                      "lng":-0.8765379190444946
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Saragossa",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d16c941735",
+                   "name":"Hamburguesería",
+                   "pluralName":"Hamburgueserías",
+                   "shortName":"Hamburguesas",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/burger_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"531f8eb4498ee6997997a7d6",
+             "name":"DendroAcua",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Avenida Cesareo Alierta, 86",
+                "crossStreet":"Calle de Luis Aula",
+                "lat":41.65606,
+                "lng":-0.8773400000000038,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65606,
+                      "lng":-0.8773400000000038
+                   }
+                ],
+                "postalCode":"50013",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Avenida Cesareo Alierta, 86 (Calle de Luis Aula)",
+                   "50013 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d100951735",
+                   "name":"Tienda de mascotas",
+                   "pluralName":"Tiendas de mascotas",
+                   "shortName":"Tienda de mascotas",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/pet_store_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e219a51d22d0a3f59f95b97",
+             "name":"Reataurante Arrozal",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.6563373702243,
+                "lng":-0.8777899091113177,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.6563373702243,
+                      "lng":-0.8777899091113177
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d14d941735",
+                   "name":"Restaurante de paella",
+                   "pluralName":"Restaurantes de paella",
+                   "shortName":"Paella",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/paella_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"59e21b7bd69ed038f95e68ae",
+             "name":"Paellador",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655856,
+                "lng":-0.878429,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655856,
+                      "lng":-0.878429
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d14d941735",
+                   "name":"Restaurante de paella",
+                   "pluralName":"Restaurantes de paella",
+                   "shortName":"Paella",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/paella_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e996cb877c85da036e1525f",
+             "name":"Bar Trevi",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65526938233618,
+                "lng":-0.8765095732694128,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65526938233618,
+                      "lng":-0.8765095732694128
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1c7941735",
+                   "name":"Cafetería",
+                   "pluralName":"Cafeterías",
+                   "shortName":"Bocadillos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/snacks_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f8e959ce5e8319783a4de26",
+             "name":"Paseo de Goya",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar (oficina de turismo)",
+                "lat":41.65566352758006,
+                "lng":-0.8781981468200684,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65566352758006,
+                      "lng":-0.8781981468200684
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar (oficina de turismo)",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1f1931735",
+                   "name":"Entretenimiento general",
+                   "pluralName":"Entretenimiento general",
+                   "shortName":"Entretenimiento",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bbb92e6ed7776b0c69f3e51",
+             "name":"El Ruedo Taberna, Zaragoza",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.656108,
+                "lng":-0.87595,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656108,
+                      "lng":-0.87595
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1db931735",
+                   "name":"Restaurante de tapas",
+                   "pluralName":"Restaurantes de tapas",
+                   "shortName":"Tapas",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/tapas_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ba60ec5f964a520c03039e3",
+             "name":"GASOLINERA VALDESPARTERA",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Zaragoza",
+                "lat":41.65635460857503,
+                "lng":-0.876565441631702,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65635460857503,
+                      "lng":-0.876565441631702
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragoza",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d124951735",
+                   "name":"Tienda de automóviles",
+                   "pluralName":"Tiendas de automóviles",
+                   "shortName":"Automotriz",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/automotive_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"524404dd498e757309b068eb",
+             "name":"Asesoria Ligorred",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65508636729864,
+                "lng":-0.877532958984375,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65508636729864,
+                      "lng":-0.877532958984375
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d124941735",
+                   "name":"Oficina",
+                   "pluralName":"Oficinas",
+                   "shortName":"Oficina",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ca83de9b7106dcb52c970a5",
+             "name":"Martin Martin",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Montecanal",
+                "lat":41.656108,
+                "lng":-0.87595,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656108,
+                      "lng":-0.87595
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Montecanal",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1c7941735",
+                   "name":"Cafetería",
+                   "pluralName":"Cafeterías",
+                   "shortName":"Bocadillos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/snacks_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"58306b5a88cfcc313bbde7c1",
+             "name":"Morgan Bar",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.654909,
+                "lng":-0.877424,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.654909,
+                      "lng":-0.877424
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"56aa371ce4b08b9a8d57356c",
+                   "name":"Bar de cerveza",
+                   "pluralName":"Bares de cerveza",
+                   "shortName":"Bar de cerveza",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"51699b3fe4b06f7881da8a5f",
+             "name":"Nacarbaby",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Don Jaime I, 24",
+                "lat":41.65533524084894,
+                "lng":-0.8768121944799834,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65533524084894,
+                      "lng":-0.8768121944799834
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Don Jaime I, 24",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d105951735",
+                   "name":"Tienda de niños",
+                   "pluralName":"Tiendas de niños",
+                   "shortName":"Tienda de niños",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/apparel_kids_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4feef4d5e4b0b7b0fe4af4e7",
+             "name":"Juegos Ambar",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.6559,
+                "lng":-0.8782,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.6559,
+                      "lng":-0.8782
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d171941735",
+                   "name":"Espacio para eventos",
+                   "pluralName":"Salas de eventos",
+                   "shortName":"Espacio para eventos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/eventspace_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f82b323e4b0bf6ccb8c9257",
+             "name":"Delegación De Gobierno",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar, Plaza de Nuestra Señora del Pilar, 50003 Zaragoza",
+                "lat":41.655425932365276,
+                "lng":-0.8781018515648689,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655425932365276,
+                      "lng":-0.8781018515648689
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar, Plaza de Nuestra Señora del Pilar, 50003 Zaragoza",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d12a941735",
+                   "name":"Edificio del Capitolio",
+                   "pluralName":"Edificios del Capitolio",
+                   "shortName":"Edificio del Capitolio",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/government_capitolbuilding_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ed22a3502d5feaa1e599545",
+             "name":"Nakoa",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65531,
+                "lng":-0.876615,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65531,
+                      "lng":-0.876615
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1f9941735",
+                   "name":"Tienda de comida y bebida",
+                   "pluralName":"Tiendas de comida y bebida",
+                   "shortName":"Comida y bebida",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/foodanddrink_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"58307bec6b0cdb3ef0d5714d",
+             "name":"casino Zaragoza",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655069,
+                "lng":-0.87689,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655069,
+                      "lng":-0.87689
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d17c941735",
+                   "name":"Casino",
+                   "pluralName":"Casinos",
+                   "shortName":"Casino",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/casino_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"5308eabc498e4d1e0b9519b2",
+             "name":"Parroquieta de la Seo",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65576620826888,
+                "lng":-0.8764769834267297,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65576620826888,
+                      "lng":-0.8764769834267297
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d132941735",
+                   "name":"Iglesia",
+                   "pluralName":"Iglesias",
+                   "shortName":"Iglesia",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/religious_church_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ba86970f964a52017da39e3",
+             "name":"Cioccolatte",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar 16",
+                "lat":41.65544710849463,
+                "lng":-0.8769937682834132,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65544710849463,
+                      "lng":-0.8769937682834132
+                   }
+                ],
+                "postalCode":"50001",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar 16",
+                   "50001 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d16d941735",
+                   "name":"Café",
+                   "pluralName":"Cafés",
+                   "shortName":"Café",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4c3cb779933b0f47f374e421",
+             "name":"Game Augusta",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Centro Comercial Augusta",
+                "lat":41.656118,
+                "lng":-0.875968,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656118,
+                      "lng":-0.875968
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Centro Comercial Augusta",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d10b951735",
+                   "name":"Tienda de videojuegos",
+                   "pluralName":"Tiendas de videojuegos",
+                   "shortName":"Video Juegos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/videogames_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bfc0797b5cd2d7fc3f430fb",
+             "name":"Sartopina",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Z-30 Tercer Cinturón",
+                "lat":41.656108,
+                "lng":-0.87595,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656108,
+                      "lng":-0.87595
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Z-30 Tercer Cinturón",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d124951735",
+                   "name":"Tienda de automóviles",
+                   "pluralName":"Tiendas de automóviles",
+                   "shortName":"Automotriz",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/automotive_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bf248f23506ef3bc382bd22",
+             "name":"pragmatic service factory",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"C/ Cuatrod e Agosto nº 18, 2ª planta Oficina 1ª",
+                "lat":41.656097,
+                "lng":-0.875927,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656097,
+                      "lng":-0.875927
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "C/ Cuatrod e Agosto nº 18, 2ª planta Oficina 1ª",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d124941735",
+                   "name":"Oficina",
+                   "pluralName":"Oficinas",
+                   "shortName":"Oficina",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4c214c939a67a593c2c6da87",
+             "name":"Calle Inglaterra 44-46 Principal Izquierda",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Mi PaLaciO",
+                "lat":41.65611,
+                "lng":-0.875953,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65611,
+                      "lng":-0.875953
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Mi PaLaciO",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"505f149de4b0f168c0159e28",
+             "name":"Taberna El Ruedo",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Don Jaime I, 54",
+                "lat":41.65510631795925,
+                "lng":-0.8769378993347802,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65510631795925,
+                      "lng":-0.8769378993347802
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "Don Jaime I, 54",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d150941735",
+                   "name":"Restaurante español",
+                   "pluralName":"Restaurantes españoles",
+                   "shortName":"Española",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/spanish_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4c5c58836147be9a9f008f09",
+             "name":"Hotel Nastasibasic",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del pilar",
+                "lat":41.655663,
+                "lng":-0.878502,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655663,
+                      "lng":-0.878502
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del pilar",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1fa931735",
+                   "name":"Hotel",
+                   "pluralName":"Hoteles",
+                   "shortName":"Hotel",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4cc7d1877722bfb74928a2fa",
+             "name":"hotel trip zaragoza",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"zona expo",
+                "lat":41.656112,
+                "lng":-0.875956,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656112,
+                      "lng":-0.875956
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "zona expo",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1fa931735",
+                   "name":"Hotel",
+                   "pluralName":"Hoteles",
+                   "shortName":"Hotel",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"53936006498e1d03a73a8500",
+             "name":"Berlanche",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Don Jaime, 44",
+                "lat":41.65600401618333,
+                "lng":-0.8765747530328524,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65600401618333,
+                      "lng":-0.8765747530328524
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Don Jaime, 44",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1ce941735",
+                   "name":"Marisquería",
+                   "pluralName":"Marisquerías",
+                   "shortName":"Mariscos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/seafood_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f8e7dabbb3d8328c5cf0c22",
+             "name":"Megabus",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Paseo Echegaray Caballero",
+                "crossStreet":"Jardiel",
+                "lat":41.65672965727696,
+                "lng":-0.8775544166564941,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65672965727696,
+                      "lng":-0.8775544166564941
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Paseo Echegaray Caballero (Jardiel)",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1f1931735",
+                   "name":"Entretenimiento general",
+                   "pluralName":"Entretenimiento general",
+                   "shortName":"Entretenimiento",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f1c671f4fc6083d3a4da8ba",
+             "name":"378. Mudejar Architecture of Aragón (1986/2001)",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Arquitectura mudéjar de Aragón",
+                "crossStreet":"UNESCO World Heritage List",
+                "lat":41.655944089737616,
+                "lng":-0.8780908584594727,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655944089737616,
+                      "lng":-0.8780908584594727
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Arquitectura mudéjar de Aragón (UNESCO World Heritage List)",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4deefb944765f83613cdba6e",
+                   "name":"Lugar histórico",
+                   "pluralName":"Lugares históricos",
+                   "shortName":"Lugar histórico",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/historicsite_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bd04eccfb2cce725fdb3bd2",
+             "name":"Santa Fe Hotel Los Cabos",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":". ZARAGOZA ESQ.ALVARO OBREGÃƒÂ“N S/N",
+                "lat":41.6562873,
+                "lng":-0.8765379,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.6562873,
+                      "lng":-0.8765379
+                   }
+                ],
+                "cc":"ES",
+                "city":"Los Cabos",
+                "country":"España",
+                "formattedAddress":[
+                   ". ZARAGOZA ESQ.ALVARO OBREGÃƒÂ“N S/N",
+                   "Los Cabos",
+                   "España"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4f8e8e7be5e8319783a4409d",
+             "name":"Paseo Renacentista",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar (Oficina de Turismo)",
+                "lat":41.6555993989153,
+                "lng":-0.8781552314758301,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.6555993989153,
+                      "lng":-0.8781552314758301
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Plaza del Pilar",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar (Oficina de Turismo)",
+                   "Zaragoza Plaza del Pilar",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1f1931735",
+                   "name":"Entretenimiento general",
+                   "pluralName":"Entretenimiento general",
+                   "shortName":"Entretenimiento",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"50e8215de4b06559ce0d11be",
+             "name":"Restaurante Aspen",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Madre Rafols, 2",
+                "lat":41.65574,
+                "lng":-0.877741,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65574,
+                      "lng":-0.877741
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Madre Rafols, 2",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d150941735",
+                   "name":"Restaurante español",
+                   "pluralName":"Restaurantes españoles",
+                   "shortName":"Española",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/spanish_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"51e51516498ed57c66231b73",
+             "name":"Hotel Via Romana",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.655219,
+                "lng":-0.876812,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655219,
+                      "lng":-0.876812
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1e0931735",
+                   "name":"Cafetería",
+                   "pluralName":"Cafeterías",
+                   "shortName":"Cafetería",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e0dd2af2fb63cdf3343ccfa",
+             "name":"Expotyre 2005, S.L.",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Ctra. Madrid, Km. 315,8-Nave 9B",
+                "lat":41.65606,
+                "lng":-0.87734,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65606,
+                      "lng":-0.87734
+                   }
+                ],
+                "postalCode":"50012",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Ctra. Madrid, Km. 315,8-Nave 9B",
+                   "50012 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d124951735",
+                   "name":"Tienda de automóviles",
+                   "pluralName":"Tiendas de automóviles",
+                   "shortName":"Automotriz",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/automotive_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":true,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"52553232498e2ac1aad58aea",
+             "name":"Vinilo Argensola",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Hermanos Argensola, 2",
+                "lat":41.655984,
+                "lng":-0.878808,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655984,
+                      "lng":-0.878808
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Hermanos Argensola, 2",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11a941735",
+                   "name":"Otros lugares nocturnos",
+                   "pluralName":"Otros lugares nocturnos",
+                   "shortName":"Nocturna",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4c3cb548a97bbe9ad8e2fadd",
+             "name":"Coronel Tapiocca",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Centro Comercial Augusta",
+                "lat":41.656107,
+                "lng":-0.87595,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656107,
+                      "lng":-0.87595
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Centro Comercial Augusta",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1f2941735",
+                   "name":"Tienda de artículos deportivos",
+                   "pluralName":"Tiendas de artículos deportivos",
+                   "shortName":"Artículos deportivos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/sports_outdoors_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e87b2debe7bcd2a2aaf82d3",
+             "name":"Rockstar Fusion Sushi Lounge",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Zaragosa",
+                "lat":41.656288146972656,
+                "lng":-0.8765379190444946,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656288146972656,
+                      "lng":-0.8765379190444946
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragosa",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d145941735",
+                   "name":"Restaurante chino",
+                   "pluralName":"Restaurantes chinos",
+                   "shortName":"China",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/asian_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"50c9928bf31c2fc834ca2435",
+             "name":"Visita Casco Histórico",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar (Oficina de Turismo)",
+                "lat":41.655583366739144,
+                "lng":-0.8781981468200684,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655583366739144,
+                      "lng":-0.8781981468200684
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar (Oficina de Turismo)",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1f1931735",
+                   "name":"Entretenimiento general",
+                   "pluralName":"Entretenimiento general",
+                   "shortName":"Entretenimiento",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e84ce1ddab4ad11c1fea2f2",
+             "name":"hotel las torres",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65592563589164,
+                "lng":-0.8782390062146738,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65592563589164,
+                      "lng":-0.8782390062146738
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1fa931735",
+                   "name":"Hotel",
+                   "pluralName":"Hoteles",
+                   "shortName":"Hotel",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"50785906067d886ad9c161d0",
+             "name":"Máxima Independance",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"C/Gran Vía, 32 - 7ª Planta. 28013 Madrid",
+                "lat":41.655583366739144,
+                "lng":-0.8771896362304688,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655583366739144,
+                      "lng":-0.8771896362304688
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "C/Gran Vía, 32 - 7ª Planta. 28013 Madrid",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1e5931735",
+                   "name":"Lugar de música",
+                   "pluralName":"Lugares de música",
+                   "shortName":"Lugar de música",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/musicvenue_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4cb05ff239458cfa590a02a0",
+             "name":"Dovela",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Santiago, 25",
+                "lat":41.655155959999995,
+                "lng":-0.87739174,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655155959999995,
+                      "lng":-0.87739174
+                   }
+                ],
+                "cc":"ES",
+                "neighborhood":"Centro, Zaragoza, Aragón",
+                "city":"Centro",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Santiago, 25",
+                   "Zaragoza Centro Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d150941735",
+                   "name":"Restaurante español",
+                   "pluralName":"Restaurantes españoles",
+                   "shortName":"Española",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/spanish_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"53640be6498e4036c4ca5071",
+             "name":"la taberna del sr macario",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Don Jaime",
+                "lat":41.65490713569119,
+                "lng":-0.8768121944799833,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65490713569119,
+                      "lng":-0.8768121944799833
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "Don Jaime",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"52e81612bcbc57f1066b79f1",
+                   "name":"Bistró",
+                   "pluralName":"Bistrós",
+                   "shortName":"Bistró",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4dbbfba16a23e294ba21aedb",
+             "name":"Basilicus",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar, 10",
+                "lat":41.656213,
+                "lng":-0.878152,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656213,
+                      "lng":-0.878152
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar, 10",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4ebcbf840cd6795a2f6e3f8a",
+             "name":"farmacia",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65600020202248,
+                "lng":-0.8778655529022217,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65600020202248,
+                      "lng":-0.8778655529022217
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"53501dd6498e0b1a4ee14394",
+             "name":"ferrety",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.65532302856445,
+                "lng":-0.8769606947898865,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65532302856445,
+                      "lng":-0.8769606947898865
+                   }
+                ],
+                "cc":"ES",
+                "country":"España",
+                "formattedAddress":[
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1c9941735",
+                   "name":"Heladería",
+                   "pluralName":"Heladerías",
+                   "shortName":"Helado",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/icecream_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e9b2979f5b9d59004d52458",
+             "name":"Concierto Fangoria",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar",
+                "lat":41.655962,
+                "lng":-0.878002,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655962,
+                      "lng":-0.878002
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"5032792091d4c4b30a586d5c",
+                   "name":"Sala de conciertos",
+                   "pluralName":"Salas de conciertos",
+                   "shortName":"Sala de conciertos",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/musicvenue_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"56b653fc498e6f4bded5ebfd",
+             "name":"Anadolu Ateşi",
+             "contact":{
+ 
+             },
+             "location":{
+                "lat":41.654969,
+                "lng":-0.877374,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.654969,
+                      "lng":-0.877374
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4f04af1f2fb6e1c99f3db0bb",
+                   "name":"Restaurante turco",
+                   "pluralName":"Restaurantes turcos",
+                   "shortName":"Turco",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/turkish_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4bd35fa2a8b3a593c9d6695f",
+             "name":"The University of beer",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Arzobizpo Apaolaza, 8",
+                "lat":41.656106,
+                "lng":-0.875958,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656106,
+                      "lng":-0.875958
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Arzobizpo Apaolaza, 8",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d11b941735",
+                   "name":"Pub",
+                   "pluralName":"Pubs",
+                   "shortName":"Pub",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"56c73b77cd10b9311f1863b2",
+             "name":"Anadolu ateşi",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Calle Santiago",
+                "lat":41.654912,
+                "lng":-0.8774,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.654912,
+                      "lng":-0.8774
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Calle Santiago",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"5283c7b4e4b094cb91ec88d7",
+                   "name":"Restaurante de kebab",
+                   "pluralName":"Restaurantes de kebab",
+                   "shortName":"Kebab",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/middleeastern_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"5203aca5498e7f6ccf45d92b",
+             "name":"Heladeria Ferreti",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Pl. del Pilar",
+                "lat":41.65592741295058,
+                "lng":-0.8783253341914306,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.65592741295058,
+                      "lng":-0.8783253341914306
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Pl. del Pilar",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d1c9941735",
+                   "name":"Heladería",
+                   "pluralName":"Heladerías",
+                   "shortName":"Helado",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/food/icecream_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4e1890b9e4cd49a7e3eacffd",
+             "name":"Oficina El Bedel",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"c/santa isabel 10",
+                "lat":41.655843257902845,
+                "lng":-0.8778119087218983,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655843257902845,
+                      "lng":-0.8778119087218983
+                   }
+                ],
+                "postalCode":"50003",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "c/santa isabel 10",
+                   "50003 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d174941735",
+                   "name":"Espacio de trabajo compartido",
+                   "pluralName":"Oficinas compartidas",
+                   "shortName":"Espacio de trabajo compartido",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4c262b445c5ca593df9845fe",
+             "name":"Gusta",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"C/ Don Jaime 35",
+                "lat":41.655176053073085,
+                "lng":-0.8772591468338367,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.655176053073085,
+                      "lng":-0.8772591468338367
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "C/ Don Jaime 35",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4d822c9a1ec4224b56add592",
+             "name":"Voluntariado Por Zaragoza",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Plaza del Pilar, 18",
+                "lat":41.656012226077145,
+                "lng":-0.8769857883453369,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656012226077145,
+                      "lng":-0.8769857883453369
+                   }
+                ],
+                "postalCode":"50002",
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Plaza del Pilar, 18",
+                   "50002 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"4bf58dd8d48988d124941735",
+                   "name":"Oficina",
+                   "pluralName":"Oficinas",
+                   "shortName":"Oficina",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4c52d851d797e21e8173277e",
+             "name":"Bocatta - Agusta",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Avda Navarra (Centro Comercial Augusta)",
+                "lat":41.656106,
+                "lng":-0.875943,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.656106,
+                      "lng":-0.875943
+                   }
+                ],
+                "cc":"ES",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Avda Navarra (Centro Comercial Augusta)",
+                   "Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+ 
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          },
+          {
+             "id":"4c4eb5f99efabe9a24c0846a",
+             "name":"BSH Electrodomésticos",
+             "contact":{
+ 
+             },
+             "location":{
+                "address":"Ronda del Canal Imperial, 18-20",
+                "lat":41.649369892506314,
+                "lng":-0.9761066738428781,
+                "labeledLatLngs":[
+                   {
+                      "label":"display",
+                      "lat":41.649369892506314,
+                      "lng":-0.9761066738428781
+                   }
+                ],
+                "postalCode":"50197",
+                "cc":"ES",
+                "neighborhood":"Plataforma Logistica de Zaragoza",
+                "city":"Zaragoza",
+                "state":"Aragón",
+                "country":"España",
+                "formattedAddress":[
+                   "Ronda del Canal Imperial, 18-20",
+                   "50197 Zaragoza Aragón",
+                   "España"
+                ]
+             },
+             "categories":[
+                {
+                   "id":"52e81612bcbc57f1066b7a36",
+                   "name":"Almacén",
+                   "pluralName":"Almacenes",
+                   "shortName":"Almacén",
+                   "icon":{
+                      "prefix":"https://ss3.4sqi.net/img/categories_v2/building/default_",
+                      "suffix":".png"
+                   },
+                   "primary":true
+                }
+             ],
+             "verified":false,
+             "stats":{
+                "tipCount":0,
+                "usersCount":0,
+                "checkinsCount":0,
+                "visitsCount":0
+             },
+             "beenHere":{
+                "count":0,
+                "lastCheckinExpiredAt":0,
+                "marked":false,
+                "unconfirmedCount":0
+             },
+             "referralId":"v-1556359218",
+             "venueChains":[
+ 
+             ],
+             "hasPerk":false
+          }
+       ],
+       "confident":false,
+       "geocode":{
+          "what":"",
+          "where":"zaragoza",
+          "feature":{
+             "cc":"ES",
+             "name":"Zaragoza",
+             "displayName":"Zaragoza, Aragón, España",
+             "matchedName":"Zaragoza, Aragón, España",
+             "highlightedName":"<b>Zaragoza</b>, Aragón, España",
+             "woeType":7,
+             "slug":"zaragoza-spain",
+             "id":"geonameid:3104324",
+             "longId":"72057594041032260",
+             "geometry":{
+                "center":{
+                   "lat":41.65606,
+                   "lng":-0.87734
+                },
+                "bounds":{
+                   "ne":{
+                      "lat":41.744521989650174,
+                      "lng":-0.7650390232938951
+                   },
+                   "sw":{
+                      "lat":41.61394006203945,
+                      "lng":-1.0928649999516356
+                   }
+                }
+             }
+          },
+          "parents":[
+ 
+          ]
+       }
+    }
+ }
