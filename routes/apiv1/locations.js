@@ -119,7 +119,6 @@ router.get('/:city/:name', async (req, res, next) => {
         if (locations.length > 0) {
             res.json({ success: true, count: locations.length, data: locations });
         } else {
-            console.log('Llamar a la API');
             const response = await api.fetchLocationsByName(city, name, limit);
             
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
@@ -189,6 +188,10 @@ router.get('/tags', async (req, res, next) => {
 const _parseArrayFourSquareToLocations = async arrPlaces => {
     let locations = [];
     for (const place of arrPlaces) {
+        
+        const locations = await Location.findOne( { id: place.id } );
+        if (locations) return;
+
         const newLocation = new Location(place);
         newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
         newLocation.coordinates.latitude = place.location.lat;
@@ -208,7 +211,10 @@ const _parseArrayFourSquareToLocations = async arrPlaces => {
             newLocation.rating.value = 0;
         }
 
-        newLocation.photos = [];
+        newLocation.photos = [
+            "https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg", 
+            "https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg"
+        ];
         console.log('Guardando localizacion: ', newLocation.name);
         
         await newLocation.save();

@@ -29,6 +29,7 @@ const locationScheme = mongoose.Schema({
     comments:  { type: [String] }
 });
 
+locationScheme.index({ id: 1 });
 locationScheme.index({ name: 1 });
 locationScheme.index({ city: 1 });
 locationScheme.index({ state: 1 });

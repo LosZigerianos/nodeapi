@@ -13,13 +13,15 @@ module.exports = {
     },
 
     fetchLocationsByCity: async (city, limit, offset) => {
-        const url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city}`;
+        // TODO: REPASAR EL TEMA Ñ
+        const url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city.replace('ñ','n').toLowerCase()}`;
         if (limit) url.concat(`&limit=${limit}`);
         return axios.get(url);
     },
 
     fetchLocationsByName: async (city, place, limit, offset) => {
-        const url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city}&query=${place}`;
+        // TODO: REPASAR EL TEMA Ñ
+        const url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city.replace('ñ','n').toLowerCase()}&query=${place.replace('ñ','n').toLowerCase()}`;
         if (limit) url.concat(`&limit=${limit}`);
         return axios.get(url);
     },
