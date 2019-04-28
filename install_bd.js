@@ -51,15 +51,6 @@ const uploadData = async function() {
         console.log('Se han eliminado los documentos existentes');
 
         // Return array with data
-        const arrLocations = await extractModels('locations_zaragoza');
-        //const arrLocations = await extractModels('locations_zaragoza');
-        console.log('Se han eliminado los documentos existentes');
-        // Store data in database
-        /*for (const location of arrLocations.venues) {
-            const saveLocation = new Location(location);
-
-            await saveLocation.save();
-        }*/
         const zaragozaPlaces = await extractModels('locations_zaragoza');
         const madridPlaces = await extractModels('locations_madrid');
         const vigoPlaces = await extractModels('locations_vigo');
@@ -68,7 +59,7 @@ const uploadData = async function() {
         .concat(madridPlaces.venues)
         .concat(vigoPlaces.venues)
         .concat(serenaPlaces.venues);
-
+        // Store data in database
         for (const place of arrPlaces) {
             const newLocation = new Location(place);
             newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."

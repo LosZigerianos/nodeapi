@@ -127,7 +127,8 @@ To go to the base URL, you can use:
 
 http://localhost:3000/apiv1/locations?token=###tokenValue###
 
-#### Searching - GET Method
+
+#### Get all locations from database - GET Method
 
 To view all locations, make a GET adding the token to: ?token=###tokenValue###
 
@@ -137,20 +138,39 @@ To find that you want, you can search directly on the list of the all locations.
 
 Or you can add the following filters:
 
-    - To filter by name, you can use: &name=Bicicleta
-    http://localhost:3000/apiv1/locations?token=###tokenValue###&nombre=Bicicleta
+    - To filter by name, you can use: &name=Parque
+    http://localhost:3000/apiv1/locations?token=###tokenValue###&name=Parque
 
     - To paginate results, you can use: &skip=3&limit=2
     http://localhost:3000/apiv1/locations?token=###tokenValue###&skip=3&limit=2
 
-    - To choose/show only some fields as shown: &fields=nombre tags foto -_id
-    http://localhost:3000/apiv1/locations?token=###tokenValue###&fields=nombre tags foto -_id
+    - To choose/show only some fields as shown: &fields=name tags photos -_id
+    http://localhost:3000/apiv1/locations?token=###tokenValue###&fields=name tags photos -_id
 
-    - (*) To order the list by name, you can use: &sort=nombre
-    http://localhost:3000/apiv1/locations?token=###tokenValue###&sort=precio
+    - (*) To order the list by name, you can use: &sort=name
+    http://localhost:3000/apiv1/locations?token=###tokenValue###&sort=name
 
 Warning (*): If you use this filter, first will be executed this filter and after the rest of the filters regardless of the order. The final result can be different than excepted.
 
 Note: The filters can be combined with each other:
 
 http://localhost:3000/apiv1/locations?token=###tokenValue###&fields=name%20city%20-_id&sort=city
+
+
+#### Search places by location (Database) - GET Method
+
+To view places by location, make a GET adding the token to: ?token=###tokenValue###
+
+http://localhost:3000/apiv1/locations/###location###?token=###tokenValue###
+
+Note: The filters can be done as 'Get all locations'.
+
+#### Search specific places by location (Database + API) - GET Method
+
+The results will be downloaded from api if there are no results in the database.
+
+To view a specific places from location, make a GET adding the token to: ?token=###tokenValue###
+
+http://localhost:3000/apiv1/locations/###location###/###place###?token=###tokenValue###
+
+Note: The filters can be done as 'Get all locations'.
