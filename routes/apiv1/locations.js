@@ -56,7 +56,9 @@ router.get('/:city', async (req, res, next) => {
         const limit = req.query.limit;
         const fields = req.query.fields;
         const sort = req.query.sort;
+        const lang = 'en';//req.query.lang;
         const filter = {};
+        console.log("city: ", city);
 
         if (city) filter.city = new RegExp(city, "i");
 
@@ -72,7 +74,7 @@ router.get('/:city', async (req, res, next) => {
             res.json({ success: true, count: locations.length, data: locations });
         } else {
             console.log('Llamar a la API');
-            const response = await api.fetchLocationsByCity(city, limit);
+            const response = await api.fetchLocationsByCity(city, limit, lang);
             
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
             
@@ -103,10 +105,12 @@ router.get('/:city/:name', async (req, res, next) => {
         const limit = req.query.limit;
         const fields = req.query.fields;
         const sort = req.query.sort;
+        const lang = 'en';//req.query.lang;
         const filter = {};
 
         if (city) filter.city = new RegExp(city, "i");
         if (name) filter.name = new RegExp(name, "i");
+        console.log("name: ", name);
 
         const locations = await Location.getAll(
             filter,
@@ -119,7 +123,7 @@ router.get('/:city/:name', async (req, res, next) => {
         if (locations.length > 0) {
             res.json({ success: true, count: locations.length, data: locations });
         } else {
-            const response = await api.fetchLocationsByName(city, name, limit);
+            const response = await api.fetchLocationsByName(city, name, limit, lang);
             
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
 
@@ -189,8 +193,8 @@ const _parseArrayFourSquareToLocations = async arrPlaces => {
     let locations = [];
     for (const place of arrPlaces) {
         
-        const locations = await Location.findOne( { id: place.id } );
-        if (locations) return;
+        const existing = await Location.findOne( { id: place.id } );
+        if (existing) return;
 
         const newLocation = new Location(place);
         newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."

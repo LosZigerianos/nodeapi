@@ -12,17 +12,21 @@ module.exports = {
         next();
     },
 
-    fetchLocationsByCity: async (city, limit, offset) => {
+    fetchLocationsByCity: async (city, limit, lang) => {
         // TODO: REPASAR EL TEMA Ñ
-        const url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city.replace('ñ','n').toLowerCase()}`;
-        if (limit) url.concat(`&limit=${limit}`);
+        let url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city.replace('ñ','n').toLowerCase()}`;
+        if (limit) url = url.concat(`&limit=${limit}`);
+        if (lang) url = url.concat(`&locale=${lang}`);
+        console.log('Request url: ', url);
         return axios.get(url);
     },
 
-    fetchLocationsByName: async (city, place, limit, offset) => {
+    fetchLocationsByName: async (city, place, limit, lang) => {
         // TODO: REPASAR EL TEMA Ñ
-        const url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city.replace('ñ','n').toLowerCase()}&query=${place.replace('ñ','n').toLowerCase()}`;
-        if (limit) url.concat(`&limit=${limit}`);
+        let url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city.replace('ñ','n').toLowerCase()}&query=${place.replace('ñ','n').toLowerCase()}`;
+        if (limit) url = url.concat(`&limit=${limit}`);
+        if (lang) url = url.concat(`&locale=${lang}`);
+        console.log('Request url: ', url);
         return axios.get(url);
     },
 
