@@ -94,31 +94,6 @@ const uploadData = async function() {
             
             await newLocation.save();
         }
-        
-
-        // Return array with data
-        /*const zaragozaPlaces = await extractModels('zaragoza');
-        const madridPlaces = await extractModels('madrid');
-        const vigoPlaces = await extractModels('vigo');
-        const serenaPlaces = await extractModels('la_serena');
-        const arrPlaces = zaragozaPlaces.concat(madridPlaces).concat(vigoPlaces).concat(serenaPlaces)
-        // Store data in database
-        for (const place of arrPlaces) {
-            const newLocation = new Location();
-            newLocation.id = place.id;
-            //newLocation.place_id = place.place_id;
-            newLocation.name = place.name;
-            newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
-            newLocation.address = place.vicinity;
-            newLocation.coordinates.latitude = place.geometry.location.lat;
-            newLocation.coordinates.longitude = place.geometry.location.lng;
-            newLocation.rating = place.rating;
-            newLocation.photos = [];
-            newLocation.tags = place.types;
-            newLocation.comments = [];
-            
-            await newLocation.save();
-        }*/
 
         // Return array with data
         const arrUsers = await extractModels('users');
@@ -136,7 +111,7 @@ const uploadData = async function() {
         });
 
     } catch(err) {
-        console.log('No ha sido posible cargar a los usuarios en la base de datos. Error:', err);
+        console.log('No ha sido posible cargar los documentos en la base de datos. Error:', err);
     }
     
 };

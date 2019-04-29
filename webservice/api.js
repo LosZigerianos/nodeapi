@@ -17,7 +17,7 @@ module.exports = {
         let url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city.replace('ñ','n').toLowerCase()}`;
         if (limit) url = url.concat(`&limit=${limit}`);
         if (lang) url = url.concat(`&locale=${lang}`);
-        console.log('Request url: ', url);
+        console.log('Request api url: ', url);
         return axios.get(url);
     },
 
@@ -26,7 +26,7 @@ module.exports = {
         let url = `venues/search?${BASE_QUERY_FOURSQUARE}&near=${city.replace('ñ','n').toLowerCase()}&query=${place.replace('ñ','n').toLowerCase()}`;
         if (limit) url = url.concat(`&limit=${limit}`);
         if (lang) url = url.concat(`&locale=${lang}`);
-        console.log('Request url: ', url);
+        console.log('Request api url: ', url);
         return axios.get(url);
     },
 

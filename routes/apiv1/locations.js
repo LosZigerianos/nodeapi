@@ -58,7 +58,6 @@ router.get('/:city', async (req, res, next) => {
         const sort = req.query.sort;
         const lang = 'en';//req.query.lang;
         const filter = {};
-        console.log("city: ", city);
 
         if (city) filter.city = new RegExp(city, "i");
 
@@ -73,7 +72,6 @@ router.get('/:city', async (req, res, next) => {
         if (locations.length > 0) {
             res.json({ success: true, count: locations.length, data: locations });
         } else {
-            console.log('Llamar a la API');
             const response = await api.fetchLocationsByCity(city, limit, lang);
             
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
