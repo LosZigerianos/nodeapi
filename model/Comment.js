@@ -3,11 +3,14 @@
 const mongoose = require('mongoose');
 
 const commentScheme = mongoose.Schema({
+    id: { type: String, unique: true },
     userId: { type: String, unique: true },
     locationId: { type: String, unique: true },
-    description: { type: String }
+    description: { type: String },
+    date: { type: String, default: Date() }
 });
 
+commentScheme.index({ id: 1 });
 commentScheme.index({ userId: 1 });
 commentScheme.index({ locationId: 1 });
 commentScheme.index({ description: 1 });

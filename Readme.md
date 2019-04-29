@@ -84,9 +84,9 @@ http://localhost:3000/apiv1/users
 
 #### Register User - POST Method
 
-To register an user, make a POST to: /signin
+To register an user, make a POST to: /signup
 
-http://localhost:3000/apiv1/users/signin
+http://localhost:3000/apiv1/users/signup
 
 Insert the followings fields:
 

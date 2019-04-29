@@ -214,7 +214,7 @@ const _parseArrayFourSquareToLocations = async arrPlaces => {
         newLocation.photos = [
             "https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg", 
             "https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg"
-        ];
+        ]; // TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
         console.log('Guardando localizacion: ', newLocation.name);
         
         await newLocation.save();
