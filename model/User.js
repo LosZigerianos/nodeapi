@@ -4,11 +4,12 @@ const mongoose = require('mongoose');
 
 // Definition of scheme
 const userScheme = mongoose.Schema({
-    name: { type: String },
-    surname: { type: String },
+    fullname: { type: String },
+    username: { type: String },
     email: { type: String, unique: true }, // required: true, 
     password: { type: String },
     token: { type: String },
+    creationDate: { type: Date, default: Date.now },
 
     googleId: { type: String },
     updated_at: { type: Date, default: Date.now },

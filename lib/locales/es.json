@@ -1,7 +1,8 @@
 {
-	"invalid_credentials": "credenciales inválidas",
-	"email_registered": "e-mail ya registrado",
-	"field_requiered": "campo obligatorio",
+	"invalid_credentials": "Credenciales inválidas",
+	"email_registered": "E-mail ya registrado",
+	"username_registered": "Nombre de usuario ya registrado",
+	"field_requiered": "Campo obligatorio",
 
 	"history": "Historia",
 	"entertainment": "Entretenimiento",

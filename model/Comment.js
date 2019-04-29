@@ -3,11 +3,10 @@
 const mongoose = require('mongoose');
 
 const commentScheme = mongoose.Schema({
-    id: { type: String, unique: true },
     userId: { type: String, unique: true },
     locationId: { type: String, unique: true },
     description: { type: String },
-    date: { type: String, default: Date() }
+    creationDate: { type: Date, default: Date.now }
 });
 
 commentScheme.index({ id: 1 });

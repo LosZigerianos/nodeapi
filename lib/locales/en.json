@@ -1,7 +1,8 @@
 {
-	"invalid_credentials": "invalid credentials",
-	"email_registered": "e-mail already registered",
-	"field_requiered": "field requiered",
+	"invalid_credentials": "Invalid credentials",
+	"email_registered": "E-mail already registered",
+	"username_registered": "Username already registered",
+	"field_requiered": "Field requiered",
 
 	"history": "History",
 	"entertainment": "Entertainment",

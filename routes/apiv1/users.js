@@ -66,9 +66,19 @@ router.post('/signup', async (req, res, next) => {
     }
 
     try {
-        const user = await User.findOne({ email: req.body.email });
-        if (user) {
+        const userByEmail = await User.findOne({ email: req.body.email });
+
+        if (userByEmail) {
             const err = new Error(i18n.__('email_registered'));
+            err.status = 422;
+            next(err);
+            return;
+        }
+
+        const userByUsername = await User.findOne({ username: req.body.username });
+
+        if (userByUsername) {
+            const err = new Error(i18n.__('username_registered'));
             err.status = 422;
             next(err);
             return;
