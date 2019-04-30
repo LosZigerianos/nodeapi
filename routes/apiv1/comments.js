@@ -6,8 +6,6 @@ const Comment = require('../../model/Comment');
 const jwtAuth = require('../../lib/jwtAuth');
 const i18n = require('../../lib/i18n');
 
-// TODO: Añadir documentacion de comentarios en el README.md
-
 // Verify JWT
 router.use(jwtAuth());
 
