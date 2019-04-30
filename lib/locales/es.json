@@ -3,6 +3,7 @@
 	"email_registered": "E-mail ya registrado",
 	"username_registered": "Nombre de usuario ya registrado",
 	"field_requiered": "Campo obligatorio",
+	"invalid_field": "Campo invalido",
 
 	"history": "Historia",
 	"entertainment": "Entretenimiento",
