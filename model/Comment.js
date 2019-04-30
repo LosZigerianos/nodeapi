@@ -11,21 +11,44 @@ const commentScheme = Schema({
 });
 
 commentScheme.index({ id: 1 });
-commentScheme.index({ userId: 1 });
-commentScheme.index({ locationId: 1 });
+commentScheme.index({ user: 1 });
+commentScheme.index({ location: 1 });
 commentScheme.index({ description: 1 });
 
 // Static method
-commentScheme.statics.getComments =
+commentScheme.statics.getByLocation =
 function(
-    filter,
+    locationId,
     skip,
     limit,
     fields,
     sort
     ) {
+    const filter = { location:  locationId };
+    return getComments(filter, skip, limit, fields, sort);
+};
+
+commentScheme.statics.getByUser =
+function(
+    userId,
+    skip,
+    limit,
+    fields,
+    sort
+    ) {
+    const filter = { user:  userId };
+    return getComments(filter, skip, limit, fields, sort);
+};
+
+const getComments = (
+    filter,
+    skip,
+    limit,
+    fields,
+    sort
+    ) => {
     // Create query
-    const query = Location.find(filter);
+    const query = Comment.find(filter);
 
     query.skip(parseInt(skip));
     query.limit(parseInt(limit));
@@ -34,10 +57,13 @@ function(
     // NOTE: First execute sort and (skip and limit) late
 
     // Execute query and return promise
-    return query.exec();
+    return query.populate('location')
+                .populate('user')
+                .exec();
 };
 
+
 // Create the model
-const Comment = mongoose.model('Location', commentScheme);
+const Comment = mongoose.model('Comment', commentScheme);
 
 module.exports = Comment;
