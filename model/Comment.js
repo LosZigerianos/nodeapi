@@ -1,10 +1,11 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const commentScheme = mongoose.Schema({
-    userId: { type: String, unique: true },
-    locationId: { type: String, unique: true },
+const commentScheme = Schema({
+    user: { type: Schema.Types.ObjectId, ref: 'User' },
+    location: { type: Schema.Types.ObjectId, ref: 'Location' },
     description: { type: String },
     creationDate: { type: Date, default: Date.now }
 });
