@@ -7,6 +7,8 @@ const api = require('../../webservice/api');
 const jwtAuth = require('../../lib/jwtAuth');
 const i18n = require('../../lib/i18n');
 
+router.use(jwtAuth());
+
 /**
  * GET /locations
  * Return a locations list.
@@ -16,6 +18,7 @@ router.get('/', async (req, res, next) => {
     try {
         const name = req.query.name;
         const city = req.query.city;
+        const tag = req.query.tag;
 
         const skip = req.query.skip;
         const limit = req.query.limit;
@@ -27,8 +30,8 @@ router.get('/', async (req, res, next) => {
 
         if (name) filter.name = new RegExp(name, "i");
         // new RegExp('^' + name, "i"); // comienza por
-
-        if (city) filter.city = city;
+        if (city) filter.city = new RegExp(city, "i");
+        if (tag) filter.tags = new RegExp(tag, "i"); //{ '$in': [ tag ] };
 
         const locations = await Location.getAll(
             filter,
@@ -39,9 +42,8 @@ router.get('/', async (req, res, next) => {
         );
 
         res.json({ success: true, count: locations.length, data: locations });
-    } catch(err) {
-        next(err);
-        return;
+    } catch (err) {
+        return next(err);
     }
 });
 
@@ -52,6 +54,7 @@ router.get('/', async (req, res, next) => {
 router.get('/:city', async (req, res, next) => {
     try {
         const city = req.params.city;
+        const tag = req.query.tag;
         const skip = req.query.skip;
         const limit = req.query.limit;
         const fields = req.query.fields;
@@ -59,9 +62,10 @@ router.get('/:city', async (req, res, next) => {
         const lang = 'en';//req.query.lang;
         const filter = {};
 
-        if (city) filter.city = new RegExp(city, "i");
+        if (city) filter.city = city; //new RegExp(city, "i");
+        if (tag) filter.tags = tag;
 
-        const locations = await Location.getAll(
+        const locations = await Location.getCity(
             filter,
             skip,
             limit,
@@ -73,10 +77,16 @@ router.get('/:city', async (req, res, next) => {
             res.json({ success: true, count: locations.length, data: locations });
         } else {
             const response = await api.fetchLocationsByCity(city, limit, lang);
-            
+
+            if (!response.data) {
+                //res.json({ success: true, message: response.message });
+                next(response);
+                return;
+            }
+
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
             
-            const locations = await Location.getAll(
+            const locations = await Location.getCity(
                 filter,
                 skip,
                 limit,
@@ -85,9 +95,10 @@ router.get('/:city', async (req, res, next) => {
             );
 
             res.json({ success: true, count: locations.length, data: locations });
+            return;
         }
-    } catch (error) {
-        console.error(error);
+    } catch (err) {
+        return next(err);
     }
 });
 
@@ -106,11 +117,10 @@ router.get('/:city/:name', async (req, res, next) => {
         const lang = 'en';//req.query.lang;
         const filter = {};
 
-        if (city) filter.city = new RegExp(city, "i");
-        if (name) filter.name = new RegExp(name, "i");
-        console.log("name: ", name);
+        if (city) filter.city = city; //new RegExp(city, "i");
+        if (name) filter.name = name; //new RegExp(name, "i");
 
-        const locations = await Location.getAll(
+        const locations = await Location.getPlaceByCity(
             filter,
             skip,
             limit,
@@ -123,9 +133,15 @@ router.get('/:city/:name', async (req, res, next) => {
         } else {
             const response = await api.fetchLocationsByName(city, name, limit, lang);
             
+            if (!response.data) {
+                //res.json({ success: true, message: response });
+                next(response);
+                return;
+            }
+
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
 
-            const locations = await Location.getAll(
+            const locations = await Location.getPlaceByCity(
                 filter,
                 skip,
                 limit,
@@ -135,8 +151,8 @@ router.get('/:city/:name', async (req, res, next) => {
 
             res.json({ success: true, count: locations.length, data: locations });
         }
-    } catch (error) {
-        console.error(error);
+    } catch (err) {
+        return next(err);
     }
 });
 
@@ -188,46 +204,51 @@ router.get('/tags', async (req, res, next) => {
 });
 
 const _parseArrayFourSquareToLocations = async arrPlaces => {
-    let locations = [];
-    for (const place of arrPlaces) {
-        
-        const existing = await Location.findOne( { id: place.id } );
-        if (existing) return;
+    try {
+        let locations = [];
+        for (const place of arrPlaces) {
+            
+            const existing = await Location.findOne( { id: place.id } );
+            if (existing) return;
 
-        const newLocation = new Location(place);
-        newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
-        newLocation.coordinates.latitude = place.location.lat;
-        newLocation.coordinates.longitude = place.location.lng;
-        newLocation.address = place.location.address;
-        newLocation.postalCode = place.location.postalCode;
-        newLocation.cc = place.location.cc;
-        newLocation.city = place.location.city;
-        newLocation.state = place.location.state;
-        newLocation.country = place.location.country;
-        newLocation.formattedAddress = place.location.formattedAddress.join(', ');
-        newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
-        newLocation.comments = [];
-        if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
-            newLocation.rating.value = newLocation.rating.totalValues / newLocation.rating.totalVotes;
-        } else {
-            newLocation.rating.value = 0;
+            const newLocation = new Location(place);
+            newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
+            newLocation.coordinates.latitude = place.location.lat;
+            newLocation.coordinates.longitude = place.location.lng;
+            newLocation.address = place.location.address;
+            newLocation.postalCode = place.location.postalCode;
+            newLocation.cc = place.location.cc;
+            newLocation.city = place.location.city;
+            newLocation.state = place.location.state;
+            newLocation.country = place.location.country;
+            newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+            newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
+            newLocation.comments = [];
+            if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
+                newLocation.rating.value = newLocation.rating.totalValues / newLocation.rating.totalVotes;
+            } else {
+                newLocation.rating.value = 0;
+            }
+
+            newLocation.photos = [
+                "https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg", 
+                "https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg"
+            ];// TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
+            console.log('Guardando localizacion: ', newLocation.name);
+            
+            await newLocation.save();
+            locations.push(newLocation);
         }
 
-        newLocation.photos = [
-            "https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg", 
-            "https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg"
-        ]; // TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
-        console.log('Guardando localizacion: ', newLocation.name);
-        
-        await newLocation.save();
-        locations.push(newLocation);
+        // TEST
+        //const images = await _getPhotosFromFourSquareLocations(locations[0].id);
+        //console.log('images: ', images);
+
+        return locations;
+    } catch(err) {
+        console.error('Error: ', err);
+        return [];
     }
-
-    // TEST
-    //const images = await _getPhotosFromFourSquareLocations(locations[0].id);
-    //console.log('images: ', images);
-
-    return locations;
 }
 
 const _getPhotosFromFourSquareLocations = async id => {
@@ -245,8 +266,8 @@ const _getPhotosFromFourSquareLocations = async id => {
 
         return arrPhotos;
     } catch(err) {
-        console.log('Error: ', err);
-        return null;
+        console.error('Error: ', err);
+        return [];
     }
 }
 

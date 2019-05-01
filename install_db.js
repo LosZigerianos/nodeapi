@@ -2,8 +2,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const Location = require('./model/Location');
-const User = require('./model/User');
+//const Location = require('./model/Location');
+//const User = require('./model/User');
 const crypto = require('crypto');
 
 // Function to remove all documents from collection
@@ -46,9 +46,15 @@ const uploadData = async function() {
         console.log('Database connected');
 
         // Remove all documents from collection
-        await removeDocument(Location);
+        /*await removeDocument(Location);
         await removeDocument(User);
-        console.log('Se han eliminado los documentos existentes');
+        console.log('Se han eliminado los documentos existentes');*/
+
+        await conn.dropDatabase();
+        console.log('Database removed');
+
+        const Location = require('./model/Location');
+        const User = require('./model/User');
 
         // Return array with data
         const zaragozaPlaces = await extractModels('locations_zaragoza');
@@ -113,7 +119,6 @@ const uploadData = async function() {
     } catch(err) {
         console.log('No ha sido posible cargar los documentos en la base de datos. Error:', err);
     }
-    
 };
 
 uploadData();
