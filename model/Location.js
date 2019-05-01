@@ -73,6 +73,7 @@ function(
     sort
     ) {
     // Create query
+    console.log('filter: ', filter);
     const query = Location.find(filter);
 
     query.skip(parseInt(skip));
@@ -93,11 +94,16 @@ function(
     fields,
     sort
     ) {
+
+    let searchText = "";
+    if (filter.city) searchText = filter.city;
+    if (filter.tag) { searchText = (searchText.length === 0) ? filter.tag : `${searchText} ${filter.tag}`; }
+    
     const query = Location.find({$text: {
         $search: filter.city,
         $caseSensitive: false,
         $diacriticSensitive: false
-    }});
+    }, city: new RegExp(filter.city, "i") });
 
     //const query = Location.find({ $text: {$search: filter.city} });
 
@@ -119,16 +125,15 @@ function(
     ) {
 
     let searchText = "";
-    if (filter.city) searchText = filter.city;
-    if (filter.name) { searchText = (searchText.length === 0) ? filter.name : `${searchText} ${filter.name}`; }
-    if (filter.tag) { searchText = (searchText.length === 0) ? filter.tag : `${searchText} ${filter.tag}`; }
-    console.log('searchText: ', searchText);
+    //if (filter.city) searchText = filter.city;
+    //if (filter.name) { searchText = (searchText.length === 0) ? filter.name : `${searchText} ${filter.name}`; }
+    if (filter.name) searchText = filter.name;
 
-    const query = Location.find({$text: {
+    const query = Location.find({ $text: {
         $search: searchText,
         $caseSensitive: false,
         $diacriticSensitive: false
-    }});
+    }, city: new RegExp(filter.city, "i") });
 
     query.skip(parseInt(skip));
     query.limit(parseInt(limit));

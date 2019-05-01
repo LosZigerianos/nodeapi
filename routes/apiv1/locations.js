@@ -7,7 +7,7 @@ const api = require('../../webservice/api');
 const jwtAuth = require('../../lib/jwtAuth');
 const i18n = require('../../lib/i18n');
 
-router.use(jwtAuth());
+//router.use(jwtAuth());
 
 /**
  * GET /locations
@@ -18,7 +18,7 @@ router.get('/', async (req, res, next) => {
     try {
         const name = req.query.name;
         const city = req.query.city;
-        //const tag = req.query.tag;
+        const tag = req.query.tag;
 
         const skip = req.query.skip;
         const limit = req.query.limit;
@@ -28,10 +28,10 @@ router.get('/', async (req, res, next) => {
 
         const filter = {};
 
-        if (name) filter.name = name; //new RegExp(name, "i");
+        if (name) filter.name = new RegExp(name, "i");
         // new RegExp('^' + name, "i"); // comienza por
-        if (city) filter.city = city;
-        //if (tag) filter.tag = { '$in': [ tag ] };
+        if (city) filter.city = new RegExp(city, "i");
+        if (tag) filter.tags = new RegExp(tag, "i"); //{ '$in': [ tag ] };
 
         const locations = await Location.getAll(
             filter,
@@ -65,8 +65,6 @@ router.get('/:city', async (req, res, next) => {
 
         if (city) filter.city = city; //new RegExp(city, "i");
         if (tag) filter.tag = tag;
-
-        console.log('filter: ', filter);
 
         const locations = await Location.getCity(
             filter,
@@ -113,7 +111,6 @@ router.get('/:city/:name', async (req, res, next) => {
     try {
         const city = req.params.city;
         const name = req.params.name;
-        const tag = req.query.tag;
         const skip = req.query.skip;
         const limit = req.query.limit;
         const fields = req.query.fields;
@@ -123,7 +120,6 @@ router.get('/:city/:name', async (req, res, next) => {
 
         if (city) filter.city = city; //new RegExp(city, "i");
         if (name) filter.name = name; //new RegExp(name, "i");
-        if (tag) filter.tag = tag;
 
         const locations = await Location.getPlaceByCity(
             filter,
