@@ -20,7 +20,7 @@ router.post('/login', async (req, res, next) => {
         return;
     }
 
-    const email = req.body.email;
+    const email = new RegExp(req.body.email, "i");
     const password = crypto.createHash('sha256').update(req.body.password).digest('base64');
 
     try {
@@ -66,8 +66,7 @@ router.post('/signup', async (req, res, next) => {
     }
 
     try {
-        const userByEmail = await User.findOne({ email: req.body.email });
-
+        const userByEmail = await User.findOne({ email: new RegExp(req.body.email, "i") });
         if (userByEmail) {
             const err = new Error(i18n.__('email_registered'));
             err.status = 422;
@@ -76,8 +75,7 @@ router.post('/signup', async (req, res, next) => {
         }
 
         const userByUsername = await User.findOne({ username: req.body.username });
-
-        if (userByUsername) {
+        if (req.body.username && userByUsername) {
             const err = new Error(i18n.__('username_registered'));
             err.status = 422;
             next(err);
@@ -90,7 +88,7 @@ router.post('/signup', async (req, res, next) => {
 
         const userStored = await newUser.save();
         
-        res.json({ success: true, result: userStored});
+        res.json({ success: true, data: userStored});
 
     } catch(err) {
         next(err);

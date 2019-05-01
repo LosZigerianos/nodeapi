@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "cluster": "node ./bin/cluster",
     "dev": "cross-env DEBUG=nodeapi:* nodemon ./bin/www",
-    "installDB": "cross-env DEBUG=nodepop:* node ./install_bd"
+    "installDB": "cross-env DEBUG=nodeapi:* node ./install_db"
   },
   "dependencies": {
     "axios": "^0.18.0",
