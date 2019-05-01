@@ -1,11 +1,11 @@
 {
     "data": [ {
-            "name": "Admin",
-            "surname": "System",
+            "fullname": "Admin System",
+            "username": "admin_system",
             "email": "admin@example.com",
             "password": "1234"
         }, {
-            "name": "Guest",
+            "fullname": "Guest Account",
             "email": "invitado@example.com",
             "password": "123123"
         } ]

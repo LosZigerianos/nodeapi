@@ -46,6 +46,8 @@ const locationScheme = mongoose.Schema({
 locationScheme.index({
     city: 'text',
     name: 'text',
+    tags: 'text',
+    //"$**": "text",
     id: 1 },
 {
   name: "locationIndex"
@@ -71,20 +73,11 @@ function(
     sort
     ) {
     // Create query
-    //const query = Location.find(filter);
-    let searchText = "";
-    if (filter.city) searchText = filter.city;
-    if (filter.name) { searchText = (searchText.length === 0) ? filter.name : ` ${filter.name}`; }
-
-    const query = Location.find({$text: {
-        $search: searchText,
-        $caseSensitive: false,
-        $diacriticSensitive: false
-    }});
+    const query = Location.find(filter);
 
     query.skip(parseInt(skip));
     query.limit(parseInt(limit));
-    fields ? query.select(fields): query.select('-__v');
+    fields ? query.select(fields) : query.select('-__v');
     query.sort(sort);
     // NOTE: First execute sort and (skip and limit) late
 
@@ -107,6 +100,35 @@ function(
     }});
 
     //const query = Location.find({ $text: {$search: filter.city} });
+
+    query.skip(parseInt(skip));
+    query.limit(parseInt(limit));
+    fields ? query.select(fields): query.select('-__v');
+    query.sort(sort);
+
+    return query.exec();
+};
+
+locationScheme.statics.getPlaceByCity =
+function(
+    filter,
+    skip,
+    limit,
+    fields,
+    sort
+    ) {
+
+    let searchText = "";
+    if (filter.city) searchText = filter.city;
+    if (filter.name) { searchText = (searchText.length === 0) ? filter.name : `${searchText} ${filter.name}`; }
+    if (filter.tag) { searchText = (searchText.length === 0) ? filter.tag : `${searchText} ${filter.tag}`; }
+    console.log('searchText: ', searchText);
+
+    const query = Location.find({$text: {
+        $search: searchText,
+        $caseSensitive: false,
+        $diacriticSensitive: false
+    }});
 
     query.skip(parseInt(skip));
     query.limit(parseInt(limit));

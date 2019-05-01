@@ -18,6 +18,7 @@ router.get('/', async (req, res, next) => {
     try {
         const name = req.query.name;
         const city = req.query.city;
+        //const tag = req.query.tag;
 
         const skip = req.query.skip;
         const limit = req.query.limit;
@@ -27,10 +28,10 @@ router.get('/', async (req, res, next) => {
 
         const filter = {};
 
-        if (name) filter.name = new RegExp(name, "i");
+        if (name) filter.name = name; //new RegExp(name, "i");
         // new RegExp('^' + name, "i"); // comienza por
-
         if (city) filter.city = city;
+        //if (tag) filter.tag = { '$in': [ tag ] };
 
         const locations = await Location.getAll(
             filter,
@@ -54,6 +55,7 @@ router.get('/', async (req, res, next) => {
 router.get('/:city', async (req, res, next) => {
     try {
         const city = req.params.city;
+        const tag = req.query.tag;
         const skip = req.query.skip;
         const limit = req.query.limit;
         const fields = req.query.fields;
@@ -62,8 +64,11 @@ router.get('/:city', async (req, res, next) => {
         const filter = {};
 
         if (city) filter.city = city; //new RegExp(city, "i");
+        if (tag) filter.tag = tag;
 
-        const locations = await Location.getAll(
+        console.log('filter: ', filter);
+
+        const locations = await Location.getCity(
             filter,
             skip,
             limit,
@@ -84,7 +89,7 @@ router.get('/:city', async (req, res, next) => {
 
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
             
-            const locations = await Location.getAll(
+            const locations = await Location.getCity(
                 filter,
                 skip,
                 limit,
@@ -108,6 +113,7 @@ router.get('/:city/:name', async (req, res, next) => {
     try {
         const city = req.params.city;
         const name = req.params.name;
+        const tag = req.query.tag;
         const skip = req.query.skip;
         const limit = req.query.limit;
         const fields = req.query.fields;
@@ -117,8 +123,9 @@ router.get('/:city/:name', async (req, res, next) => {
 
         if (city) filter.city = city; //new RegExp(city, "i");
         if (name) filter.name = name; //new RegExp(name, "i");
+        if (tag) filter.tag = tag;
 
-        const locations = await Location.getAll(
+        const locations = await Location.getPlaceByCity(
             filter,
             skip,
             limit,
@@ -139,7 +146,7 @@ router.get('/:city/:name', async (req, res, next) => {
 
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
 
-            const locations = await Location.getAll(
+            const locations = await Location.getPlaceByCity(
                 filter,
                 skip,
                 limit,
