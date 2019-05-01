@@ -7,7 +7,7 @@ const api = require('../../webservice/api');
 const jwtAuth = require('../../lib/jwtAuth');
 const i18n = require('../../lib/i18n');
 
-//router.use(jwtAuth());
+router.use(jwtAuth());
 
 /**
  * GET /locations
