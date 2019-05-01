@@ -90,7 +90,7 @@ router.post('/signup', async (req, res, next) => {
 
         const userStored = await newUser.save();
         
-        res.json({ success: true, result: userStored});
+        res.json({ success: true, data: userStored});
 
     } catch(err) {
         next(err);

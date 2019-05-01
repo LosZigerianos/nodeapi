@@ -59,7 +59,7 @@ router.get('/:city', async (req, res, next) => {
         const lang = 'en';//req.query.lang;
         const filter = {};
 
-        if (city) filter.city = new RegExp(city, "i");
+        if (city) filter.city = city; //new RegExp(city, "i");
 
         const locations = await Location.getAll(
             filter,
@@ -73,7 +73,13 @@ router.get('/:city', async (req, res, next) => {
             res.json({ success: true, count: locations.length, data: locations });
         } else {
             const response = await api.fetchLocationsByCity(city, limit, lang);
-            
+
+            if (!response.data) {
+                //res.json({ success: true, message: response.message });
+                next(response);
+                return;
+            }
+
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
             
             const locations = await Location.getAll(
@@ -85,6 +91,7 @@ router.get('/:city', async (req, res, next) => {
             );
 
             res.json({ success: true, count: locations.length, data: locations });
+            return;
         }
     } catch (error) {
         console.error(error);
@@ -106,9 +113,8 @@ router.get('/:city/:name', async (req, res, next) => {
         const lang = 'en';//req.query.lang;
         const filter = {};
 
-        if (city) filter.city = new RegExp(city, "i");
-        if (name) filter.name = new RegExp(name, "i");
-        console.log("name: ", name);
+        if (city) filter.city = city; //new RegExp(city, "i");
+        if (name) filter.name = name; //new RegExp(name, "i");
 
         const locations = await Location.getAll(
             filter,
@@ -123,6 +129,12 @@ router.get('/:city/:name', async (req, res, next) => {
         } else {
             const response = await api.fetchLocationsByName(city, name, limit, lang);
             
+            if (!response.data) {
+                //res.json({ success: true, message: response });
+                next(response);
+                return;
+            }
+
             _ = await _parseArrayFourSquareToLocations(response.data.response.venues);
 
             const locations = await Location.getAll(
@@ -216,7 +228,7 @@ const _parseArrayFourSquareToLocations = async arrPlaces => {
         newLocation.photos = [
             "https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg", 
             "https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg"
-        ]; // TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
+        ];// TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
         console.log('Guardando localizacion: ', newLocation.name);
         
         await newLocation.save();
@@ -246,7 +258,7 @@ const _getPhotosFromFourSquareLocations = async id => {
         return arrPhotos;
     } catch(err) {
         console.log('Error: ', err);
-        return null;
+        return [];
     }
 }
 
