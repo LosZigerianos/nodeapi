@@ -42,9 +42,8 @@ router.get('/', async (req, res, next) => {
         );
 
         res.json({ success: true, count: locations.length, data: locations });
-    } catch(err) {
-        next(err);
-        return;
+    } catch (err) {
+        return next(err);
     }
 });
 
@@ -64,7 +63,7 @@ router.get('/:city', async (req, res, next) => {
         const filter = {};
 
         if (city) filter.city = city; //new RegExp(city, "i");
-        if (tag) filter.tag = tag;
+        if (tag) filter.tags = tag;
 
         const locations = await Location.getCity(
             filter,
@@ -98,8 +97,8 @@ router.get('/:city', async (req, res, next) => {
             res.json({ success: true, count: locations.length, data: locations });
             return;
         }
-    } catch (error) {
-        console.error(error);
+    } catch (err) {
+        return next(err);
     }
 });
 
@@ -152,8 +151,8 @@ router.get('/:city/:name', async (req, res, next) => {
 
             res.json({ success: true, count: locations.length, data: locations });
         }
-    } catch (error) {
-        console.error(error);
+    } catch (err) {
+        return next(err);
     }
 });
 
@@ -205,46 +204,51 @@ router.get('/tags', async (req, res, next) => {
 });
 
 const _parseArrayFourSquareToLocations = async arrPlaces => {
-    let locations = [];
-    for (const place of arrPlaces) {
-        
-        const existing = await Location.findOne( { id: place.id } );
-        if (existing) return;
+    try {
+        let locations = [];
+        for (const place of arrPlaces) {
+            
+            const existing = await Location.findOne( { id: place.id } );
+            if (existing) return;
 
-        const newLocation = new Location(place);
-        newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
-        newLocation.coordinates.latitude = place.location.lat;
-        newLocation.coordinates.longitude = place.location.lng;
-        newLocation.address = place.location.address;
-        newLocation.postalCode = place.location.postalCode;
-        newLocation.cc = place.location.cc;
-        newLocation.city = place.location.city;
-        newLocation.state = place.location.state;
-        newLocation.country = place.location.country;
-        newLocation.formattedAddress = place.location.formattedAddress.join(', ');
-        newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
-        newLocation.comments = [];
-        if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
-            newLocation.rating.value = newLocation.rating.totalValues / newLocation.rating.totalVotes;
-        } else {
-            newLocation.rating.value = 0;
+            const newLocation = new Location(place);
+            newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
+            newLocation.coordinates.latitude = place.location.lat;
+            newLocation.coordinates.longitude = place.location.lng;
+            newLocation.address = place.location.address;
+            newLocation.postalCode = place.location.postalCode;
+            newLocation.cc = place.location.cc;
+            newLocation.city = place.location.city;
+            newLocation.state = place.location.state;
+            newLocation.country = place.location.country;
+            newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+            newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
+            newLocation.comments = [];
+            if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
+                newLocation.rating.value = newLocation.rating.totalValues / newLocation.rating.totalVotes;
+            } else {
+                newLocation.rating.value = 0;
+            }
+
+            newLocation.photos = [
+                "https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg", 
+                "https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg"
+            ];// TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
+            console.log('Guardando localizacion: ', newLocation.name);
+            
+            await newLocation.save();
+            locations.push(newLocation);
         }
 
-        newLocation.photos = [
-            "https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg", 
-            "https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg"
-        ];// TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
-        console.log('Guardando localizacion: ', newLocation.name);
-        
-        await newLocation.save();
-        locations.push(newLocation);
+        // TEST
+        //const images = await _getPhotosFromFourSquareLocations(locations[0].id);
+        //console.log('images: ', images);
+
+        return locations;
+    } catch(err) {
+        console.error('Error: ', err);
+        return [];
     }
-
-    // TEST
-    //const images = await _getPhotosFromFourSquareLocations(locations[0].id);
-    //console.log('images: ', images);
-
-    return locations;
 }
 
 const _getPhotosFromFourSquareLocations = async id => {
@@ -262,7 +266,7 @@ const _getPhotosFromFourSquareLocations = async id => {
 
         return arrPhotos;
     } catch(err) {
-        console.log('Error: ', err);
+        console.error('Error: ', err);
         return [];
     }
 }

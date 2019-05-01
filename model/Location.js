@@ -73,7 +73,6 @@ function(
     sort
     ) {
     // Create query
-    console.log('filter: ', filter);
     const query = Location.find(filter);
 
     query.skip(parseInt(skip));
@@ -97,15 +96,13 @@ function(
 
     let searchText = "";
     if (filter.city) searchText = filter.city;
-    if (filter.tag) { searchText = (searchText.length === 0) ? filter.tag : `${searchText} ${filter.tag}`; }
-    
+    if (filter.tags) { searchText = (searchText.length === 0) ? filter.tags : `${searchText} ${filter.tags}`; }
+
     const query = Location.find({$text: {
-        $search: filter.city,
+        $search: searchText,
         $caseSensitive: false,
         $diacriticSensitive: false
-    }, city: new RegExp(filter.city, "i") });
-
-    //const query = Location.find({ $text: {$search: filter.city} });
+    }, city: new RegExp(filter.city, "i"), tags: { "$in" : [new RegExp(filter.tags, "i")]} });
 
     query.skip(parseInt(skip));
     query.limit(parseInt(limit));
