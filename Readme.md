@@ -189,26 +189,26 @@ To go to the base URL, you can use:
 
 To view all comments, make a GET adding the token to: ?token=###tokenValue###
 
-```http://localhost:3000/apiv1/comments/###user_id###?token=###tokenValue###```
+```http://localhost:3000/apiv1/comments/user/###user_id###?token=###tokenValue###```
 
 #### Get all comments by location - GET Method
 
 To view all comments, make a GET adding the token to: ?token=###tokenValue###
 
-```http://localhost:3000/apiv1/comments/###location_id###?token=###tokenValue###```
+```http://localhost:3000/apiv1/comments/location/###location_id###?token=###tokenValue###```
 
 
 #### Filters
 you can add the following filters:
 
     - To paginate results, you can use: &skip=3&limit=2
-    http://localhost:3000/apiv1/comments/###locationId###?token=###tokenValue###&skip=3&limit=2
+    http://localhost:3000/apiv1/comments/location/###locationId###?token=###tokenValue###&skip=3&limit=2
 
     - To choose/show only some fields as shown: &fields=location description -_id
-    http://localhost:3000/apiv1/comments/###locationId###?token=###tokenValue###&fields=location description -_id
+    http://localhost:3000/apiv1/comments/location/###locationId###?token=###tokenValue###&fields=location description -_id
 
-    - (*) To order the list by name, you can use: &sort=name
-    http://localhost:3000/apiv1/comments/###userId###?token=###tokenValue###&sort=name
+    - (*) To order the list by name, you can use: &sort=creationDate
+    http://localhost:3000/apiv1/comments/user/###userId###?token=###tokenValue###&sort=creationDate
 
 
 #### Create a new comment - POST Method
@@ -219,5 +219,15 @@ To create a new comment, make a POST adding the parameters in body:
     - locationId
     - description
 
-```http://localhost:3000/apiv1/comments```
+```http://localhost:3000/apiv1/comments/add```
 
+
+#### Delete a comment - DELETE Method
+
+To delete a comment, make a DELETE adding the **comment id** parameter in url and add in body or query params:
+
+    - token
+
+```http://localhost:3000/apiv1/comments/###commentId###/delete```
+
+Note: Only can to delete a comment the same user that it created
