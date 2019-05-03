@@ -2,8 +2,8 @@
 	"invalid_credentials": "Credenciales inválidas",
 	"email_registered": "E-mail ya registrado",
 	"username_registered": "Nombre de usuario ya registrado",
-	"field_requiered": "Campo obligatorio",
-	"invalid_field": "Campo invalido",
+	"field_requiered %s": "Campo obligatorio: %s",
+	"invalid_field %s": "Campo invalido: %s",
 
 	"history": "Historia",
 	"entertainment": "Entretenimiento",

@@ -2,12 +2,11 @@
 	"invalid_credentials": "Invalid credentials",
 	"email_registered": "E-mail already registered",
 	"username_registered": "Username already registered",
-	"field_requiered": "Field requiered",
-	"invalid_field": "Invalid field",
-
+	"field_requiered %s": "Field Required: %s",
+	"invalid_field %s": "Invalid field: %s",
 	"history": "History",
 	"entertainment": "Entertainment",
-    "motor": "Motor",
-    "relax": "Relax",
-    "landscape": "Landscape"
+	"motor": "Motor",
+	"relax": "Relax",
+	"landscape": "Landscape"
 }

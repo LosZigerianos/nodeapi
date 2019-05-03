@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const Comment = require('../../model/Comment');
+const Location = require('../../model/Location');
+
 
 const jwtAuth = require('../../lib/jwtAuth');
 const i18n = require('../../lib/i18n');
@@ -13,7 +15,7 @@ router.use(jwtAuth());
  * GET /:locationId
  * Return a comments list by location id.
  */
-router.get('/:locationId', async (req, res, next) => {
+router.get('/location/:locationId', async (req, res, next) => {
     i18n.checkLanguage(req);
 
     const {
@@ -36,7 +38,7 @@ router.get('/:locationId', async (req, res, next) => {
  * GET /:userId
  * Return a comments list by user id.
  */
-router.get('/:userId', async (req, res, next) => {
+router.get('/user/:userId', async (req, res, next) => {
     i18n.checkLanguage(req);
 
     const {
@@ -59,7 +61,7 @@ router.get('/:userId', async (req, res, next) => {
  * POST /
  * Create a new comment 
  */
-router.post('/' ,async (req, res, next) => {
+router.post('/add' ,async (req, res, next) => {
     i18n.checkLanguage(req);    
    
     try {
@@ -70,7 +72,7 @@ router.post('/' ,async (req, res, next) => {
 
         // validate if description is not undefined or empty
         if (!description) {
-            const err = new Error(i18n.__('field_requiered: %s', 'description'));
+            const err = new Error(i18n.__('field_requiered %s', 'description'));
             err.status = 422;
             next(err);
             return;
@@ -79,7 +81,7 @@ router.post('/' ,async (req, res, next) => {
 
         // validate if locationId is not undefined
         if (!locationId) {
-            const err = new Error(i18n.__('field_requiered: %s', 'locationId'));
+            const err = new Error(i18n.__('field_requiered %s', 'locationId'));
             err.status = 422;
             next(err);
             return;
@@ -88,7 +90,7 @@ router.post('/' ,async (req, res, next) => {
         // validate if location id exist
         const location = await Location.findOne({ _id: locationId });
         if (!location) {
-            const err = new Error(i18n.__('invalid_field: %s', 'locationId'))
+            const err = new Error(i18n.__('invalid_field %s', 'locationId'))
             err.status = 401;
             next(err);
             return;
