@@ -106,4 +106,43 @@ router.post('/add' ,async (req, res, next) => {
     }
 });
 
+/** 
+ * DELETE /
+ * Delete a comment
+ */
+router.delete('/:commentId/delete', async (req, res, next) => {
+    i18n.checkLanguage(req);  
+    
+    try {
+        const { commentId } = req.params;
+
+        const comment = await Comment.findOne({ _id:  commentId});
+
+        // validate if comment exist
+        if (!comment) {
+            const err = new Error(i18n.__('invalid_field %s', 'comment id'));
+            err.status = 422;
+            next(err);
+            return;
+        }
+
+        // validate if user is comment's own
+        if (comment.user.toString() !== req.user_id) {
+            const err = new Error(i18n.__('invalid_user'));
+            err.status = 422;
+            next(err);
+            return;
+        }
+
+        // delete comment
+        await comment.deleteOne();
+
+        res.json({ success: true, result: comment });
+    }catch(err) {
+        next(err);
+        return;
+    }
+
+});
+
 module.exports = router;

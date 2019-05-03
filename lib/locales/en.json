@@ -4,6 +4,8 @@
 	"username_registered": "Username already registered",
 	"field_requiered %s": "Field Required: %s",
 	"invalid_field %s": "Invalid field: %s",
+	"invalid_user": "Invalid user",
+
 	"history": "History",
 	"entertainment": "Entertainment",
 	"motor": "Motor",
