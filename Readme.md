@@ -198,6 +198,13 @@ To view all comments, make a GET adding the token to: ?token=###tokenValue###
 ```http://localhost:3000/apiv1/comments/location/###location_id###?token=###tokenValue###```
 
 
+#### Get all comments from following user like timeline - GET Method
+
+To view timeline comments, make a GET adding the token to: ?token=###tokenValue###
+
+```http://localhost:3000/apiv1/comments/timeline?token=###tokenValue###```
+
+
 #### Filters
 you can add the following filters:
 
