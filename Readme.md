@@ -80,13 +80,13 @@ npm run cluster
 
 To go to the base URL, you can use:
 
-http://localhost:3000/apiv1/users
+```http://localhost:3000/apiv1/users```
 
 #### Register User - POST Method
 
 To register an user, make a POST to: /signup
 
-http://localhost:3000/apiv1/users/signup
+```http://localhost:3000/apiv1/users/signup```
 
 Insert the followings fields:
 
@@ -98,7 +98,7 @@ Insert the followings fields:
 
 To obtain a token, make a POST to: /login
 
-http://localhost:3000/apiv1/users/login
+```http://localhost:3000/apiv1/users/login```
 
 Use that token in the rest of request in:
 
@@ -110,7 +110,7 @@ Use that token in the rest of request in:
 
 To obtain a token, make a POST to: /login/google
 
-http://localhost:3000/apiv1/users/login/google
+```http://localhost:3000/apiv1/users/login/google```
 
 Use that token in the rest of request in:
 
@@ -125,14 +125,14 @@ Use that token in the rest of request in:
 
 To go to the base URL, you can use:
 
-http://localhost:3000/apiv1/locations?token=###tokenValue###
+```http://localhost:3000/apiv1/locations?token=###tokenValue###```
 
 
 #### Get all locations from database - GET Method
 
 To view all locations, make a GET adding the token to: ?token=###tokenValue###
 
-http://localhost:3000/apiv1/locations?token=###tokenValue###
+```http://localhost:3000/apiv1/locations?token=###tokenValue###```
 
 To find that you want, you can search directly on the list of the all locations.
 
@@ -154,14 +154,14 @@ Warning (*): If you use this filter, first will be executed this filter and afte
 
 Note: The filters can be combined with each other:
 
-http://localhost:3000/apiv1/locations?token=###tokenValue###&fields=name%20city%20-_id&sort=city
+```http://localhost:3000/apiv1/locations?token=###tokenValue###&fields=name%20city%20-_id&sort=city```
 
 
 #### Search places by location (Database) - GET Method
 
 To view places by location, make a GET adding the token to: ?token=###tokenValue###
 
-http://localhost:3000/apiv1/locations/###location###?token=###tokenValue###
+```http://localhost:3000/apiv1/locations/###location###?token=###tokenValue###```
 
 Note: The filters can be done as 'Get all locations'.
 
@@ -171,6 +171,70 @@ The results will be downloaded from api if there are no results in the database.
 
 To view a specific places from location, make a GET adding the token to: ?token=###tokenValue###
 
-http://localhost:3000/apiv1/locations/###location###/###place###?token=###tokenValue###
+```http://localhost:3000/apiv1/locations/###location###/###place###?token=###tokenValue###```
 
 Note: The filters can be done as 'Get all locations'.
+
+
+
+### COMMENTS
+
+#### Base URL
+
+To go to the base URL, you can use:
+
+```http://localhost:3000/apiv1/comments```
+
+#### Get all comments by user - GET Method
+
+To view all comments, make a GET adding the token to: ?token=###tokenValue###
+
+```http://localhost:3000/apiv1/comments/user/###user_id###?token=###tokenValue###```
+
+#### Get all comments by location - GET Method
+
+To view all comments, make a GET adding the token to: ?token=###tokenValue###
+
+```http://localhost:3000/apiv1/comments/location/###location_id###?token=###tokenValue###```
+
+
+#### Get all comments from following user like timeline - GET Method
+
+To view timeline comments, make a GET adding the token to: ?token=###tokenValue###
+
+```http://localhost:3000/apiv1/comments/timeline?token=###tokenValue###```
+
+
+#### Filters
+you can add the following filters:
+
+    - To paginate results, you can use: &skip=3&limit=2
+    http://localhost:3000/apiv1/comments/location/###locationId###?token=###tokenValue###&skip=3&limit=2
+
+    - To choose/show only some fields as shown: &fields=location description -_id
+    http://localhost:3000/apiv1/comments/location/###locationId###?token=###tokenValue###&fields=location description -_id
+
+    - (*) To order the list by name, you can use: &sort=creationDate
+    http://localhost:3000/apiv1/comments/user/###userId###?token=###tokenValue###&sort=creationDate
+
+
+#### Create a new comment - POST Method
+
+To create a new comment, make a POST adding the parameters in body:
+
+    - token
+    - locationId
+    - description
+
+```http://localhost:3000/apiv1/comments/add```
+
+
+#### Delete a comment - DELETE Method
+
+To delete a comment, make a DELETE adding the **comment id** parameter in url and add in body or query params:
+
+    - token
+
+```http://localhost:3000/apiv1/comments/###commentId###/delete```
+
+Note: Only can to delete a comment the same user that it created

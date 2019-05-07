@@ -1,14 +1,16 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const userScheme = mongoose.Schema({
+const userScheme = Schema({
     fullname: { type: String },
     username: { type: String, unique: true }, // , unique: true
     email: { type: String, unique: true, required: true }, // required: true, 
     password: { type: String },
     token: { type: String },
     creationDate: { type: Date, default: Date.now },
+    following: [{ type: Schema.Types.ObjectId, ref: 'User' }],
 
     googleId: { type: String },
     updated_at: { type: Date, default: Date.now },
