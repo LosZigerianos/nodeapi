@@ -10,10 +10,12 @@ const commentScheme = Schema({
     creationDate: { type: Date, default: Date.now }
 });
 
-commentScheme.index({ id: 1 });
-commentScheme.index({ user: 1 });
-commentScheme.index({ location: 1 });
-commentScheme.index({ description: 1 });
+commentScheme.index({
+    user: 1,
+    location: 1,
+}, {
+  name: "commentIndex"
+});
 
 // Static method
 commentScheme.statics.getByLocation =
@@ -37,6 +39,18 @@ function(
     sort
     ) {
     const filter = { user:  userId };
+    return getComments(filter, skip, limit, fields, sort);
+};
+
+commentScheme.statics.getByUsers =
+function(
+    userIdsArray,
+    skip,
+    limit,
+    fields,
+    sort
+    ) {
+    const filter = { user: { $in: userIdsArray } };
     return getComments(filter, skip, limit, fields, sort);
 };
 
