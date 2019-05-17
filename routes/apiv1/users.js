@@ -47,7 +47,7 @@ router.post('/login', async (req, res, next) => {
                     return;
                 }
 
-                res.json({ success: true, token });
+                res.json({ success: true, metadata: user , data: token });
             });
 
     } catch(err) {
@@ -145,7 +145,7 @@ router.post('/recoverPassword', async (req, res, next) => {
          user.password = crypto.createHash('sha256').update(recoverPassword).digest('base64');
          const _  = await User.findOneAndUpdate({ _id: user._id }, user, { new: true }).exec();
          
-         res.json({ success: true, data: i18n.__('sent_email')});
+         res.json({ success: true, message: i18n.__('sent_email')});
 
     } catch(err) {
         next(err);

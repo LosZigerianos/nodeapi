@@ -9,7 +9,7 @@ const userScheme = Schema({
     email: { type: String, unique: true, required: true }, // required: true, 
     password: { type: String },
     token: { type: String },
-    creationDate: { type: Date, default: Date.now },
+    creation_date: { type: Date, default: Date.now },
     following: [{ type: Schema.Types.ObjectId, ref: 'User' }],
 
     googleId: { type: String },
