@@ -26,5 +26,11 @@ module.exports = {
         'clientID'       : 'L5DDPYKZNXMEK0STLKVNTETOSXXEXC3LJNVRBDTMRKZIJOQE',
         'clientSecret'   : '1ZFJDO43IVUHNEVS4ME21UKJJNOFANCGGHENJBFG2RIGOZ5O',
         'v'              : '20190426' // version - YYYYMMDD
+    },
+
+    nodemailer : {
+        'provider'   : 'Gmail',
+        'email'      : 'loszigerianos@gmail.com',
+        'password'   : 'cAtnot-jywnon-poqme2'
     }
 };

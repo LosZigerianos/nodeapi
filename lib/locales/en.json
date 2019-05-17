@@ -5,6 +5,9 @@
 	"field_requiered %s": "Field Required: %s",
 	"invalid_field %s": "Invalid field: %s",
 	"invalid_user": "Invalid user",
+	"recover_password": "Recover password",
+	"sent_email": "Sent e-mail",
+	"new_password": "Your new password",
 
 	"history": "History",
 	"entertainment": "Entertainment",

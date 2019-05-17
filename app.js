@@ -53,7 +53,7 @@ app.get('/auth/google/callback',
  * Routes from app
  */
 app.use('/',          require('./routes/index'));
-app.use('/users',     require('./routes/users'));
+//app.use('/users',     require('./routes/users'));
 app.use('/apiv1/locations', require('./routes/apiv1/locations'));
 app.use('/apiv1/users', require('./routes/apiv1/users'));
 app.use('/apiv1/comments', require('./routes/apiv1/comments'));

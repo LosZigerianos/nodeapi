@@ -94,6 +94,17 @@ Insert the followings fields:
     - email
     - password
 
+#### Recover password - POST Method
+
+To recover the password of an user, make a POST to: /recoverPassword
+
+```http://localhost:3000/apiv1/users/recoverPassword```
+
+Insert the followings fields:
+    - email
+
+Finally, an email with the new password will be sent so that the user can update it. 
+
 #### Local authentication - POST Method
 
 To obtain a token, make a POST to: /login
