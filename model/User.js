@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 
 const userScheme = Schema({
     fullname: { type: String },
-    username: { type: String, unique: true }, // , unique: true
-    email: { type: String, unique: true, required: true }, // required: true, 
+    username: { type: String, unique: true, sparse: true },
+    email: { type: String, unique: true, required: true },
     password: { type: String },
     token: { type: String },
     creation_date: { type: Date, default: Date.now },
