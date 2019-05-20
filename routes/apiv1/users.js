@@ -28,7 +28,7 @@ router.post('/login', async (req, res, next) => {
         return;
     }
 
-    const email = new RegExp(req.body.email, 'i');
+    const email = new RegExp('^' + req.body.email + '$', "i");
     const password = crypto
         .createHash('sha256')
         .update(req.body.password)
@@ -79,13 +79,13 @@ router.post('/signup', async (req, res, next) => {
     }
 
     try {
-        const userByEmail = await User.findOne({ email: new RegExp(req.body.email, 'i') });
+        const userByEmail = await User.findOne({ email: new RegExp('^' + req.body.email + '$', "i") });
         if (userByEmail) {
             res.json({ success: true, error: i18n.__('email_registered') });
             return;
         }
 
-        const userByUsername = await User.findOne({ username: req.body.username });
+        const userByUsername = await User.findOne({ username: new RegExp(req.body.username, "i") });
         if (req.body.username && userByUsername) {
             res.json({ success: true, error: i18n.__('username_registered') });
             return;
@@ -119,8 +119,7 @@ router.post('/recoverPassword', async (req, res, next) => {
         return;
     }
 
-    const email = new RegExp(req.body.email, 'i');
-
+    const email = new RegExp('^' + req.body.email + '$', "i");
     try {
         const user = await User.findOne({ email }).exec();
 
