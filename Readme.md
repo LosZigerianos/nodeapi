@@ -216,7 +216,7 @@ Note: The filters can be combined with each other:
 
 To view places by location, make a GET adding the token to: ?token=###tokenValue###
 
-```http://localhost:3000/apiv1/locations/###location###?token=###tokenValue###```
+```http://localhost:3000/apiv1/locations/city/###location###?token=###tokenValue###```
 
 Note: The filters can be done as 'Get all locations'.
 
@@ -226,9 +226,22 @@ The results will be downloaded from api if there are no results in the database.
 
 To view a specific places from location, make a GET adding the token to: ?token=###tokenValue###
 
-```http://localhost:3000/apiv1/locations/###location###/###place###?token=###tokenValue###```
+```http://localhost:3000/apiv1/locations/city/###location###/place/###place###?token=###tokenValue###```
 
 Note: The filters can be done as 'Get all locations'.
+
+#### Get near locations (DATABASE) - Get Method
+
+To view near locations, make a GET adding the token to: ?token=###tokenValue###
+
+Insert the following fields required:
+```
+- latitude
+- longitude
+```
+**Example: ```locations/near?latitude=41.6560593&longitude=-0.87734```**
+
+```http://localhost:3000/apiv1/locations/near?latitude=###latitudeValue###&longitude=###longitudeValue###&token=###tokenValue###```
 
 
 

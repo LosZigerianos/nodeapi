@@ -69,8 +69,7 @@ const uploadData = async function() {
         for (const place of arrPlaces) {
             const newLocation = new Location(place);
             newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
-            newLocation.coordinates.latitude = place.location.lat;
-            newLocation.coordinates.longitude = place.location.lng;
+            newLocation.geometry.coordinates = [place.location.lng, place.location.lat];
             newLocation.address = place.location.address;
             newLocation.postalCode = place.location.postalCode;
             newLocation.cc = place.location.cc;
