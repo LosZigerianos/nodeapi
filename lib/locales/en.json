@@ -9,10 +9,16 @@
 	"sent_email": "Sent e-mail",
 	"new_password": "Your new password",
 	"should_them_be_equals %s %s": "%s and %s should them be equals",
-
+	"image": "Image",
+	"password": "Password",
+	"newPassword": "New password",
+	"passwordConfirmation": "Confirm password",
+	"email": "E-mail",
+	
 	"history": "History",
 	"entertainment": "Entertainment",
 	"motor": "Motor",
 	"relax": "Relax",
-	"landscape": "Landscape"
+	"landscape": "Landscape",
+	"field_requiered": "field_requiered"
 }
