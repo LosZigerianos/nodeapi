@@ -90,9 +90,53 @@ To register an user, make a POST to: /signup
 
 Insert the followings fields:
 
-    - name
+    - username
     - email
     - password
+
+
+#### Me data - GET Method
+
+To get *Me data* of an user, make a GET to: /me
+
+```http://localhost:3000/apiv1/users/me```
+
+#### Update User - PUT Method
+
+To Update an user, make a PUT to: /me/update
+
+```http://localhost:3000/apiv1/users/me/update```
+
+You CAN insert the followings fields:
+
+    - fullname
+    - username
+    - email
+
+#### Change Password - PUT Method
+
+To Change password of an user, make a PUT to: /me/change-password
+
+```http://localhost:3000/apiv1/users/me/change-password```
+
+Insert the followings fields:
+
+    - password
+    - newPassword
+    - passwordConfirmation
+
+
+#### Upload photo - PUT Method
+
+To upload photo of an user, make a PUT to: /me/photo
+
+```http://localhost:3000/apiv1/users/me/photo```
+
+Add Header **Content-Type: multipart/form-data**
+
+Insert the followings fields like **File type**:
+
+    - image
 
 #### Recover password - POST Method
 
