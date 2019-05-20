@@ -22,7 +22,7 @@ function removeDocument(documento) {
 function extractModels(fileName) {
     return new Promise(resolve => {
 
-        const fichero = path.join(__dirname, './model/', fileName + '.json');
+        const fichero = path.join(__dirname, './seeds/', fileName + '.json');
 
         fs.readFile(fichero, 'utf8', (err, data) => {
 

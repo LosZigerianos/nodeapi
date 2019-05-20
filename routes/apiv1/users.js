@@ -8,6 +8,8 @@ const localConfig = require('../../localConfig');
 const i18n = require('../../lib/i18n');
 const nodemailer = require('nodemailer');
 const jwtAuth = require('../../lib/jwtAuth');
+const uploadS3 = require('../../lib/uploadS3');
+const IMAGE_TYPE = uploadS3.IMAGE_TYPE;
 
 /**
  * POST /login
@@ -112,7 +114,7 @@ router.post('/signup', async (req, res, next) => {
 });
 
 /**
- * POST /signup
+ * POST /recoverPassword
  *
  */
 router.post('/recoverPassword', async (req, res, next) => {
@@ -174,8 +176,63 @@ router.post('/recoverPassword', async (req, res, next) => {
 });
 
 /**
+ * PUT /me/change-password
+ * Return a user data
+ */
+router.put('/me/change-password', jwtAuth(), async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    const { password, newPassword, passwordConfirmation } = req.body;
+
+    if (!password) {
+        const err = new Error(i18n.__('field_requiered %s', 'password'));
+        err.status = 422;
+        next(err);
+        return;
+    }
+
+    if (!newPassword) {
+        const err = new Error(i18n.__('field_requiered %s', 'newPassword'));
+        err.status = 422;
+        next(err);
+        return;
+    }
+    if (!passwordConfirmation) {
+        const err = new Error(i18n.__('field_requiered %s', 'passwordConfirmation'));
+        err.status = 422;
+        next(err);
+        return;
+    }
+
+    if (newPassword !== passwordConfirmation) {
+        const err = new Error(
+            i18n.__('should_them_be_equals %s %s', 'newPassword', 'passwordConfirmation'),
+        );
+        err.status = 422;
+        next(err);
+        return;
+    }
+
+    const passwordHash = crypto
+        .createHash('sha256')
+        .update(newPassword)
+        .digest('base64');
+
+    try {
+        const query = { _id: req.user_id };
+        const update = { password: passwordHash };
+        
+        const userUpdated = await User.findOneAndUpdate(query, update);
+
+        res.json({ success: true, data: userUpdated });
+    } catch (err) {
+        return next(err);
+    }
+});
+
+/**
  * PUT /me/update
- * Return a user registered data
+ * Return a user data
  */
 router.put('/me/update', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
@@ -208,6 +265,9 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
         const regexEmail = new RegExp(email, 'i');
         const userByEmail = await User.findOne({ email: regexEmail }).exec();
 
+        // verify:
+        // email is not undefined and exists an user with that email
+        // existing user is different from a logged user
         if (email && userByEmail && currentUser.email !== userByEmail.email) {
             const err = new Error(i18n.__('email_registered'));
             err.status = 422;
@@ -226,6 +286,33 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
 });
 
 /**
+ * POST /me/photo
+ * Return a user data
+ */
+router.post('/me/photo', jwtAuth(), uploadS3.single('image'), async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    if (!req.file) {
+        const err = new Error(i18n.__('field_requiered %s', 'image'));
+        err.status = 422;
+        next(err);
+        return;
+    }
+
+    const userPerfilPath = req.file.transforms[IMAGE_TYPE.ORIGINAL].location;
+
+    try {
+        const query = { _id: req.user_id };
+        const update = { photo: userPerfilPath };
+        const updatedUser = await User.findOneAndUpdate(query, update);
+
+        res.json({ success: true, data: updatedUser });
+    } catch (err) {
+        return next(err);
+    }
+});
+
+/**
  * GET /me
  * Return a user data
  */
@@ -233,9 +320,9 @@ router.get('/me', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
     try {
-        const user = await User.findOne({ _id: req.user_id }).exec();
+        const currentUser = await User.findOne({ _id: req.user_id }).exec();
 
-        res.json({ success: true, user });
+        res.json({ success: true, data: currentUser });
     } catch (err) {
         return next(err);
     }

@@ -8,6 +8,7 @@
 	"recover_password": "Recuperar contraseña",
 	"sent_email": "E-mail enviado",
 	"new_password": "Tu nueva contraseña",
+	"should_them_be_equals %s %s": "%s y %s deben ser iguales",
 
 	"history": "Historia",
 	"entertainment": "Entretenimiento",
