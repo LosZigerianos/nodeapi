@@ -137,6 +137,27 @@ locationScheme.statics.getPlaceByCity = function(filter, skip, limit, fields, so
     return query.exec();
 };
 
+locationScheme.statics.getPlacesByName = function(filter, skip, limit, fields, sort) {
+    let searchText = '';
+    if (filter.name) searchText = filter.name;
+
+    const query = Location.find({
+        $text: {
+            $search: searchText,
+            $caseSensitive: false,
+            $diacriticSensitive: false,
+        },
+        name: new RegExp(filter.name, 'i'),
+    });
+
+    query.skip(parseInt(skip));
+    query.limit(parseInt(limit));
+    fields ? query.select(fields) : query.select('-__v');
+    query.sort(sort);
+
+    return query.exec();
+};
+
 // Create the model
 const Location = mongoose.model('Location', locationScheme);
 

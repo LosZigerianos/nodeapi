@@ -127,6 +127,36 @@ router.get('/city/:city/place/:name', async (req, res, next) => {
     }
 });
 
+
+/**
+ * GET /locations
+ * Return a places by name.
+ */
+router.get('/place/:name', async (req, res, next) => {
+    try {
+        const name = req.params.name;
+        const skip = req.query.skip;
+        const limit = req.query.limit;
+        const fields = req.query.fields;
+        const sort = req.query.sort;
+        const lang = 'en'; //req.query.lang;
+        const filter = {};
+
+        if (name) filter.name = name;
+
+        const locations = await Location.getPlacesByName(filter, skip, limit, fields, sort);
+        
+        if (!locations) {
+            res.json({ success: true, error: i18n.__('not_results') });
+            return;
+        }
+
+        res.json({ success: true, count: locations.length, data: locations });
+    } catch (err) {
+        return next(err);
+    }
+});
+
 /**
  * GET /near
  */
