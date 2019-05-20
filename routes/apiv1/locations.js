@@ -148,7 +148,7 @@ router.get('/near', async (req, res, next) => {
 
         const nearLocations = await Location.getNearLocations(query, skip, limit, fields, sort);
 
-        res.json({ success: true, count: nearLocatios.length, data: nearLocations });
+        res.json({ success: true, count: nearLocations.length, data: nearLocations });
     } catch (err) {
         next(err);
         return;
