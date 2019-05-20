@@ -14,64 +14,40 @@ const locationScheme = mongoose.Schema({
     state: { type: String },
     country: { type: String },
     formattedAddress: { type: String },
-    coordinates: {
-        latitude: { type: String },
-        longitude:  { type: String }
+    geometry: {
+        type: { type: String, default: 'Point' },
+        coordinates: { type: [Number] }, // [longitude, latitude]
     },
     rating: {
         totalVotes: { type: Number, default: 0 },
         totalValues: { type: Number, default: 0 },
-        value: { type: Number }
+        value: { type: Number },
     },
     photos: { type: [String] },
     tags: { type: [String] },
-    comments:  { type: [String] }
+    comments: { type: [String] },
 });
 
-/*locationScheme.index({
+locationScheme.index(
+    {
         city: 'text',
-        id: 1
+        name: 'text',
+        tags: 'text',
+        id: 1,
     },
     {
-        weights: {
-            city:1,
-        },
+        name: 'locationIndex',
     },
-    {
-        name: "locationIndex"
-    }
 );
-*/
 
-locationScheme.index({
-    city: 'text',
-    name: 'text',
-    tags: 'text',
-    //"$**": "text",
-    id: 1 },
-{
-  name: "locationIndex"
-}, );
+locationScheme.index({ geometry: '2dsphere' });
 
-const tags = [
-    'history',
-    'entertainment',
-    'motor',
-    'relax',
-    'landscape'
-];
+const tags = ['history', 'entertainment', 'motor', 'relax', 'landscape'];
 
 locationScheme.statics.showTags = () => tags;
 
 // Static method
-locationScheme.statics.getAll =
-function(
-    filter,
-    skip,
-    limit,
-    fields,
-    sort
-    ) {
+locationScheme.statics.getAll = function(filter, skip, limit, fields, sort) {
     // Create query
     const query = Location.find(filter);
 
@@ -85,56 +61,77 @@ function(
     return query.exec();
 };
 
-locationScheme.statics.getCity =
-function(
-    filter,
+locationScheme.statics.getNearLocations = function(
+    coordinatesObject = {},
     skip,
     limit,
     fields,
-    sort
-    ) {
-
-    let searchText = "";
-    if (filter.city) searchText = filter.city;
-    if (filter.tags) { searchText = (searchText.length === 0) ? filter.tags : `${searchText} ${filter.tags}`; }
-
-    const query = Location.find({$text: {
-        $search: searchText,
-        $caseSensitive: false,
-        $diacriticSensitive: false
-    }, city: new RegExp(filter.city, "i"), tags: { "$in" : [new RegExp(filter.tags, "i")]} });
+    sort,
+) {
+    // create query
+    const query = Location.find({
+        geometry: {
+            $nearSphere: {
+                $geometry: {
+                    type: 'Point',
+                    coordinates: [coordinatesObject.longitude, coordinatesObject.latitude],
+                },
+                $maxDistance: coordinatesObject.meters || 5000,
+            },
+        },
+    });
 
     query.skip(parseInt(skip));
     query.limit(parseInt(limit));
-    fields ? query.select(fields): query.select('-__v');
+    fields ? query.select(fields) : query.select('-__v');
     query.sort(sort);
 
     return query.exec();
 };
 
-locationScheme.statics.getPlaceByCity =
-function(
-    filter,
-    skip,
-    limit,
-    fields,
-    sort
-    ) {
+locationScheme.statics.getCity = function(filter, skip, limit, fields, sort) {
+    let searchText = '';
+    if (filter.city) searchText = filter.city;
+    if (filter.tags) {
+        searchText = searchText.length === 0 ? filter.tags : `${searchText} ${filter.tags}`;
+    }
 
-    let searchText = "";
+    const query = Location.find({
+        $text: {
+            $search: searchText,
+            $caseSensitive: false,
+            $diacriticSensitive: false,
+        },
+        city: new RegExp(filter.city, 'i'),
+        tags: { $in: [new RegExp(filter.tags, 'i')] },
+    });
+
+    query.skip(parseInt(skip));
+    query.limit(parseInt(limit));
+    fields ? query.select(fields) : query.select('-__v');
+    query.sort(sort);
+
+    return query.exec();
+};
+
+locationScheme.statics.getPlaceByCity = function(filter, skip, limit, fields, sort) {
+    let searchText = '';
     //if (filter.city) searchText = filter.city;
     //if (filter.name) { searchText = (searchText.length === 0) ? filter.name : `${searchText} ${filter.name}`; }
     if (filter.name) searchText = filter.name;
 
-    const query = Location.find({ $text: {
-        $search: searchText,
-        $caseSensitive: false,
-        $diacriticSensitive: false
-    }, city: new RegExp(filter.city, "i") });
+    const query = Location.find({
+        $text: {
+            $search: searchText,
+            $caseSensitive: false,
+            $diacriticSensitive: false,
+        },
+        city: new RegExp(filter.city, 'i'),
+    });
 
     query.skip(parseInt(skip));
     query.limit(parseInt(limit));
-    fields ? query.select(fields): query.select('-__v');
+    fields ? query.select(fields) : query.select('-__v');
     query.sort(sort);
 
     return query.exec();
