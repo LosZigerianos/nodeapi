@@ -8,6 +8,7 @@
 	"recover_password": "Recover password",
 	"sent_email": "Sent e-mail",
 	"new_password": "Your new password",
+	"should_them_be_equals %s %s": "%s and %s should them be equals",
 
 	"history": "History",
 	"entertainment": "Entertainment",
