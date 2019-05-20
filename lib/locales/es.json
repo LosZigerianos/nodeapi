@@ -9,6 +9,11 @@
 	"sent_email": "E-mail enviado",
 	"new_password": "Tu nueva contraseña",
 	"should_them_be_equals %s %s": "%s y %s deben ser iguales",
+	"image": "Imagen",
+	"password": "Contraseña",
+	"newPassword": "Nueva contraseña",
+	"passwordConfirmation": "Confirmar password",
+	"email": "E-mail",
 
 	"history": "Historia",
 	"entertainment": "Entretenimiento",

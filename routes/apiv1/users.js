@@ -19,12 +19,12 @@ router.post('/login', async (req, res, next) => {
     i18n.checkLanguage(req);
 
     if (!req.body.email) {
-        res.json({ success: true, message: i18n.__('invalid_credentials') });
+        res.json({ success: true, error: i18n.__('field_requiered %s', 'email') });
         return;
     }
 
     if (!req.body.password) {
-        res.json({ success: true, message: i18n.__('invalid_credentials') });
+        res.json({ success: true, error: i18n.__('field_requiered %s', 'password') });
         return;
     }
 
@@ -38,12 +38,12 @@ router.post('/login', async (req, res, next) => {
         const user = await User.findOne({ email }).exec();
 
         if (!user) {
-            res.json({ success: true, message: i18n.__('invalid_credentials') });
+            res.json({ success: true, error: i18n.__('invalid_credentials') });
             return;
         }
 
         if (password !== user.password) {
-            res.json({ success: true, message: i18n.__('invalid_credentials') });
+            res.json({ success: true, error: i18n.__('invalid_credentials') });
             return;
         }
 
@@ -74,26 +74,20 @@ router.post('/signup', async (req, res, next) => {
     i18n.checkLanguage(req);
 
     if (!req.body.email || !req.body.password) {
-        const err = new Error(i18n.__('field_requiered'));
-        err.status = 404;
-        next(err);
+        res.json({ success: true, error: i18n.__('field_requiered') });
         return;
     }
 
     try {
         const userByEmail = await User.findOne({ email: new RegExp(req.body.email, 'i') });
         if (userByEmail) {
-            const err = new Error(i18n.__('email_registered'));
-            err.status = 422;
-            next(err);
+            res.json({ success: true, error: i18n.__('email_registered') });
             return;
         }
 
         const userByUsername = await User.findOne({ username: req.body.username });
         if (req.body.username && userByUsername) {
-            const err = new Error(i18n.__('username_registered'));
-            err.status = 422;
-            next(err);
+            res.json({ success: true, error: i18n.__('username_registered') });
             return;
         }
 
@@ -121,7 +115,7 @@ router.post('/recoverPassword', async (req, res, next) => {
     i18n.checkLanguage(req);
 
     if (!req.body.email) {
-        res.json({ success: true, message: i18n.__('invalid_credentials') });
+        res.json({ success: true, error: i18n.__('invalid_credentials') });
         return;
     }
 
@@ -131,7 +125,7 @@ router.post('/recoverPassword', async (req, res, next) => {
         const user = await User.findOne({ email }).exec();
 
         if (!user) {
-            res.json({ success: true, message: i18n.__('invalid_credentials') });
+            res.json({ success: true, error: i18n.__('invalid_credentials') });
             return;
         }
 
@@ -185,31 +179,21 @@ router.put('/me/change-password', jwtAuth(), async (req, res, next) => {
     const { password, newPassword, passwordConfirmation } = req.body;
 
     if (!password) {
-        const err = new Error(i18n.__('field_requiered %s', 'password'));
-        err.status = 422;
-        next(err);
+        res.json({ success: true, error: i18n.__('field_requiered %s', 'password') });
         return;
     }
 
     if (!newPassword) {
-        const err = new Error(i18n.__('field_requiered %s', 'newPassword'));
-        err.status = 422;
-        next(err);
+        res.json({ success: true, error: i18n.__('field_requiered %s', 'newPassword') });
         return;
     }
     if (!passwordConfirmation) {
-        const err = new Error(i18n.__('field_requiered %s', 'passwordConfirmation'));
-        err.status = 422;
-        next(err);
+        res.json({ success: true, error: i18n.__('field_requiered %s', 'passwordConfirmation') });
         return;
     }
 
     if (newPassword !== passwordConfirmation) {
-        const err = new Error(
-            i18n.__('should_them_be_equals %s %s', 'newPassword', 'passwordConfirmation'),
-        );
-        err.status = 422;
-        next(err);
+        res.json({ success: true, error: i18n.__('should_them_be_equals %s %s', 'newPassword', 'passwordConfirmation') });
         return;
     }
 
@@ -254,9 +238,7 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
         // username is not undefined and exists an user with that username
         // existing user is different from a logged user
         if (username && userByUsername && currentUser.username !== userByUsername.username) {
-            const err = new Error(i18n.__('username_registered'));
-            err.status = 422;
-            next(err);
+            res.json({ success: true, error: i18n.__('username_registered') });
             return;
         } else if (username) {
             props.username = username;
@@ -269,10 +251,7 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
         // email is not undefined and exists an user with that email
         // existing user is different from a logged user
         if (email && userByEmail && currentUser.email !== userByEmail.email) {
-            const err = new Error(i18n.__('email_registered'));
-            err.status = 422;
-            next(err);
-            return;
+            res.json({ success: true, error: i18n.__('email_registered') });
         } else if (email) {
             props.email = email;
         }
@@ -293,9 +272,7 @@ router.post('/me/photo', jwtAuth(), uploadS3.single('image'), async (req, res, n
     i18n.checkLanguage(req);
 
     if (!req.file) {
-        const err = new Error(i18n.__('field_requiered %s', 'image'));
-        err.status = 422;
-        next(err);
+        res.json({ success: true, error: i18n.__('field_requiered %s', 'image') });
         return;
     }
 
