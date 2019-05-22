@@ -282,7 +282,7 @@ router.post('/me/photo', jwtAuth(), uploadS3.single('image'), async (req, res, n
         const update = { photo: userPerfilPath };
         const updatedUser = await User.findOneAndUpdate(query, update);
 
-        res.json({ success: true, data: updatedUser });
+        res.json({ success: true, data: userPerfilPath, metadata: updatedUser });
     } catch (err) {
         return next(err);
     }
