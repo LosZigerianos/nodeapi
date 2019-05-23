@@ -1,1820 +1,1996 @@
 {
-    "meta":{
-       "code":200,
-       "requestId":"5cc479409fb6b7571a5f4284"
-    },
-    "data":{
-       "venues":[
-          {
-             "id":"4adcda37f964a5201f3c21e3",
-             "name":"Puerta del Sol",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Pl. Puerta del Sol",
-                "lat":40.416888020226295,
-                "lng":-3.703363480483436,
-                "postalCode":"28013",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Pl. Puerta del Sol",
-                   "28013 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d164941735",
-                   "name":"Plaza",
-                   "pluralName":"Plazas",
-                   "shortName":"Plaza",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/plaza_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"5b615e53088158002cd70561",
-             "name":"Vips",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Puerta del Sol",
-                "lat":40.416508,
-                "lng":-3.702508,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.416508,
-                      "lng":-3.702508
-                   }
-                ],
-                "postalCode":"28012",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Puerta del Sol",
-                   "28012 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d16e941735",
-                   "name":"Restaurante de comida rápida",
-                   "pluralName":"Restaurantes de comida rápida",
-                   "shortName":"Comida rápida",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/fastfood_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4cfa60b7d7206ea8bf833869",
-             "name":"Pans&Company",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Pl. de la Puerta del Sol",
-                "lat":40.4169734546592,
-                "lng":-3.702426194456961,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.4169734546592,
-                      "lng":-3.702426194456961
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Pl. de la Puerta del Sol",
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1c5941735",
-                   "name":"Local de sándwiches",
-                   "pluralName":"Locales de bocadillos",
-                   "shortName":"Sándwiches",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/deli_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4f4663d2e4b00ed04a3df423",
-             "name":"Hostal Ana Belen",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle de Espoz y Mina, 2, 28014 Madrid",
-                "lat":40.41660108640132,
-                "lng":-3.7023377664000696,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41660108640132,
-                      "lng":-3.7023377664000696
-                   }
-                ],
-                "postalCode":"28014",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle de Espoz y Mina, 2, 28014 Madrid",
-                   "28014 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1ee931735",
-                   "name":"Albergue juvenil",
-                   "pluralName":"Albergues",
-                   "shortName":"Albergue juvenil",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/travel\/hostel_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"5495789c498e5586edfd3579",
-             "name":"Serafina",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"C\/ Espoz y Mina, 4",
-                "lat":40.41642972263389,
-                "lng":-3.7022844736145575,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41642972263389,
-                      "lng":-3.7022844736145575
-                   }
-                ],
-                "postalCode":"28012",
-                "cc":"ES",
-                "city":"Madrid City Center",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "C\/ Espoz y Mina, 4",
-                   "28012 Madrid Centro Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1c4941735",
-                   "name":"Restaurante",
-                   "pluralName":"Restaurantes",
-                   "shortName":"Restaurante",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"5086c3f55262acd00bdb1e2d",
-             "name":"Cercanías Sol",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Pl. de la Puerta del Sol",
-                "lat":40.41694264946852,
-                "lng":-3.7030062744743986,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41694264946852,
-                      "lng":-3.7030062744743986
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Pl. de la Puerta del Sol",
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d129951735",
-                   "name":"Estación de tren",
-                   "pluralName":"Estaciones de tren",
-                   "shortName":"Estación de tren",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/travel\/trainstation_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"53f1fb17498e52a63d7ef57a",
-             "name":"Hostal Victoria 2",
-             "contact":{
- 
-             },
-             "location":{
-                "lat":40.41649931761419,
-                "lng":-3.7028530984138963,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41649931761419,
-                      "lng":-3.7028530984138963
-                   }
-                ],
-                "cc":"ES",
-                "country":"España",
-                "formattedAddress":[
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1ee931735",
-                   "name":"Albergue juvenil",
-                   "pluralName":"Albergues",
-                   "shortName":"Albergue juvenil",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/travel\/hostel_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4b6f3e87f964a520bbe62ce3",
-             "name":"Metro Sol",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Pl. de la Puerta del Sol",
-                "lat":40.416881555677016,
-                "lng":-3.703038460187899,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.416881555677016,
-                      "lng":-3.703038460187899
-                   }
-                ],
-                "postalCode":"28013",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Pl. de la Puerta del Sol",
-                   "28013 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1fd931735",
-                   "name":"Estación de metro",
-                   "pluralName":"Estaciones de metro",
-                   "shortName":"Metro",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/travel\/subway_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4b801c4ef964a520285330e3",
-             "name":"Estatua del Oso y el Madroño",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Pl. de la Puerta del Sol",
-                "crossStreet":"C. de Alcalá",
-                "lat":40.41696040770478,
-                "lng":-3.702651301596941,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41696040770478,
-                      "lng":-3.702651301596941
-                   }
-                ],
-                "postalCode":"28013",
-                "cc":"ES",
-                "neighborhood":"Sol",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Pl. de la Puerta del Sol (C. de Alcalá)",
-                   "28013 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d12d941735",
-                   "name":"Monumento\/Edificio histórico",
-                   "pluralName":"Monumentos\/Puntos de referencia",
-                   "shortName":"Edificio histórico",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/government_monument_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"538a4c78498e264f18c776b2",
-             "name":"Apple Puerta del Sol",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Pl. de la Puerta del Sol, 1",
-                "crossStreet":"C. Alcalá",
-                "lat":40.4168038,
-                "lng":-3.7022209,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.4168038,
-                      "lng":-3.7022209
-                   }
-                ],
-                "postalCode":"28013",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Pl. de la Puerta del Sol, 1 (C. Alcalá)",
-                   "28013 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d122951735",
-                   "name":"Tienda de electrónica",
-                   "pluralName":"Tiendas de electrónica",
-                   "shortName":"Electrónica",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/technology_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":true,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4d0f948371e8a1cd7a8a7bbd",
-             "name":"Aplauso",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Carretas 29",
-                "lat":40.41568367412913,
-                "lng":-3.7032445560462137,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41568367412913,
-                      "lng":-3.7032445560462137
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Carretas 29",
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d107951735",
-                   "name":"Zapatería",
-                   "pluralName":"Zapaterías",
-                   "shortName":"Zapatos",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/apparel_shoestore_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"5b2e0f97d8096e002c73ad9b",
-             "name":"Xiaomi Store",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle carretas 5",
-                "lat":40.416405394736124,
-                "lng":-3.7032103468362965,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.416405394736124,
-                      "lng":-3.7032103468362965
-                   }
-                ],
-                "postalCode":"28012",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle carretas 5",
-                   "28012 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d122951735",
-                   "name":"Tienda de electrónica",
-                   "pluralName":"Tiendas de electrónica",
-                   "shortName":"Electrónica",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/technology_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4eed2d658b81bbbf5ce60763",
-             "name":"Bingo enracha Universal",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"C. Carretas, 13",
-                "lat":40.41615245981799,
-                "lng":-3.702759418458524,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41615245981799,
-                      "lng":-3.702759418458524
-                   }
-                ],
-                "postalCode":"28012",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "C. Carretas, 13",
-                   "28012 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d17c941735",
-                   "name":"Casino",
-                   "pluralName":"Casinos",
-                   "shortName":"Casino",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/casino_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":true,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "venuePage":{
-                "id":"33689642"
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4c9da73aca44236a4d2a2399",
-             "name":"Hostal Alhambra Suites",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"calle de Espoz y Mina, 8",
-                "lat":40.41616835679364,
-                "lng":-3.702313564775626,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41616835679364,
-                      "lng":-3.702313564775626
-                   }
-                ],
-                "postalCode":"28012",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "calle de Espoz y Mina, 8",
-                   "28012 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1ee931735",
-                   "name":"Albergue juvenil",
-                   "pluralName":"Albergues",
-                   "shortName":"Albergue juvenil",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/travel\/hostel_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"516f3827e4b00a3ef5f44e92",
-             "name":"Hostal Apollo XI",
-             "contact":{
- 
-             },
-             "location":{
-                "lat":40.416281282876,
-                "lng":-3.7028332778548085,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.416281282876,
-                      "lng":-3.7028332778548085
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4f2a210c4b9023bd5841ed28",
-                   "name":"Complejo habitacional",
-                   "pluralName":"Complejos habitacionales",
-                   "shortName":"Complejo habitacional",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/housingdevelopment_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4f7ddadad4f2554c7ea28134",
-             "name":"Hotel NH Collection Madrid Paseo del Prado",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Pl. Cánovas del Castillo, 4",
-                "lat":40.4165,
-                "lng":-3.70256,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.4165,
-                      "lng":-3.70256
-                   }
-                ],
-                "postalCode":"28014",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Pl. Cánovas del Castillo, 4",
-                   "28014 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1fa931735",
-                   "name":"Hotel",
-                   "pluralName":"Hoteles",
-                   "shortName":"Hotel",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/travel\/hotel_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":true,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4c28ac2b97d00f47df2a40ea",
-             "name":"Marypaz",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Puerta del sol, 4",
-                "lat":40.41683668695608,
-                "lng":-3.7027042675015664,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41683668695608,
-                      "lng":-3.7027042675015664
-                   }
-                ],
-                "postalCode":"28013",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Puerta del sol, 4",
-                   "28013 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d107951735",
-                   "name":"Zapatería",
-                   "pluralName":"Zapaterías",
-                   "shortName":"Zapatos",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/apparel_shoestore_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":true,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"5152bcd8e4b0d3abfab0a21d",
-             "name":"Alimentacion Solmina",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle de Espoz y Mina, 4",
-                "crossStreet":"Pasage de Matheu",
-                "lat":40.41673235081773,
-                "lng":-3.702962111627612,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41673235081773,
-                      "lng":-3.702962111627612
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle de Espoz y Mina, 4 (Pasage de Matheu)",
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d118951735",
-                   "name":"Tienda de comestibles",
-                   "pluralName":"Tiendas de comestibles",
-                   "shortName":"Tienda de comestibles",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/food_grocery_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"50e58830e4b033c8809dd200",
-             "name":"Lola Rey",
-             "contact":{
- 
-             },
-             "location":{
-                "lat":40.41736237808486,
-                "lng":-3.7032594215855865,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41736237808486,
-                      "lng":-3.7032594215855865
-                   }
-                ],
-                "cc":"ES",
-                "neighborhood":"Sol",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d107951735",
-                   "name":"Zapatería",
-                   "pluralName":"Zapaterías",
-                   "shortName":"Zapatos",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/apparel_shoestore_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"58261e4870fc421beb381a41",
-             "name":"calle san ricardo",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle san ricardo",
-                "lat":40.41615,
-                "lng":-3.703321,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41615,
-                      "lng":-3.703321
-                   }
-                ],
-                "cc":"ES",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle san ricardo",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"52e81612bcbc57f1066b79ee",
-                   "name":"Arte callejero",
-                   "pluralName":"Puestos de arte callejero",
-                   "shortName":"Arte callejero",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/default_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"563b7525cd10e8c24f239bb6",
-             "name":"Bacoa",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Carrera de San Jerónimo, 3",
-                "lat":40.416697729325435,
-                "lng":-3.7016824585888597,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.416697729325435,
-                      "lng":-3.7016824585888597
-                   }
-                ],
-                "postalCode":"28014",
-                "cc":"ES",
-                "city":"Madrid City Center",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Carrera de San Jerónimo, 3",
-                   "28014 Madrid Centro Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d16c941735",
-                   "name":"Hamburguesería",
-                   "pluralName":"Hamburgueserías",
-                   "shortName":"Hamburguesas",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/burger_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":true,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"50fe7d36e0e20411be59c45b",
-             "name":"Codere apuestas",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle Espoz y Mina, 2",
-                "lat":40.41652659939546,
-                "lng":-3.7023282051086426,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41652659939546,
-                      "lng":-3.7023282051086426
-                   }
-                ],
-                "postalCode":"28012",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle Espoz y Mina, 2",
-                   "28012 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1f1931735",
-                   "name":"Entretenimiento general",
-                   "pluralName":"Entretenimiento general",
-                   "shortName":"Entretenimiento",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/default_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":true,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4c6fb91db5a5236a48f74d52",
-             "name":"+ Vision",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Puerta del Sol 14",
-                "lat":40.41698413162549,
-                "lng":-3.7027936367599175,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41698413162549,
-                      "lng":-3.7027936367599175
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Puerta del Sol 14",
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1ff941735",
-                   "name":"Tienda miscelánea",
-                   "pluralName":"Tiendas misceláneas",
-                   "shortName":"Tienda",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/default_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4f9e7415e4b02aa9c18f8dcd",
-             "name":"Madrid Gift",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle Del Arenal 5",
-                "lat":40.41681225059205,
-                "lng":-3.7028580535548814,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41681225059205,
-                      "lng":-3.7028580535548814
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle Del Arenal 5",
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d128951735",
-                   "name":"Tienda de regalos",
-                   "pluralName":"Tiendas de regalos",
-                   "shortName":"Tienda de regalos",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/giftshop_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4ec64a11722eeaa24c95e102",
-             "name":"La Canela",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle de Las Carretas",
-                "lat":40.416941,
-                "lng":-3.702924,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.416941,
-                      "lng":-3.702924
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle de Las Carretas",
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1d3941735",
-                   "name":"Restaurante vegetariano\/vegano",
-                   "pluralName":"Restaurantes vegetarianos\/veganos",
-                   "shortName":"Vegetariana\/Vegetariana estricta",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/vegetarian_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4edc9ac5e300851bfc1a780c",
-             "name":"Farmacia Company",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Sol",
-                "lat":40.41692107842013,
-                "lng":-3.702456688706806,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41692107842013,
-                      "lng":-3.702456688706806
-                   }
-                ],
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Sol",
-                   "Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d10f951735",
-                   "name":"Farmacia",
-                   "pluralName":"Farmacias",
-                   "shortName":"Farmacia",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/pharmacy_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4cba3efcf50e224b26c2f2fb",
-             "name":"O' Miño",
-             "contact":{
- 
-             },
-             "location":{
-                "lat":40.41684749588895,
-                "lng":-3.7026325952292174,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41684749588895,
-                      "lng":-3.7026325952292174
-                   }
-                ],
-                "cc":"ES",
-                "country":"España",
-                "formattedAddress":[
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d116941735",
-                   "name":"Bar",
-                   "pluralName":"Bares",
-                   "shortName":"Bar",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"5478dde0498eab68d4d6423f",
-             "name":"Rosi La Loca",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle Cadiz 4",
-                "lat":40.415821011717526,
-                "lng":-3.7029546044326276,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.415821011717526,
-                      "lng":-3.7029546044326276
-                   }
-                ],
-                "postalCode":"28012",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle Cadiz 4",
-                   "28012 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1db931735",
-                   "name":"Restaurante de tapas",
-                   "pluralName":"Restaurantes de tapas",
-                   "shortName":"Tapas",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/tapas_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":true,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "venuePage":{
-                "id":"136851529"
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4b6c7a86f964a520693d2ce3",
-             "name":"Las Bravas",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Psaje. de Matheu 5",
-                "lat":40.416133921554575,
-                "lng":-3.7020722856015755,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.416133921554575,
-                      "lng":-3.7020722856015755
-                   }
-                ],
-                "postalCode":"28012",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Psaje. de Matheu 5",
-                   "28012 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d1db931735",
-                   "name":"Restaurante de tapas",
-                   "pluralName":"Restaurantes de tapas",
-                   "shortName":"Tapas",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/tapas_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":false,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          },
-          {
-             "id":"4c2dbe353a4d0f47b54fe486",
-             "name":"Dunkin' Coffee",
-             "contact":{
- 
-             },
-             "location":{
-                "address":"Calle de la Victoria 2",
-                "crossStreet":"Esq. Carrera de San Jerónimo 4",
-                "lat":40.41667587441991,
-                "lng":-3.7016327412408496,
-                "labeledLatLngs":[
-                   {
-                      "label":"display",
-                      "lat":40.41667587441991,
-                      "lng":-3.7016327412408496
-                   }
-                ],
-                "postalCode":"28014",
-                "cc":"ES",
-                "city":"Madrid",
-                "state":"Madrid",
-                "country":"España",
-                "formattedAddress":[
-                   "Calle de la Victoria 2 (Esq. Carrera de San Jerónimo 4)",
-                   "28014 Madrid Madrid",
-                   "España"
-                ]
-             },
-             "categories":[
-                {
-                   "id":"4bf58dd8d48988d148941735",
-                   "name":"Tienda de donuts",
-                   "pluralName":"Tiendas de donuts",
-                   "shortName":"Donuts",
-                   "icon":{
-                      "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/donuts_",
-                      "suffix":".png"
-                   },
-                   "primary":true
-                }
-             ],
-             "verified":true,
-             "stats":{
-                "tipCount":0,
-                "usersCount":0,
-                "checkinsCount":0,
-                "visitsCount":0
-             },
-             "beenHere":{
-                "count":0,
-                "lastCheckinExpiredAt":0,
-                "marked":false,
-                "unconfirmedCount":0
-             },
-             "referralId":"v-1556379968",
-             "venueChains":[
- 
-             ],
-             "hasPerk":false
-          }
-       ],
-       "confident":false,
-       "geocode":{
-          "what":"",
-          "where":"madrid",
-          "feature":{
-             "cc":"ES",
-             "name":"Madrid",
-             "displayName":"Madrid, España",
-             "matchedName":"Madrid, España",
-             "highlightedName":"<b>Madrid<\/b>, España",
-             "woeType":7,
-             "slug":"madrid",
-             "id":"geonameid:3117735",
-             "longId":"72057594041045671",
-             "geometry":{
-                "center":{
-                   "lat":40.4165,
-                   "lng":-3.70256
-                },
-                "bounds":{
-                   "ne":{
-                      "lat":40.64339099993895,
-                      "lng":-3.5178330153857993
-                   },
-                   "sw":{
-                      "lat":40.273124093367976,
-                      "lng":-3.8890639517477053
-                   }
-                }
-             }
-          },
-          "parents":[
- 
-          ]
-       }
-    }
+   "meta": {
+      "code":200,
+      "requestId":"5cc479409fb6b7571a5f4284"
+   },
+   "data": {
+      "venues": [
+         {
+            "id":"5b615e53088158002cd70561",
+            "name":"Vips",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Puerta del Sol",
+               "lat":40.416508,
+               "lng":-3.702508,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416508,
+                     "lng":-3.702508
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Puerta del Sol",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d16e941735",
+                  "name":"Fast Food Restaurant",
+                  "pluralName":"Fast Food Restaurants",
+                  "shortName":"Fast Food",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4adcda37f964a5201f3c21e3",
+            "name":"Puerta del Sol",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Pl. Puerta del Sol",
+               "lat":40.416961245240365,
+               "lng":-3.7031850939323796,
+               "postalCode":"28013",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Pl. Puerta del Sol",
+                  "28013 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d164941735",
+                  "name":"Plaza",
+                  "pluralName":"Plazas",
+                  "shortName":"Plaza",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/parks_outdoors/plaza_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":4,
+               "summary":"4 people are here",
+               "groups":[
+                  {
+                     "type":"others",
+                     "name":"Other people here",
+                     "count":4,
+                     "items":[
+      
+                     ]
+                  }
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"5495789c498e5586edfd3579",
+            "name":"Serafina",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"C/ Espoz y Mina, 4",
+               "lat":40.41642972263389,
+               "lng":-3.7022844736145575,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41642972263389,
+                     "lng":-3.7022844736145575
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid City Center",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "C/ Espoz y Mina, 4",
+                  "28012 City Center Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1c4941735",
+                  "name":"Restaurant",
+                  "pluralName":"Restaurants",
+                  "shortName":"Restaurant",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/default_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4b6f3e87f964a520bbe62ce3",
+            "name":"Metro Sol",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Pl. de la Puerta del Sol",
+               "lat":40.416881555677016,
+               "lng":-3.703038460187899,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416881555677016,
+                     "lng":-3.703038460187899
+                  }
+               ],
+               "postalCode":"28013",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Pl. de la Puerta del Sol",
+                  "28013 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1fd931735",
+                  "name":"Metro Station",
+                  "pluralName":"Metro Stations",
+                  "shortName":"Metro",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/subway_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4b801c4ef964a520285330e3",
+            "name":"Estatua del Oso y el Madroño",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Pl. de la Puerta del Sol",
+               "crossStreet":"C. de Alcalá",
+               "lat":40.41696040770478,
+               "lng":-3.702651301596941,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41696040770478,
+                     "lng":-3.702651301596941
+                  }
+               ],
+               "postalCode":"28013",
+               "cc":"ES",
+               "neighborhood":"Sol",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Pl. de la Puerta del Sol (C. de Alcalá)",
+                  "28013 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d12d941735",
+                  "name":"Monument / Landmark",
+                  "pluralName":"Monuments / Landmarks",
+                  "shortName":"Landmark",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/building/government_monument_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4f4663d2e4b00ed04a3df423",
+            "name":"Hostal Ana Belen",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle de Espoz y Mina, 2, 28014 Madrid",
+               "lat":40.41660108640132,
+               "lng":-3.7023377664000696,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41660108640132,
+                     "lng":-3.7023377664000696
+                  }
+               ],
+               "postalCode":"28014",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle de Espoz y Mina, 2, 28014 Madrid",
+                  "28014 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1ee931735",
+                  "name":"Hostel",
+                  "pluralName":"Hostels",
+                  "shortName":"Hostel",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hostel_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"5b2e0f97d8096e002c73ad9b",
+            "name":"Xiaomi Store",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle carretas 5",
+               "lat":40.416405394736124,
+               "lng":-3.7032103468362965,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416405394736124,
+                     "lng":-3.7032103468362965
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle carretas 5",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d122951735",
+                  "name":"Electronics Store",
+                  "pluralName":"Electronics Stores",
+                  "shortName":"Electronics",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/technology_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"53f1fb17498e52a63d7ef57a",
+            "name":"Hostal Victoria 2",
+            "contact":{
+      
+            },
+            "location":{
+               "lat":40.41649931761419,
+               "lng":-3.7028530984138963,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41649931761419,
+                     "lng":-3.7028530984138963
+                  }
+               ],
+               "cc":"ES",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1ee931735",
+                  "name":"Hostel",
+                  "pluralName":"Hostels",
+                  "shortName":"Hostel",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hostel_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"55cbaf10498e3444aa55d9e0",
+            "name":"Parilla Alhambra",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"7, Calle de Victoria",
+               "lat":40.41830988218405,
+               "lng":-3.7024913744322356,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41830988218405,
+                     "lng":-3.7024913744322356
+                  }
+               ],
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "7, Calle de Victoria",
+                  "Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d150941735",
+                  "name":"Spanish Restaurant",
+                  "pluralName":"Spanish Restaurants",
+                  "shortName":"Spanish",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/spanish_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4f7ddadad4f2554c7ea28134",
+            "name":"Hotel NH Collection Madrid Paseo del Prado",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Pl. Cánovas del Castillo, 4",
+               "lat":40.4165,
+               "lng":-3.70256,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.4165,
+                     "lng":-3.70256
+                  }
+               ],
+               "postalCode":"28014",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Pl. Cánovas del Castillo, 4",
+                  "28014 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1fa931735",
+                  "name":"Hotel",
+                  "pluralName":"Hotels",
+                  "shortName":"Hotel",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":true,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4eed2d658b81bbbf5ce60763",
+            "name":"Bingo enracha Universal",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"C. Carretas, 13",
+               "lat":40.41615245981799,
+               "lng":-3.702759418458524,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41615245981799,
+                     "lng":-3.702759418458524
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "C. Carretas, 13",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d17c941735",
+                  "name":"Casino",
+                  "pluralName":"Casinos",
+                  "shortName":"Casino",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/casino_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":true,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "venuePage":{
+               "id":"33689642"
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"538a4c78498e264f18c776b2",
+            "name":"Apple Puerta del Sol",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Pl. de la Puerta del Sol, 1",
+               "crossStreet":"C. Alcalá",
+               "lat":40.4168038,
+               "lng":-3.7022209,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.4168038,
+                     "lng":-3.7022209
+                  }
+               ],
+               "postalCode":"28013",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Pl. de la Puerta del Sol, 1 (C. Alcalá)",
+                  "28013 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d122951735",
+                  "name":"Electronics Store",
+                  "pluralName":"Electronics Stores",
+                  "shortName":"Electronics",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/technology_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":true,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"5554513c498e64955f7f10ac",
+            "name":"Calle del Arenal, 11,",
+            "contact":{
+      
+            },
+            "location":{
+               "lat":40.41678268632694,
+               "lng":-3.7026945341585136,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41678268632694,
+                     "lng":-3.7026945341585136
+                  }
+               ],
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+      
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"50e44123e4b0b76a47df7302",
+            "name":"Amigos aquí me quedo yo",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Espoz y Mina 5",
+               "lat":40.416071786933095,
+               "lng":-3.702233978859556,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416071786933095,
+                     "lng":-3.702233978859556
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Espoz y Mina 5",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1c4941735",
+                  "name":"Restaurant",
+                  "pluralName":"Restaurants",
+                  "shortName":"Restaurant",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/default_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":true,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "venuePage":{
+               "id":"127400081"
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4b6c7a86f964a520693d2ce3",
+            "name":"Las Bravas",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Psaje. de Matheu 5",
+               "lat":40.416133921554575,
+               "lng":-3.7020722856015755,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416133921554575,
+                     "lng":-3.7020722856015755
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Psaje. de Matheu 5",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1db931735",
+                  "name":"Tapas Restaurant",
+                  "pluralName":"Tapas Restaurants",
+                  "shortName":"Tapas",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/tapas_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"56b0f88a498e3c3b51995ce3",
+            "name":"lounge estrella damm",
+            "contact":{
+      
+            },
+            "location":{
+               "lat":40.416613,
+               "lng":-3.703193,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416613,
+                     "lng":-3.703193
+                  }
+               ],
+               "cc":"ES",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d155941735",
+                  "name":"Gastropub",
+                  "pluralName":"Gastropubs",
+                  "shortName":"Gastropub",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/gastropub_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4cba3efcf50e224b26c2f2fb",
+            "name":"O' Miño",
+            "contact":{
+      
+            },
+            "location":{
+               "lat":40.41684749588895,
+               "lng":-3.7026325952292174,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41684749588895,
+                     "lng":-3.7026325952292174
+                  }
+               ],
+               "cc":"ES",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d116941735",
+                  "name":"Bar",
+                  "pluralName":"Bars",
+                  "shortName":"Bar",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"5342b72f498e3fa654a0c98c",
+            "name":"La Carmela",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"C. de la Victoria, 4",
+               "lat":40.41613640584133,
+               "lng":-3.701752025935887,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41613640584133,
+                     "lng":-3.701752025935887
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "C. de la Victoria, 4",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d150941735",
+                  "name":"Spanish Restaurant",
+                  "pluralName":"Spanish Restaurants",
+                  "shortName":"Spanish",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/spanish_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"5478dde0498eab68d4d6423f",
+            "name":"Rosi La Loca",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle Cadiz 4",
+               "lat":40.415821011717526,
+               "lng":-3.7029546044326276,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.415821011717526,
+                     "lng":-3.7029546044326276
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle Cadiz 4",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1db931735",
+                  "name":"Tapas Restaurant",
+                  "pluralName":"Tapas Restaurants",
+                  "shortName":"Tapas",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/tapas_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":true,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "venuePage":{
+               "id":"136851529"
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4f33cbace4b0b5f6dee6d145",
+            "name":"La Pulpería de Victoria",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle de La Victoria, 2, (Junto a Puerta del Sol)",
+               "crossStreet":"Carrera de San Jerónimo",
+               "lat":40.416506381,
+               "lng":-3.70170887,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416506381,
+                     "lng":-3.70170887
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle de La Victoria, 2, (Junto a Puerta del Sol) (Carrera de San Jerónimo)",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1ce941735",
+                  "name":"Seafood Restaurant",
+                  "pluralName":"Seafood Restaurants",
+                  "shortName":"Seafood",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/seafood_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":true,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4c3bb390d94dc9b6174300e8",
+            "name":"PaPizza",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"C. Carretas, 3",
+               "crossStreet":"Pl. de la Puerta del Sol",
+               "lat":40.41668374127545,
+               "lng":-3.703309981324974,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41668374127545,
+                     "lng":-3.703309981324974
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "C. Carretas, 3 (Pl. de la Puerta del Sol)",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1ca941735",
+                  "name":"Pizza Place",
+                  "pluralName":"Pizza Places",
+                  "shortName":"Pizza",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4ec64a11722eeaa24c95e102",
+            "name":"La Canela",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle de Las Carretas",
+               "lat":40.416941,
+               "lng":-3.702924,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416941,
+                     "lng":-3.702924
+                  }
+               ],
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle de Las Carretas",
+                  "Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1d3941735",
+                  "name":"Vegetarian / Vegan Restaurant",
+                  "pluralName":"Vegetarian / Vegan Restaurants",
+                  "shortName":"Vegetarian / Vegan",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/vegetarian_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4d88fafd401a224b635d8318",
+            "name":"La Ria",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Pje de Matheu, 2",
+               "lat":40.41612245293183,
+               "lng":-3.7020163595243427,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41612245293183,
+                     "lng":-3.7020163595243427
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Pje de Matheu, 2",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d150941735",
+                  "name":"Spanish Restaurant",
+                  "pluralName":"Spanish Restaurants",
+                  "shortName":"Spanish",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/spanish_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4c2dbe353a4d0f47b54fe486",
+            "name":"Dunkin' Coffee",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle de la Victoria 2",
+               "crossStreet":"Esq. Carrera de San Jerónimo 4",
+               "lat":40.41667587441991,
+               "lng":-3.7016327412408496,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41667587441991,
+                     "lng":-3.7016327412408496
+                  }
+               ],
+               "postalCode":"28014",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle de la Victoria 2 (Esq. Carrera de San Jerónimo 4)",
+                  "28014 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d148941735",
+                  "name":"Donut Shop",
+                  "pluralName":"Donut Shops",
+                  "shortName":"Donuts",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/donuts_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":true,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"516f3827e4b00a3ef5f44e92",
+            "name":"Hostal Apollo XI",
+            "contact":{
+      
+            },
+            "location":{
+               "lat":40.416281282876,
+               "lng":-3.7028332778548085,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.416281282876,
+                     "lng":-3.7028332778548085
+                  }
+               ],
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4f2a210c4b9023bd5841ed28",
+                  "name":"Housing Development",
+                  "pluralName":"Housing Developments",
+                  "shortName":"Housing Development",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/building/housingdevelopment_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"5152bcd8e4b0d3abfab0a21d",
+            "name":"Alimentacion Solmina",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle de Espoz y Mina, 4",
+               "crossStreet":"Pasage de Matheu",
+               "lat":40.41673235081773,
+               "lng":-3.702962111627612,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41673235081773,
+                     "lng":-3.702962111627612
+                  }
+               ],
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle de Espoz y Mina, 4 (Pasage de Matheu)",
+                  "Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d118951735",
+                  "name":"Grocery Store",
+                  "pluralName":"Grocery Stores",
+                  "shortName":"Grocery Store",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/food_grocery_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"5358d6a8498e454970a82cdd",
+            "name":"Cafe & Tapas",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Carrera De San Jerónimo 3",
+               "crossStreet":"Sol",
+               "lat":40.4167319824383,
+               "lng":-3.701885959908235,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.4167319824383,
+                     "lng":-3.701885959908235
+                  }
+               ],
+               "postalCode":"28013",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Carrera De San Jerónimo 3 (Sol)",
+                  "28013 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d16d941735",
+                  "name":"Café",
+                  "pluralName":"Cafés",
+                  "shortName":"Café",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"58261e4870fc421beb381a41",
+            "name":"calle san ricardo",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle san ricardo",
+               "lat":40.41615,
+               "lng":-3.703321,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41615,
+                     "lng":-3.703321
+                  }
+               ],
+               "cc":"ES",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle san ricardo",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"52e81612bcbc57f1066b79ee",
+                  "name":"Street Art",
+                  "pluralName":"Street Art Installations",
+                  "shortName":"Street Art",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/default_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4edc9ac5e300851bfc1a780c",
+            "name":"Farmacia Company",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Sol",
+               "lat":40.41692107842013,
+               "lng":-3.702456688706806,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.41692107842013,
+                     "lng":-3.702456688706806
+                  }
+               ],
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Sol",
+                  "Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d10f951735",
+                  "name":"Pharmacy",
+                  "pluralName":"Pharmacies",
+                  "shortName":"Pharmacy",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/shops/pharmacy_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         },
+         {
+            "id":"4eb5fa094901cef9d8cbfacb",
+            "name":"Hostal Victoria II",
+            "contact":{
+      
+            },
+            "location":{
+               "address":"Calle de las Carretas, 3, 28012 Madrid",
+               "crossStreet":"Calle Mayor",
+               "lat":40.4163762381738,
+               "lng":-3.703209810933633,
+               "labeledLatLngs":[
+                  {
+                     "label":"display",
+                     "lat":40.4163762381738,
+                     "lng":-3.703209810933633
+                  }
+               ],
+               "postalCode":"28012",
+               "cc":"ES",
+               "city":"Madrid",
+               "state":"Madrid",
+               "country":"Spain",
+               "formattedAddress":[
+                  "Calle de las Carretas, 3, 28012 Madrid (Calle Mayor)",
+                  "28012 Madrid Madrid",
+                  "Spain"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d1fa931735",
+                  "name":"Hotel",
+                  "pluralName":"Hotels",
+                  "shortName":"Hotel",
+                  "icon":{
+                     "prefix":"https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "tipCount":0,
+               "usersCount":0,
+               "checkinsCount":0,
+               "visitsCount":0
+            },
+            "beenHere":{
+               "count":0,
+               "lastCheckinExpiredAt":0,
+               "marked":false,
+               "unconfirmedCount":0
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nobody here",
+               "groups":[
+      
+               ]
+            },
+            "referralId":"v-1558636383",
+            "venueChains":[
+      
+            ],
+            "hasPerk":false
+         }
+      ]
+   }
  }

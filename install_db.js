@@ -61,10 +61,13 @@ const uploadData = async function() {
         const madridPlaces = await extractModels('locations_madrid');
         const vigoPlaces = await extractModels('locations_vigo');
         const serenaPlaces = await extractModels('locations_la_serena');
+        const barcelonaPlaces = await extractModels('locations_barcelona');
+
         const arrPlaces = (zaragozaPlaces.venues)
         .concat(madridPlaces.venues)
         .concat(vigoPlaces.venues)
-        .concat(serenaPlaces.venues);
+        .concat(serenaPlaces.venues)
+        .concat(barcelonaPlaces.venues);
         // Store data in database
         for (const place of arrPlaces) {
             const newLocation = new Location(place);

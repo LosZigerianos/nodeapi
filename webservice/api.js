@@ -23,7 +23,7 @@ module.exports = {
         try {
             return await axios.get(url);
         } catch(err) {
-            console.log('Ha ocurrido un error: ', err.response.data.meta);
+            console.log('(fetchLocationsByCity) An error occurred: ', err.response.data.meta);
             const error = new Error(err.response.data.meta.errorDetail);
             error.status = err.response.data.meta.code;
             return error;
@@ -42,7 +42,7 @@ module.exports = {
         try {
             return await axios.get(url);
         } catch(err) {
-            console.log('Ha ocurrido un error: ', err.response.data.meta);
+            console.log('(fetchLocationsByName) An error occurred: ', err.response.data.meta);
             const error = new Error(err.response.data.meta.errorDetail);
             error.status = err.response.data.meta.code;
             return error;
@@ -56,7 +56,7 @@ module.exports = {
         try {
             return await axios.get(url);
         } catch(err) {
-            console.log('Ha ocurrido un error: ', err.response.data.meta);
+            console.log('(fetchPhotosByLocationId) An error occurred: ', err.response.data.meta);
             const error = new Error(err.response.data.meta.errorDetail);
             error.status = err.response.data.meta.code;
             return error;

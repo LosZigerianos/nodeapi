@@ -240,38 +240,43 @@ const _parseArrayFourSquareToLocations = async arrPlaces => {
         let locations = [];
         for (const place of arrPlaces) {
             const existing = await Location.findOne({ id: place.id });
-            if (existing) return;
+            if (!existing) {
+                const newLocation = new Location(place);
+                newLocation.description =
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus.';
+                newLocation.geometry.coordinates = [place.location.lng, place.location.lat]; //[longitude, latitude]
+                newLocation.address = place.location.address;
+                newLocation.postalCode = place.location.postalCode;
+                newLocation.cc = place.location.cc;
+                newLocation.city = place.location.city;
+                newLocation.state = place.location.state;
+                newLocation.country = place.location.country;
+                newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+                newLocation.tags = place.categories.map(
+                    (currentCategory, index, array) => currentCategory.name,
+                );
 
-            const newLocation = new Location(place);
-            newLocation.description =
-                'Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus.';
-            newLocation.geometry.coordinates = [place.location.lng, place.location.lat]; //[longitude, latitude]
-            newLocation.address = place.location.address;
-            newLocation.postalCode = place.location.postalCode;
-            newLocation.cc = place.location.cc;
-            newLocation.city = place.location.city;
-            newLocation.state = place.location.state;
-            newLocation.country = place.location.country;
-            newLocation.formattedAddress = place.location.formattedAddress.join(', ');
-            newLocation.tags = place.categories.map(
-                (currentCategory, index, array) => currentCategory.name,
-            );
-            newLocation.comments = [];
-            if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
-                newLocation.rating.value =
-                    newLocation.rating.totalValues / newLocation.rating.totalVotes;
+                newLocation.comments = [];
+                
+                if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
+                    newLocation.rating.value =
+                        newLocation.rating.totalValues / newLocation.rating.totalVotes;
+                } else {
+                    newLocation.rating.value = 0;
+                }
+
+                newLocation.photos = [
+                    'https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg',
+                    'https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg',
+                ]; // TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
+                console.log('Guardando localizacion: ', newLocation.name);
+
+                await newLocation.save();
+
+                locations.push(newLocation);
             } else {
-                newLocation.rating.value = 0;
+                locations.push(existing);
             }
-
-            newLocation.photos = [
-                'https://fastly.4sqi.net/img/general/612x612/4189440_tfA12_JJyhZs7ZvV-PBLUQ1O6oGu_wvJSDMLcuZKBx4.jpg',
-                'https://fastly.4sqi.net/img/general/960x720/88036_aVd3RS7aEP98snzQmhs6e_-SWtdofBAe6NilL1RY7d0.jpg',
-            ]; // TODO: await _getPhotosFromFourSquareLocations(newLocation.id);
-            console.log('Guardando localizacion: ', newLocation.name);
-
-            await newLocation.save();
-            locations.push(newLocation);
         }
 
         // TEST
