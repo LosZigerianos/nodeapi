@@ -147,7 +147,7 @@ router.get('/place/:name', async (req, res, next) => {
         const locations = await Location.getPlacesByName(filter, skip, limit, fields, sort);
         
         if (!locations) {
-            res.json({ success: true, error: i18n.__('not_results') });
+            res.status(400).json({ success: true, error: i18n.__('not_results') });
             return;
         }
 
@@ -167,11 +167,13 @@ router.get('/near', async (req, res, next) => {
 
     try {
         if (!latitude) {
-            return res.json({ success: true, data: [] });
+            res.status(400).json({ success: true, error: i18n("field_requiered %s", "latitude") });
+            return;
         }
 
         if (!longitude) {
-            return res.json({ success: true, data: [] });
+            res.status(400).json({ success: true, error: i18n("field_requiered %s", "longitude") });
+            return;
         }
 
         const query = { latitude, longitude, meters };

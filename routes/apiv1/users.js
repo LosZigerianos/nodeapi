@@ -19,16 +19,16 @@ router.post('/login', async (req, res, next) => {
     i18n.checkLanguage(req);
 
     if (!req.body.email) {
-        res.json({ success: true, error: i18n.__('field_requiered %s', 'email') });
+        res.status(400).json({ success: true, error: i18n.__('field_requiered %s', 'email') });
         return;
     }
 
     if (!req.body.password) {
-        res.json({ success: true, error: i18n.__('field_requiered %s', 'password') });
+        res.status(400).json({ success: true, error: i18n.__('field_requiered %s', 'password') });
         return;
     }
 
-    const email = new RegExp('^' + req.body.email + '$', "i");
+    const email = new RegExp('^' + req.body.email + '$', 'i');
     const password = crypto
         .createHash('sha256')
         .update(req.body.password)
@@ -38,12 +38,12 @@ router.post('/login', async (req, res, next) => {
         const user = await User.findOne({ email }).exec();
 
         if (!user) {
-            res.json({ success: true, error: i18n.__('invalid_credentials') });
+            res.status(401).json({ success: true, error: i18n.__('invalid_credentials') });
             return;
         }
 
         if (password !== user.password) {
-            res.json({ success: true, error: i18n.__('invalid_credentials') });
+            res.status(401).json({ success: true, error: i18n.__('invalid_credentials') });
             return;
         }
 
@@ -74,20 +74,22 @@ router.post('/signup', async (req, res, next) => {
     i18n.checkLanguage(req);
 
     if (!req.body.email || !req.body.password) {
-        res.json({ success: true, error: i18n.__('field_requiered') });
+        res.status(400).json({ success: true, error: i18n.__('field_requiered') });
         return;
     }
 
     try {
-        const userByEmail = await User.findOne({ email: new RegExp('^' + req.body.email + '$', "i") });
+        const userByEmail = await User.findOne({
+            email: new RegExp('^' + req.body.email + '$', 'i'),
+        });
         if (userByEmail) {
-            res.json({ success: true, error: i18n.__('email_registered') });
+            res.status(422).json({ success: true, error: i18n.__('email_registered') });
             return;
         }
 
-        const userByUsername = await User.findOne({ username: new RegExp(req.body.username, "i") });
+        const userByUsername = await User.findOne({ username: new RegExp(req.body.username, 'i') });
         if (req.body.username && userByUsername) {
-            res.json({ success: true, error: i18n.__('username_registered') });
+            res.status(422).json({ success: true, error: i18n.__('username_registered') });
             return;
         }
 
@@ -119,7 +121,7 @@ router.post('/recoverPassword', async (req, res, next) => {
         return;
     }
 
-    const email = new RegExp('^' + req.body.email + '$', "i");
+    const email = new RegExp('^' + req.body.email + '$', 'i');
     try {
         const user = await User.findOne({ email }).exec();
 
@@ -178,21 +180,30 @@ router.put('/me/change-password', jwtAuth(), async (req, res, next) => {
     const { password, newPassword, passwordConfirmation } = req.body;
 
     if (!password) {
-        res.json({ success: true, error: i18n.__('field_requiered %s', 'password') });
+        res.status(400).json({ success: true, error: i18n.__('field_requiered %s', 'password') });
         return;
     }
 
     if (!newPassword) {
-        res.json({ success: true, error: i18n.__('field_requiered %s', 'newPassword') });
+        res.status(400).json({
+            success: true,
+            error: i18n.__('field_requiered %s', 'newPassword'),
+        });
         return;
     }
     if (!passwordConfirmation) {
-        res.json({ success: true, error: i18n.__('field_requiered %s', 'passwordConfirmation') });
+        res.status(400).json({
+            success: true,
+            error: i18n.__('field_requiered %s', 'passwordConfirmation'),
+        });
         return;
     }
 
     if (newPassword !== passwordConfirmation) {
-        res.json({ success: true, error: i18n.__('should_them_be_equals %s %s', 'newPassword', 'passwordConfirmation') });
+        res.status(400).json({
+            success: true,
+            error: i18n.__('should_them_be_equals %s %s', 'newPassword', 'passwordConfirmation'),
+        });
         return;
     }
 
@@ -204,7 +215,7 @@ router.put('/me/change-password', jwtAuth(), async (req, res, next) => {
     try {
         const query = { _id: req.user_id };
         const update = { password: passwordHash };
-        
+
         const userUpdated = await User.findOneAndUpdate(query, update);
 
         res.json({ success: true, data: userUpdated });
@@ -237,7 +248,7 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
         // username is not undefined and exists an user with that username
         // existing user is different from a logged user
         if (username && userByUsername && currentUser.username !== userByUsername.username) {
-            res.json({ success: true, error: i18n.__('username_registered') });
+            res.status(422).json({ success: true, error: i18n.__('username_registered') });
             return;
         } else if (username) {
             props.username = username;
@@ -250,12 +261,12 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
         // email is not undefined and exists an user with that email
         // existing user is different from a logged user
         if (email && userByEmail && currentUser.email !== userByEmail.email) {
-            res.json({ success: true, error: i18n.__('email_registered') });
+            res.status(422).json({ success: true, error: i18n.__('email_registered') });
         } else if (email) {
             props.email = email;
         }
 
-        const userUpdated = await currentUser.update(props);
+        const userUpdated = await User.findByIdAndUpdate(req.user_id, props);
 
         res.json({ success: true, data: userUpdated });
     } catch (err) {
@@ -271,7 +282,7 @@ router.post('/me/photo', jwtAuth(), uploadS3.single('image'), async (req, res, n
     i18n.checkLanguage(req);
 
     if (!req.file) {
-        res.json({ success: true, error: i18n.__('field_requiered %s', 'image') });
+        res.status(400).json({ success: true, error: i18n.__('field_requiered %s', 'image') });
         return;
     }
 

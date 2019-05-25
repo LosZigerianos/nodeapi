@@ -3,6 +3,7 @@
 	"email_registered": "E-mail already registered",
 	"username_registered": "Username already registered",
 	"field_requiered %s": "Field Required: %s",
+	"param_required %s": "Parameter Required: %s",
 	"invalid_field %s": "Invalid field: %s",
 	"invalid_user": "Invalid user",
 	"recover_password": "Recover password",
