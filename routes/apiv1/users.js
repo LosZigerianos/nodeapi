@@ -362,16 +362,16 @@ router.post('/following/add', jwtAuth(), async (req, res, next) => {
  * GET /following
  * Return following of a user
  */
-router.get('/:userId/following', jwtAuth(), async (req, res, next) => {
+router.get('/:followingId/following', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
-    const { userId } = req.params;
+    const { followingId } = req.params;
 
     try {
-        if (!userId) {
+        if (!followingId) {
             res.status(400).json({
                 success: true,
-                error: i18n.__('field_requiered %s', 'userId'),
+                error: i18n.__('field_requiered %s', 'followingId'),
             });
             return;
         }
@@ -388,16 +388,16 @@ router.get('/:userId/following', jwtAuth(), async (req, res, next) => {
  * GET /followers
  * Return following of a user
  */
-router.get('/:userId/followers', jwtAuth(), async (req, res, next) => {
+router.get('/:followerId/followers', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
-    const { userId } = req.params;
+    const { followerId } = req.params;
 
     try {
-        if (!userId) {
+        if (!followerId) {
             res.status(400).json({
                 success: true,
-                error: i18n.__('field_requiered %s', 'userId'),
+                error: i18n.__('field_requiered %s', 'followerId'),
             });
             return;
         }
@@ -405,6 +405,47 @@ router.get('/:userId/followers', jwtAuth(), async (req, res, next) => {
         const user = await User.findById(req.user_id).populate('followers');
 
         res.json({ success: true, data: user.followers, count: user.followers.length });
+    } catch (err) {
+        return next(err);
+    }
+});
+
+/**
+ * delete /following
+ * Return following of a user
+ */
+router.delete('/following/delete', jwtAuth(), async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    const { followingId } = req.body;
+
+    try {
+        if (!followingId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'followingId'),
+            });
+            return;
+        }
+
+        const following = await User.findById(followingId);
+        if (!following) {
+            res.status(422).json({
+                success: true,
+                error: i18n.__('field_invalid %s', 'followingId'),
+            });
+            return;
+        }
+
+        // delete following from current user
+        const user = await User.findByIdAndUpdate(req.user_id, {
+            $pull: { following: followingId },
+        });
+
+        // delete current user like follower from following User
+        following.update({ $pull: { followers: user.id } });
+
+        res.json({ success: true, data: user });
     } catch (err) {
         return next(err);
     }
