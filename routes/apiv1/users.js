@@ -362,11 +362,52 @@ router.post('/following/add', jwtAuth(), async (req, res, next) => {
  * GET /following
  * Return following of a user
  */
-router.get('/following', async (req, res, next) => {
+router.get('/:userId/following', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
+    const { userId } = req.params;
+
     try {
-    } catch (err) {}
+        if (!userId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'userId'),
+            });
+            return;
+        }
+
+        const user = await User.findById(req.user_id).populate('following');
+
+        res.json({ success: true, data: user.following, count: user.following.length });
+    } catch (err) {
+        return next(err);
+    }
+});
+
+/**
+ * GET /followers
+ * Return following of a user
+ */
+router.get('/:userId/followers', jwtAuth(), async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    const { userId } = req.params;
+
+    try {
+        if (!userId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'userId'),
+            });
+            return;
+        }
+
+        const user = await User.findById(req.user_id).populate('followers');
+
+        res.json({ success: true, data: user.followers, count: user.followers.length });
+    } catch (err) {
+        return next(err);
+    }
 });
 
 module.exports = router;
