@@ -315,4 +315,58 @@ router.get('/me', jwtAuth(), async (req, res, next) => {
     }
 });
 
+/**
+ * POST /following/add
+ * Return a user data
+ */
+router.post('/following/add', jwtAuth(), async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    try {
+        const { followingId } = req.body;
+
+        if (!followingId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'followingId'),
+            });
+            return;
+        }
+
+        const followingUser = await User.findById(followingId);
+        if (!followingUser) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('invalid_field %s', 'followingId'),
+            });
+            return;
+        }
+
+        const currentUser = await User.findById(req.user_id);
+
+        // update followingUser
+        followingUser.followers.addToSet(currentUser.id);
+        await followingUser.save();
+
+        // update currentUser
+        currentUser.following.addToSet(followingId);
+        await currentUser.save();
+
+        res.json({ success: true, data: currentUser });
+    } catch (err) {
+        return next(err);
+    }
+});
+
+/**
+ * GET /following
+ * Return following of a user
+ */
+router.get('/following', async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    try {
+    } catch (err) {}
+});
+
 module.exports = router;

@@ -36,7 +36,7 @@ commentScheme.statics.getByUsers = function(userIdsArray, skip, limit, fields, s
     return getComments(filter, skip, limit, fields, sort);
 };
 
-const getComments = (filter, skip, limit, fields, sort) => {
+const getComments = (filter, skip, limit, fields, sort = '-creationDate') => {
     // Create query
     const query = Comment.find(filter);
 
@@ -52,6 +52,12 @@ const getComments = (filter, skip, limit, fields, sort) => {
         .populate('user')
         .exec();
 };
+
+commentScheme.set('toJSON', {
+    transform: function(doc, ret, options) {
+        delete ret.__v;
+    },
+});
 
 // Create the model
 const Comment = mongoose.model('Comment', commentScheme);

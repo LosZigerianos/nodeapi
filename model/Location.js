@@ -158,6 +158,13 @@ locationScheme.statics.getPlacesByName = function(filter, skip, limit, fields, s
     return query.exec();
 };
 
+locationScheme.set('toJSON', {
+    transform: function(doc, ret, options) {       
+        delete ret.__v;
+        delete ret.id;
+    },
+});
+
 // Create the model
 const Location = mongoose.model('Location', locationScheme);
 

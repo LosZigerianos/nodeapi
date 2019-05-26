@@ -29,7 +29,7 @@ router.get('/location/:locationId', async (req, res, next) => {
     try {
         const comments = await Comment.getByLocation(locationId, skip, limit, fields, sort);
 
-        res.json({ success: true, results: comments });
+        res.json({ success: true, data: comments, count: comments.length });
     } catch (err) {
         next(err);
         return;
@@ -54,7 +54,7 @@ router.get('/user/:userId', async (req, res, next) => {
     try {
         const comments = await Comment.getByUser(userId, skip, limit, fields, sort);
 
-        res.json({ success: true, results: comments });
+        res.json({ success: true, data: comments, count: comments.length });
     } catch (err) {
         next(err);
         return;
@@ -78,7 +78,7 @@ router.get('/timeline', async (req, res, next) => {
 
         const comments = await Comment.getByUsers(followingUserArray, skip, limit, fields, sort);
 
-        res.json({ success: true, results: comments });
+        res.json({ success: true, data: comments, count: comments.length });
     } catch (err) {
         next(err);
         return;
@@ -106,21 +106,30 @@ router.post('/add', async (req, res, next) => {
 
         // validate if locationId is not undefined
         if (!locationId) {
-            res.status(400).json({ success: true, error: i18n.__('field_requiered %s', 'locationId') });
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'locationId'),
+            });
             return;
         }
 
         // validate if location id exist
         const location = await Location.findById(locationId);
         if (!location) {
-            res.status(422).json({ success: true, error: i18n.__('invalid_field %s', 'locationId') });
+            res.status(422).json({
+                success: true,
+                error: i18n.__('invalid_field %s', 'locationId'),
+            });
             return;
         }
 
         // create new comment
         const comment = await Comment.create({ user: userId, location: locationId, description });
 
-        res.json({ success: true, result: comment });
+        // add comment to current user
+        await User.findByIdAndUpdate(userId, { $addToSet: { comments: comment.id } });
+
+        res.json({ success: true, data: comment });
     } catch (err) {
         next(err);
         return;
@@ -141,10 +150,12 @@ router.delete('/:commentId/delete', async (req, res, next) => {
 
         // validate if comment exist
         if (!comment) {
-            res.status(422).json({ success: true, error: i18n.__('invalid_field %s', 'commentId') });
+            res.status(422).json({
+                success: true,
+                error: i18n.__('invalid_field %s', 'commentId'),
+            });
             return;
         }
-
 
         // validate if user is comment's own
         if (comment.user.toString() !== req.user_id) {
@@ -155,7 +166,10 @@ router.delete('/:commentId/delete', async (req, res, next) => {
         // delete comment
         await comment.deleteOne();
 
-        res.json({ success: true, result: comment });
+        // delete comment from user
+        await User.findByIdAndUpdate(req.user_id, { $pull: { comments: commentId } });
+
+        res.json({ success: true, data: comment });
     } catch (err) {
         next(err);
         return;
