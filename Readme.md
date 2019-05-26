@@ -138,6 +138,15 @@ Insert the followings fields like **File type**:
 
     - image
 
+### Add Following to other User  - POST Method
+
+To Add Following to other user, make a POST to: /users/following/add
+```http://localhost:3000/apiv1/users/following/add```
+
+Insert the followings fields:
+
+    - followingId
+
 #### Recover password - POST Method
 
 To recover the password of an user, make a POST to: /recoverPassword
