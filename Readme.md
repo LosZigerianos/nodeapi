@@ -94,43 +94,41 @@ Insert the followings fields:
     - email
     - password
 
-
 #### Me data - GET Method
 
-To get *Me data* of an user, make a GET to: /me
+To get **Me data** of an user, make a GET to: /userId/###userId###
 
-```http://localhost:3000/apiv1/users/me```
+```http://localhost:3000/apiv1/users/userId/###userId###```
 
 #### Update User - PUT Method
 
-To Update an user, make a PUT to: /me/update
+To Update an user, make a PUT to: /userId/###userId###/update
 
-```http://localhost:3000/apiv1/users/me/update```
+```http://localhost:3000/apiv1/users/userId/###userId###/update```
 
 You CAN insert the followings fields:
 
     - fullname
     - username
     - email
+    - username
 
 #### Change Password - PUT Method
 
-To Change password of an user, make a PUT to: /me/change-password
+To Change password of an user, make a PUT to: /userId/:userId/change-password
 
-```http://localhost:3000/apiv1/users/me/change-password```
+```http://localhost:3000/apiv1/users/me/userId/###userId###/change-password```
 
 Insert the followings fields:
 
-    - password
+    - oldPassword
     - newPassword
-    - passwordConfirmation
-
 
 #### Upload photo - PUT Method
 
-To upload photo of an user, make a PUT to: /me/photo
+To upload photo of an user, make a PUT to: /userId/###userId###/photo
 
-```http://localhost:3000/apiv1/users/me/photo```
+```http://localhost:3000/apiv1/users/userId/###userId###/photo```
 
 Add Header **Content-Type: multipart/form-data**
 
@@ -138,14 +136,70 @@ Insert the followings fields like **File type**:
 
     - image
 
-### Add Following to other User  - POST Method
 
-To Add Following to other user, make a POST to: /users/following/add
-```http://localhost:3000/apiv1/users/following/add```
+#### Followers and Following EndPoints
+
+##### Add Following to other User  - POST Method
+
+To Add Following to other user, make a POST to: /userId/###userId###/following/add
+```http://localhost:3000/apiv1/users/userId/###userId###/following/add```
 
 Insert the followings fields:
 
     - followingId
+
+##### Delete Following from a User  - DELETE Method
+
+To Add Following to other user, make a POST to: /userId/###userId###/following/delete
+```http://localhost:3000/apiv1/users//userId/###userId###/following/delete```
+
+Insert the followings fields:
+
+    - followingId
+
+##### Get Following From user  - GET Method
+
+To Get Following from user, make a GET to: /userId/###userId###/following
+```http://localhost:3000/apiv1/users/userId/###userId###/following```
+
+##### Get Followers From user  - GET Method
+
+To Get Following from user, make a GET to: /userId/###userId###/followers
+```http://localhost:3000/apiv1/users/userId/###userId###/followers```
+
+##### Followers and Following Filters
+```
+- To paginate results, you can use: &skip=3&limit=2
+http://localhost:3000/apiv1/users/userId/###userId###/followers?skip=3&limit=2
+
+- To choose/show only some fields as shown: &fields=name tags photos -_id
+http://localhost:3000/apiv1/users/userId/###userId###/followers?fields=fullname -email
+
+- (*) To order the list by name, you can use: &sort=name
+http://localhost:3000/apiv1/users/userId/###userId###/following?sort=fullname
+```
+
+#### User Profile - GET Method
+
+To get User Profile, make a GET to: /profile/###userId###
+```http://localhost:3000/apiv1/users/profile/###userId###```
+
+**User profile Filters (comments and locations)**
+
+```
+- To paginate **comments**, you can use: &skipComment=3&limitComment=2
+http://localhost:3000/apiv1/users/userId/###userId###/followers?skipComment=3&limitComment=2
+
+- To choose/show only some fields from **comments** as shown: &fieldsComments=description -_id
+http://localhost:3000/apiv1/users/userId/###userId###/followers?fieldsComments=description
+
+- To choose/show only some fields from **locations** as shown: &fieldsComments=description -_id
+http://localhost:3000/apiv1/users/userId/###userId###/followers?fieldsLocations=name -_id
+
+- (*) To order the list by creationDate from **comments**, you can use: &sortComments=name
+http://localhost:3000/apiv1/users/userId/###userId###/following?sortComments=creationDate
+```
+    
 
 #### Recover password - POST Method
 
