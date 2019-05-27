@@ -174,49 +174,66 @@ router.post('/recoverPassword', async (req, res, next) => {
  * PUT /me/change-password
  * Return a user data
  */
-router.put('/me/change-password', jwtAuth(), async (req, res, next) => {
+router.put('/userId/:userId/change-password', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
-    const { password, newPassword, passwordConfirmation } = req.body;
-
-    if (!password) {
-        res.status(400).json({ success: true, error: i18n.__('field_requiered %s', 'password') });
-        return;
-    }
-
-    if (!newPassword) {
-        res.status(400).json({
-            success: true,
-            error: i18n.__('field_requiered %s', 'newPassword'),
-        });
-        return;
-    }
-    if (!passwordConfirmation) {
-        res.status(400).json({
-            success: true,
-            error: i18n.__('field_requiered %s', 'passwordConfirmation'),
-        });
-        return;
-    }
-
-    if (newPassword !== passwordConfirmation) {
-        res.status(400).json({
-            success: true,
-            error: i18n.__('should_them_be_equals %s %s', 'newPassword', 'passwordConfirmation'),
-        });
-        return;
-    }
-
-    const passwordHash = crypto
-        .createHash('sha256')
-        .update(newPassword)
-        .digest('base64');
+    const { oldPassword, newPassword } = req.body;
+    const { userId } = req.params;
 
     try {
-        const query = { _id: req.user_id };
-        const update = { password: passwordHash };
+        if (!userId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'userId'),
+            });
+            return;
+        }
 
-        const userUpdated = await User.findOneAndUpdate(query, update);
+        // old password validations
+        if (!oldPassword) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'oldPassword'),
+            });
+            return;
+        }
+
+        const currentUser = await User.findById(userId);
+        const oldPasswordHash = crypto
+            .createHash('sha256')
+            .update(oldPassword)
+            .digest('base64');
+
+        if (currentUser.password !== oldPasswordHash) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__(
+                    'should_them_be_equals %s %s',
+                    'current user password',
+                    'oldPassword field',
+                ),
+            });
+            return;
+        }
+
+        // new password validations
+        if (!newPassword) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'newPassword'),
+            });
+            return;
+        }
+
+        // create new password hash
+        const newPasswordHash = crypto
+            .createHash('sha256')
+            .update(newPassword)
+            .digest('base64');
+
+        // update user
+        const propsUpdate = { password: newPasswordHash };
+        const userUpdated = await User.findByIdAndUpdate(userId, propsUpdate);
 
         res.json({ success: true, data: userUpdated });
     } catch (err) {
@@ -225,21 +242,26 @@ router.put('/me/change-password', jwtAuth(), async (req, res, next) => {
 });
 
 /**
- * PUT /me/update
+ * PUT /userId/:userId/update
  * Return a user data
  */
-router.put('/me/update', jwtAuth(), async (req, res, next) => {
+router.put('/userId/:userId/update', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
     const { fullname, username, email } = req.body;
-    const props = {};
+    const { userId } = req.params;
+    const propsUpdate = {};
 
     try {
-        const currentUser = await User.findById(req.user_id).exec();
-
-        if (fullname) {
-            props.fullname = fullname;
+        if (!userId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'userId'),
+            });
+            return;
         }
+
+        const currentUser = await User.findById(userId).exec();
 
         const regexUsername = new RegExp(username, 'i');
         const userByUsername = await User.findOne({ username: regexUsername }).exec();
@@ -251,7 +273,7 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
             res.status(422).json({ success: true, error: i18n.__('username_registered') });
             return;
         } else if (username) {
-            props.username = username;
+            propsUpdate.username = username;
         }
 
         const regexEmail = new RegExp(email, 'i');
@@ -263,10 +285,14 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
         if (email && userByEmail && currentUser.email !== userByEmail.email) {
             res.status(422).json({ success: true, error: i18n.__('email_registered') });
         } else if (email) {
-            props.email = email;
+            propsUpdate.email = email;
         }
 
-        const userUpdated = await User.findByIdAndUpdate(req.user_id, props);
+        if (fullname) {
+            propsUpdate.fullname = fullname;
+        }
+
+        const userUpdated = await User.findByIdAndUpdate(userId, propsUpdate, { new: true });
 
         res.json({ success: true, data: userUpdated });
     } catch (err) {
@@ -275,11 +301,21 @@ router.put('/me/update', jwtAuth(), async (req, res, next) => {
 });
 
 /**
- * POST /me/photo
+ * PUT /me/photo
  * Return a user data
  */
-router.post('/me/photo', jwtAuth(), uploadS3.single('image'), async (req, res, next) => {
+router.put('/userId/:userId/photo', jwtAuth(), uploadS3.single('image'), async (req, res, next) => {
     i18n.checkLanguage(req);
+
+    const { userId } = req.params;
+
+    if (!userId) {
+        res.status(400).json({
+            success: true,
+            error: i18n.__('field_requiered %s', 'userId'),
+        });
+        return;
+    }
 
     if (!req.file) {
         res.status(400).json({ success: true, error: i18n.__('field_requiered %s', 'image') });
@@ -289,9 +325,8 @@ router.post('/me/photo', jwtAuth(), uploadS3.single('image'), async (req, res, n
     const userPerfilPath = req.file.transforms[IMAGE_TYPE.ORIGINAL].location;
 
     try {
-        const query = { _id: req.user_id };
-        const update = { photo: userPerfilPath };
-        const updatedUser = await User.findOneAndUpdate(query, update);
+        const propsUpdate = { photo: userPerfilPath };
+        const updatedUser = await User.findByIdAndUpdate(userId, propsUpdate, { new: true });
 
         res.json({ success: true, data: userPerfilPath, metadata: updatedUser });
     } catch (err) {
@@ -300,16 +335,67 @@ router.post('/me/photo', jwtAuth(), uploadS3.single('image'), async (req, res, n
 });
 
 /**
- * GET /me
- * Return a user data
+ * GET /userId/:userId
+ * Return a user basic data
  */
-router.get('/me', jwtAuth(), async (req, res, next) => {
+router.get('/userId/:userId', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
-    try {
-        const currentUser = await User.findOne({ _id: req.user_id }).exec();
+    const { userId } = req.params;
 
-        res.json({ success: true, data: currentUser });
+    if (!userId) {
+        res.status(400).json({
+            success: true,
+            error: i18n.__('field_requiered %s', 'userId'),
+        });
+        return;
+    }
+
+    try {
+        const user = await User.findById(userId).exec();
+
+        res.json({ success: true, data: user });
+    } catch (err) {
+        return next(err);
+    }
+});
+
+/**
+ * GET /userId/:userId
+ * Return a user full data
+ */
+router.get('/profile/:userId', jwtAuth(), async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    const { userId } = req.params;
+
+    const {
+        skipComments,
+        limitComments,
+        fieldsComments,
+        sortComments,
+        fieldsLocations,
+    } = req.query;
+
+    if (!userId) {
+        res.status(400).json({
+            success: true,
+            error: i18n.__('field_requiered %s', 'userId'),
+        });
+        return;
+    }
+
+    try {
+        const user = await User.findByIdAndGetFullData(
+            userId,
+            skipComments,
+            limitComments,
+            fieldsComments,
+            sortComments,
+            fieldsLocations,
+        );
+
+        res.json({ success: true, data: user });
     } catch (err) {
         return next(err);
     }
@@ -319,11 +405,20 @@ router.get('/me', jwtAuth(), async (req, res, next) => {
  * POST /following/add
  * Return a user data
  */
-router.post('/following/add', jwtAuth(), async (req, res, next) => {
+router.post('/userId/:userId/following/add', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
     try {
+        const { userId } = req.params;
         const { followingId } = req.body;
+
+        if (!userId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'userId'),
+            });
+            return;
+        }
 
         if (!followingId) {
             res.status(400).json({
@@ -342,7 +437,7 @@ router.post('/following/add', jwtAuth(), async (req, res, next) => {
             return;
         }
 
-        const currentUser = await User.findById(req.user_id);
+        const currentUser = await User.findById(userId);
 
         // update followingUser
         followingUser.followers.addToSet(currentUser.id);
@@ -352,7 +447,7 @@ router.post('/following/add', jwtAuth(), async (req, res, next) => {
         currentUser.following.addToSet(followingId);
         await currentUser.save();
 
-        res.json({ success: true, data: currentUser });
+        res.json({ success: true, data: followingUser, metadata: currentUser });
     } catch (err) {
         return next(err);
     }
@@ -362,21 +457,23 @@ router.post('/following/add', jwtAuth(), async (req, res, next) => {
  * GET /following
  * Return following of a user
  */
-router.get('/:followingId/following', jwtAuth(), async (req, res, next) => {
+router.get('/userId/:userId/following', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
-    const { followingId } = req.params;
+    const { fields, sort, limit, skip } = req.query;
+    const { userId } = req.params;
 
     try {
-        if (!followingId) {
+        if (!userId) {
             res.status(400).json({
                 success: true,
-                error: i18n.__('field_requiered %s', 'followingId'),
+                error: i18n.__('field_requiered %s', 'userId'),
             });
             return;
         }
 
-        const user = await User.findById(req.user_id).populate('following');
+        const user = await User.findByIdAndGetFollowing(userId, skip, limit, fields, sort);
+        console.log('user', user);
 
         res.json({ success: true, data: user.following, count: user.following.length });
     } catch (err) {
@@ -388,21 +485,21 @@ router.get('/:followingId/following', jwtAuth(), async (req, res, next) => {
  * GET /followers
  * Return following of a user
  */
-router.get('/:followerId/followers', jwtAuth(), async (req, res, next) => {
+router.get('/userId/:userId/followers', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
-    const { followerId } = req.params;
+    const { userId } = req.params;
 
     try {
-        if (!followerId) {
+        if (!userId) {
             res.status(400).json({
                 success: true,
-                error: i18n.__('field_requiered %s', 'followerId'),
+                error: i18n.__('field_requiered %s', 'userId'),
             });
             return;
         }
 
-        const user = await User.findById(req.user_id).populate('followers');
+        const user = await User.findById(userId).populate('followers');
 
         res.json({ success: true, data: user.followers, count: user.followers.length });
     } catch (err) {
@@ -411,15 +508,24 @@ router.get('/:followerId/followers', jwtAuth(), async (req, res, next) => {
 });
 
 /**
- * delete /following
- * Return following of a user
+ * delete /userId/:userId/following/delete
+ * Return current user
  */
-router.delete('/following/delete', jwtAuth(), async (req, res, next) => {
+router.delete('/userId/:userId/following/delete', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
+    const { userId } = req.params;
     const { followingId } = req.body;
 
     try {
+        if (!userId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'userId'),
+            });
+            return;
+        }
+
         if (!followingId) {
             res.status(400).json({
                 success: true,
@@ -428,8 +534,8 @@ router.delete('/following/delete', jwtAuth(), async (req, res, next) => {
             return;
         }
 
-        const following = await User.findById(followingId);
-        if (!following) {
+        const followingUser = await User.findById(followingId);
+        if (!followingUser) {
             res.status(422).json({
                 success: true,
                 error: i18n.__('field_invalid %s', 'followingId'),
@@ -437,15 +543,21 @@ router.delete('/following/delete', jwtAuth(), async (req, res, next) => {
             return;
         }
 
-        // delete following from current user
-        const user = await User.findByIdAndUpdate(req.user_id, {
-            $pull: { following: followingId },
-        });
+        // delete followingUser from current user
+        const user = await User.findByIdAndUpdate(
+            userId,
+            { $pull: { following: followingId } },
+            { new: true },
+        );
 
         // delete current user like follower from following User
-        following.update({ $pull: { followers: user.id } });
+        const followingUserUpdated = await User.findByIdAndUpdate(
+            followingId,
+            { $pull: { followers: user.id } },
+            { new: true },
+        );
 
-        res.json({ success: true, data: user });
+        res.json({ success: true, data: user, metadata: followingUserUpdated });
     } catch (err) {
         return next(err);
     }
