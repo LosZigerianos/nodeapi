@@ -10,6 +10,7 @@ const nodemailer = require('nodemailer');
 const jwtAuth = require('../../lib/jwtAuth');
 const uploadS3 = require('../../lib/uploadS3');
 const IMAGE_TYPE = uploadS3.IMAGE_TYPE;
+const DEFAULT_PHOTO = url => `${url}/images/user-profile.png`;
 
 /**
  * POST /login
@@ -98,7 +99,12 @@ router.post('/signup', async (req, res, next) => {
             .update(req.body.password)
             .digest('base64');
 
-        const newUser = new User(req.body);
+        // Add default photo url
+        const url = req.protocol + '://' + req.get('host');
+        const photo = DEFAULT_PHOTO(url);
+
+        //create new user
+        const newUser = new User({ ...req.body, photo });
 
         const userStored = await newUser.save();
 

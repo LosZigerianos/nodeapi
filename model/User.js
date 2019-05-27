@@ -7,6 +7,7 @@ const Constants = {
     FOLLOWING: 'following',
     COMMENTS: 'comments',
     LOCATION: 'location',
+    DEFAULT_PHOTO: 'images/user-profile.png',
 };
 
 const userSchema = Schema({
@@ -19,7 +20,7 @@ const userSchema = Schema({
     following: [{ type: Schema.Types.ObjectId, ref: 'User' }],
     followers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
     comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
-    photo: { type: String, default: null },
+    photo: { type: String, default: Constants.DEFAULT_PHOTO },
     googleId: { type: String },
     updated_at: { type: Date, default: Date.now },
     provider: { type: String, default: 'local' },
