@@ -32,7 +32,7 @@ userSchema.statics.findByIdAndGetFullData = async function(
     userId,
     skipComments,
     limitComments,
-    fieldsComments = '-__v',
+    fieldsComments = '-__v -user',
     sortComments = '-creationDate',
     fieldsLocations = '-id -__v',
 ) {
@@ -97,6 +97,7 @@ userSchema.methods.toFullInfo = function() {
 
     user.followers = user.followers.length;
     user.following = user.following.length;
+    user.commentsCount = user.comments.length;
 
     delete user.password;
     delete user.__v;

@@ -65,17 +65,34 @@ router.get('/user/:userId', async (req, res, next) => {
  * GET /timeline
  * Return a comments list by user'friends
  */
-router.get('/timeline', async (req, res, next) => {
+router.get('/userId/:userId/timeline', async (req, res, next) => {
     i18n.checkLanguage(req);
 
     const { fields, sort, limit, skip } = req.query;
-
-    const userId = req.user_id;
+    const { userId } = req.params;
 
     try {
         const user = await User.findOne({ _id: userId });
-        const followingUserArray = user.following;
 
+        if (!userId) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'userId'),
+            });
+            return;
+        }
+
+        if (!user) {
+            res.status(400).json({
+                success: true,
+                error: i18n.__('invalid_field %s', 'userId'),
+            });
+            return;
+        }
+
+        // get following from user
+        const followingUserArray = user.following;
+        // get timeline comments
         const comments = await Comment.getByUsers(followingUserArray, skip, limit, fields, sort);
 
         res.json({ success: true, data: comments, count: comments.length });
@@ -125,11 +142,15 @@ router.post('/add', async (req, res, next) => {
 
         // create new comment
         const comment = await Comment.create({ user: userId, location: locationId, description });
+        // get comment with user and location full data
+        const commentFullData = await Comment.findById(comment.id)
+            .populate('user')
+            .populate('location');
 
         // add comment to current user
         await User.findByIdAndUpdate(userId, { $addToSet: { comments: comment.id } });
 
-        res.json({ success: true, data: comment });
+        res.json({ success: true, data: commentFullData });
     } catch (err) {
         next(err);
         return;
