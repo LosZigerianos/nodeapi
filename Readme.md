@@ -302,7 +302,12 @@ Insert the following fields required:
 - latitude
 - longitude
 ```
+
+```Note: optional query field: search```
+
 **Example: ```locations/near?latitude=41.6560593&longitude=-0.87734```**
+**Example with search: ```locations/near?latitude=41.6560593&longitude=-0.87734&search=cafe```**
+
 
 ```http://localhost:3000/apiv1/locations/near?latitude=###latitudeValue###&longitude=###longitudeValue###&token=###tokenValue###```
 
