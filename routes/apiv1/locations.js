@@ -127,7 +127,6 @@ router.get('/city/:city/place/:name', async (req, res, next) => {
     }
 });
 
-
 /**
  * GET /locations
  * Return a places by name.
@@ -145,7 +144,7 @@ router.get('/place/:name', async (req, res, next) => {
         if (name) filter.name = name;
 
         const locations = await Location.getPlacesByName(filter, skip, limit, fields, sort);
-        
+
         if (!locations) {
             res.status(400).json({ success: true, error: i18n.__('not_results') });
             return;
@@ -161,24 +160,46 @@ router.get('/place/:name', async (req, res, next) => {
  * GET /near
  */
 router.get('/near', async (req, res, next) => {
-    const { fields, sort, limit, skip, latitude, longitude } = req.query;
-
-    const meters = 5000;
+    const { fields, sort, limit, skip, latitude, longitude, meters, search } = req.query;
 
     try {
         if (!latitude) {
-            res.status(400).json({ success: true, error: i18n("field_requiered %s", "latitude") });
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'latitude'),
+            });
             return;
         }
 
         if (!longitude) {
-            res.status(400).json({ success: true, error: i18n("field_requiered %s", "longitude") });
+            res.status(400).json({
+                success: true,
+                error: i18n.__('field_requiered %s', 'longitude'),
+            });
             return;
         }
 
-        const query = { latitude, longitude, meters };
+        const coordinateObject = { latitude, longitude, meters };
 
-        const nearLocations = await Location.getNearLocations(query, skip, limit, fields, sort);
+        let nearLocations;
+        if (search) {
+            nearLocations = await Location.getNearLocationsWithSearch(
+                coordinateObject,
+                search,
+                skip,
+                limit,
+                fields,
+                sort,
+            );
+        } else {
+            nearLocations = await Location.getNearLocations(
+                coordinateObject,
+                skip,
+                limit,
+                fields,
+                sort,
+            );
+        }
 
         res.json({ success: true, count: nearLocations.length, data: nearLocations });
     } catch (err) {
@@ -259,7 +280,7 @@ const _parseArrayFourSquareToLocations = async arrPlaces => {
                 );
 
                 newLocation.comments = [];
-                
+
                 if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
                     newLocation.rating.value =
                         newLocation.rating.totalValues / newLocation.rating.totalVotes;

@@ -61,6 +61,37 @@ locationScheme.statics.getAll = function(filter, skip, limit, fields, sort) {
     return query.exec();
 };
 
+locationScheme.statics.getNearLocationsWithSearch = function(
+    coordinatesObject = {},
+    searchText,
+    skip,
+    limit,
+    fields,
+    sort,
+) {
+    const meters = coordinatesObject.meters? parseInt(coordinatesObject.meters) / 1000 : 5;
+
+    // create query
+    const query = Location.find({
+        geometry: {
+            $geoWithin: {
+                $center: [
+                    [coordinatesObject.longitude, coordinatesObject.latitude],
+                    5,
+                ],
+            },
+        },
+        $text: { $search: searchText },
+    });
+
+    query.skip(parseInt(skip));
+    query.limit(parseInt(limit));
+    fields ? query.select(fields) : query.select('-__v');
+    query.sort(sort);
+
+    return query.exec();
+};
+
 locationScheme.statics.getNearLocations = function(
     coordinatesObject = {},
     skip,
@@ -76,7 +107,7 @@ locationScheme.statics.getNearLocations = function(
                     type: 'Point',
                     coordinates: [coordinatesObject.longitude, coordinatesObject.latitude],
                 },
-                $maxDistance: coordinatesObject.meters || 5000,
+                $maxDistance: parseInt(coordinatesObject.meters) || 5000,
             },
         },
     });
@@ -159,7 +190,7 @@ locationScheme.statics.getPlacesByName = function(filter, skip, limit, fields, s
 };
 
 locationScheme.set('toJSON', {
-    transform: function(doc, ret, options) {       
+    transform: function(doc, ret, options) {
         delete ret.__v;
         delete ret.id;
     },
