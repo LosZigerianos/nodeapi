@@ -29,7 +29,7 @@ router.get('/location/:locationId', async (req, res, next) => {
     try {
         const comments = await Comment.getByLocation(locationId, skip, limit, fields, sort);
 
-        res.json({ success: true, data: comments, count: comments.length });
+        res.json({ success: true, data: comments.data, count: comments.count });
     } catch (err) {
         next(err);
         return;
@@ -54,7 +54,7 @@ router.get('/user/:userId', async (req, res, next) => {
     try {
         const comments = await Comment.getByUser(userId, skip, limit, fields, sort);
 
-        res.json({ success: true, data: comments, count: comments.length });
+        res.json({ success: true, data: comments.data, count: comments.count });
     } catch (err) {
         next(err);
         return;
@@ -95,7 +95,7 @@ router.get('/userId/:userId/timeline', async (req, res, next) => {
         // get timeline comments
         const comments = await Comment.getByUsers(followingUserArray, skip, limit, fields, sort);
 
-        res.json({ success: true, data: comments, count: comments.length });
+        res.json({ success: true, data: comments.data, count: comments.count });
     } catch (err) {
         next(err);
         return;

@@ -10,6 +10,7 @@ const nodemailer = require('nodemailer');
 const jwtAuth = require('../../lib/jwtAuth');
 const uploadS3 = require('../../lib/uploadS3');
 const IMAGE_TYPE = uploadS3.IMAGE_TYPE;
+const constants = require('../../commons/constants');
 const DEFAULT_PHOTO = url => `${url}/images/user-profile.png`;
 
 /**
@@ -479,9 +480,8 @@ router.get('/userId/:userId/following', jwtAuth(), async (req, res, next) => {
         }
 
         const user = await User.findByIdAndGetFollowing(userId, skip, limit, fields, sort);
-        console.log('user', user);
 
-        res.json({ success: true, data: user.following, count: user.following.length });
+        res.json({ success: true, data: user.data.following, count: user.count });
     } catch (err) {
         return next(err);
     }
@@ -494,6 +494,7 @@ router.get('/userId/:userId/following', jwtAuth(), async (req, res, next) => {
 router.get('/userId/:userId/followers', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
+    const { fields, sort, limit, skip } = req.query;
     const { userId } = req.params;
 
     try {
@@ -505,9 +506,9 @@ router.get('/userId/:userId/followers', jwtAuth(), async (req, res, next) => {
             return;
         }
 
-        const user = await User.findById(userId).populate('followers');
+        const user = await User.findByIdAndGetFollowers(userId, skip, limit, fields, sort);
 
-        res.json({ success: true, data: user.followers, count: user.followers.length });
+        res.json({ success: true, data: user.data.followers, count: user.count });
     } catch (err) {
         return next(err);
     }

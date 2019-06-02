@@ -21,22 +21,22 @@ commentScheme.index(
 );
 
 // Static method
-commentScheme.statics.getByLocation = function(locationId, skip, limit, fields, sort) {
+commentScheme.statics.getByLocation = async function(locationId, skip, limit, fields, sort) {
     const filter = { location: locationId };
-    return getComments(filter, skip, limit, fields, sort);
+    return await getComments(filter, skip, limit, fields, sort);
 };
 
-commentScheme.statics.getByUser = function(userId, skip, limit, fields, sort) {
+commentScheme.statics.getByUser = async function(userId, skip, limit, fields, sort) {
     const filter = { user: userId };
-    return getComments(filter, skip, limit, fields, sort);
+    return await getComments(filter, skip, limit, fields, sort);
 };
 
-commentScheme.statics.getByUsers = function(userIdsArray, skip, limit, fields, sort) {
+commentScheme.statics.getByUsers = async function(userIdsArray, skip, limit, fields, sort) {
     const filter = { user: { $in: userIdsArray } };
-    return getComments(filter, skip, limit, fields, sort);
+    return await getComments(filter, skip, limit, fields, sort);
 };
 
-const getComments = (filter, skip, limit, fields, sort = '-creationDate') => {
+const getComments = async (filter, skip, limit, fields, sort = '-creationDate') => {
     // Create query
     const query = Comment.find(filter);
 
@@ -47,10 +47,15 @@ const getComments = (filter, skip, limit, fields, sort = '-creationDate') => {
     // NOTE: First execute sort and (skip and limit) late
 
     // Execute query and return promise
-    return query
+    const comments = await query
         .populate('location')
         .populate('user')
         .exec();
+
+    // get comments size from database for this filter
+    const commentsCount = await Comment.count(filter);
+
+    return { data: comments, count: commentsCount };
 };
 
 commentScheme.set('toJSON', {

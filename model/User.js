@@ -1,14 +1,7 @@
 'use strict';
 const mongoose = require('mongoose');
+const constants = require('../commons/constants');
 const Schema = mongoose.Schema;
-
-const Constants = {
-    FOLLOWERS: 'followers',
-    FOLLOWING: 'following',
-    COMMENTS: 'comments',
-    LOCATION: 'location',
-    DEFAULT_PHOTO: 'images/user-profile.png',
-};
 
 const userSchema = Schema({
     fullname: { type: String, default: '' },
@@ -20,7 +13,7 @@ const userSchema = Schema({
     following: [{ type: Schema.Types.ObjectId, ref: 'User' }],
     followers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
     comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
-    photo: { type: String, default: Constants.DEFAULT_PHOTO },
+    photo: { type: String, default: constants.DEFAULT_PHOTO },
     googleId: { type: String },
     updated_at: { type: Date, default: Date.now },
     provider: { type: String, default: 'local' },
@@ -36,9 +29,9 @@ userSchema.statics.findByIdAndGetFullData = async function(
     sortComments = '-creationDate',
     fieldsLocations = '-id -__v',
 ) {
-    const query = await User.findById(userId).populate({
+    const user = await User.findById(userId).populate({
         // comments
-        path: Constants.COMMENTS,
+        path: constants.COMMENTS,
         select: fieldsComments,
         options: {
             sort: sortComments,
@@ -46,29 +39,45 @@ userSchema.statics.findByIdAndGetFullData = async function(
             skip: parseInt(skipComments),
         },
         // locations inside comments
-        populate: { path: Constants.LOCATION, model: 'Location', select: fieldsLocations },
+        populate: { path: constants.LOCATION, model: 'Location', select: fieldsLocations },
     });
 
-    return query.toFullInfo();
+    // get comments size from database for this user
+    const commentsCount = await User.getSubDocumentCount(user, constants.COMMENTS);
+
+    // add comments count to user object
+    const userProfileInfo = user.toFullInfo();
+    userProfileInfo.commentsCount = commentsCount;
+
+    return userProfileInfo;
+};
+
+userSchema.statics.getSubDocumentCount = async function(user, subDocument) {
+    const result = await User.aggregate()
+        .match({ email: user.email })
+        .project({ count: { $size: '$' + subDocument } })
+        .group({ _id: null, total: { $sum: '$count' } });
+
+    return result[0].total;
 };
 
 userSchema.statics.findByIdAndGetFollowing = function(userId, skip, limit, fields, sort) {
-    return findByIdAndPopulateDocument(userId, Constants.FOLLOWING, skip, limit, fields, sort);
+    return findByIdAndPopulateDocument(userId, constants.FOLLOWING, skip, limit, fields, sort);
 };
 userSchema.statics.findByIdAndGetFollowers = function(userId, skip, limit, fields, sort) {
-    return findByIdAndPopulateDocument(userId, Constants.FOLLOWERS, skip, limit, fields, sort);
+    return findByIdAndPopulateDocument(userId, constants.FOLLOWERS, skip, limit, fields, sort);
 };
 
-const findByIdAndPopulateDocument = function(
+const findByIdAndPopulateDocument = async function(
     userId,
-    documentToPopulate,
+    subDocumentToPopulate,
     skip,
     limit,
     fields = '-__v',
     sort = '-creationDate',
 ) {
-    const query = User.findById(userId).populate({
-        path: documentToPopulate,
+    const user = await User.findById(userId).populate({
+        path: subDocumentToPopulate,
         select: fields,
         options: {
             sort: sort,
@@ -77,7 +86,10 @@ const findByIdAndPopulateDocument = function(
         },
     });
 
-    return query.exec();
+    // get subdocument size from database for this user
+    const subDocumentCount = await User.getSubDocumentCount(user, subDocumentToPopulate);
+
+    return { data: user, count: subDocumentCount };
 };
 
 userSchema.methods.toJSON = function() {
