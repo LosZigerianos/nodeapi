@@ -374,3 +374,7 @@ To delete a comment, make a DELETE adding the **comment id** parameter in url an
 ```http://localhost:3000/apiv1/comments/###commentId###/delete```
 
 Note: Only can to delete a comment the same user that it created
+
+### Validate token - GET Method
+To validate a token, make a GET adding token to:
+```http://localhost:3000/apiv1/token/validate?token=###TOKEN###```

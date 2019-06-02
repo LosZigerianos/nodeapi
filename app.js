@@ -57,6 +57,8 @@ app.use('/',          require('./routes/index'));
 app.use('/apiv1/locations', require('./routes/apiv1/locations'));
 app.use('/apiv1/users', require('./routes/apiv1/users'));
 app.use('/apiv1/comments', require('./routes/apiv1/comments'));
+app.use('/apiv1/token', require('./routes/apiv1/token'));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
