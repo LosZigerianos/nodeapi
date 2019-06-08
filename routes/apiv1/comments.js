@@ -167,10 +167,13 @@ router.delete('/:commentId/delete', async (req, res, next) => {
     try {
         const { commentId } = req.params;
 
-        const comment = await Comment.findOne({ _id: commentId });
+        // get comment with user and location full data
+        const commentFullData = await Comment.findById(commentId)
+            .populate('user')
+            .populate('location');
 
         // validate if comment exist
-        if (!comment) {
+        if (!commentFullData) {
             res.status(422).json({
                 success: true,
                 error: i18n.__('invalid_field %s', 'commentId'),
@@ -179,18 +182,18 @@ router.delete('/:commentId/delete', async (req, res, next) => {
         }
 
         // validate if user is comment's own
-        if (comment.user.toString() !== req.user_id) {
+        if (commentFullData.user._id.toString() !== req.user_id) {
             res.status(401).json({ success: true, error: i18n.__('invalid_user') });
             return;
         }
 
         // delete comment
-        await comment.deleteOne();
+        await commentFullData.deleteOne();
 
         // delete comment from user
-        await User.findByIdAndUpdate(req.user_id, { $pull: { comments: commentId } });
+        await User.findByIdAndUpdate(req.user_id, { $pull: { comments: commentFullData._id } });
 
-        res.json({ success: true, data: comment });
+        res.json({ success: true, data: commentFullData });
     } catch (err) {
         next(err);
         return;
