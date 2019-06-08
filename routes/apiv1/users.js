@@ -392,9 +392,10 @@ router.get('/profile/:userId', jwtAuth(), async (req, res, next) => {
         return;
     }
 
+    const userInfo = { userProfileId: userId, loggedUser: req.user_id };
     try {
-        const user = await User.findByIdAndGetFullData(
-            userId,
+        const user = await User.findOneAndGetProfileData(
+            userInfo,
             skipComments,
             limitComments,
             fieldsComments,

@@ -21,15 +21,15 @@ const userSchema = Schema({
 
 userSchema.index({ fullname: 1, username: 1, email: 1, creation_date: 1, provider: 1 });
 
-userSchema.statics.findByIdAndGetFullData = async function(
-    userId,
+userSchema.statics.findOneAndGetProfileData = async function(
+    userInfo = {},
     skipComments,
     limitComments,
     fieldsComments = '-__v -user',
     sortComments = '-creation_date',
     fieldsLocations = '-id -__v',
 ) {
-    const user = await User.findById(userId).populate({
+    const userProfile = await User.findById(userInfo.userProfileId).populate({
         // comments
         path: constants.COMMENTS,
         select: fieldsComments,
@@ -42,14 +42,20 @@ userSchema.statics.findByIdAndGetFullData = async function(
         populate: { path: constants.LOCATION, model: 'Location', select: fieldsLocations },
     });
 
-    // get comments size from database for this user
-    const commentsCount = await User.getSubDocumentCount(user, constants.COMMENTS);
+    // get comments size from database for this userProfile
+    const commentsCount = await User.getSubDocumentCount(userProfile, constants.COMMENTS);
 
-    // add comments count to user object
-    const userProfileInfo = user.toFullInfo();
-    userProfileInfo.commentsCount = commentsCount;
+    // add comments count to userProfile object
+    const userProfileProfileInfo = userProfile.toFullInfo();
+    userProfileProfileInfo.comments_count = commentsCount;
 
-    return userProfileInfo;
+    // if logged user is following to profile user
+    userProfileProfileInfo.is_following_user = await User.isFollowingUser(
+        userInfo.userProfileId,
+        userInfo.loggedUser,
+    );
+
+    return userProfileProfileInfo;
 };
 
 userSchema.statics.getSubDocumentCount = async function(user, subDocument) {
@@ -104,12 +110,20 @@ userSchema.methods.toJSON = function() {
     return user;
 };
 
+userSchema.statics.isFollowingUser = async function(profileUserId, loggedUserId) {
+    if (profileUserId === loggedUserId) {
+        return null;
+    }
+
+    const isFollowingUser = await User.findOne({ _id: loggedUserId, following: profileUserId });
+    return !!isFollowingUser;
+};
+
 userSchema.methods.toFullInfo = function() {
     const user = this.toObject();
 
     user.followers = user.followers.length;
     user.following = user.following.length;
-    user.commentsCount = user.comments.length;
 
     delete user.password;
     delete user.__v;
