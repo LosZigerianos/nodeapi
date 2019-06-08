@@ -61,7 +61,7 @@ router.get('/city/:city', async (req, res, next) => {
 
         const locations = await Location.getCity(filter, skip, limit, fields, sort);
 
-        if (locations.length > 0) {
+        if (locations.count > 0) {
             res.json({ success: true, count: locations.length, data: locations });
         } else {
             const response = await api.fetchLocationsByCity(city, limit, lang);
@@ -76,7 +76,7 @@ router.get('/city/:city', async (req, res, next) => {
 
             const locations = await Location.getCity(filter, skip, limit, fields, sort);
 
-            res.json({ success: true, count: locations.length, data: locations });
+            res.json({ success: true, count: locations.count, data: locations.data });
             return;
         }
     } catch (err) {
@@ -105,7 +105,7 @@ router.get('/city/:city/place/:name', async (req, res, next) => {
 
         const locations = await Location.getPlaceByCity(filter, skip, limit, fields, sort);
 
-        if (locations.length > 0) {
+        if (locations.count > 0) {
             res.json({ success: true, count: locations.length, data: locations });
         } else {
             const response = await api.fetchLocationsByName(city, name, limit, lang);
@@ -120,7 +120,7 @@ router.get('/city/:city/place/:name', async (req, res, next) => {
 
             const locations = await Location.getPlaceByCity(filter, skip, limit, fields, sort);
 
-            res.json({ success: true, count: locations.length, data: locations });
+            res.json({ success: true, count: locations.count, data: locations.data });
         }
     } catch (err) {
         return next(err);
@@ -150,7 +150,7 @@ router.get('/place/:name', async (req, res, next) => {
             return;
         }
 
-        res.json({ success: true, count: locations.length, data: locations });
+        res.json({ success: true, count: locations.count, data: locations.data });
     } catch (err) {
         return next(err);
     }
@@ -201,7 +201,7 @@ router.get('/near', async (req, res, next) => {
             );
         }
 
-        res.json({ success: true, count: nearLocations.length, data: nearLocations });
+        res.json({ success: true, count: nearLocations.count, data: nearLocations.data });
     } catch (err) {
         next(err);
         return;

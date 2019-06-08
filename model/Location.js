@@ -61,46 +61,51 @@ locationScheme.statics.getAll = function(filter, skip, limit, fields, sort) {
     return query.exec();
 };
 
-locationScheme.statics.getNearLocationsWithSearch = function(
+locationScheme.statics.getNearLocationsWithSearch = async function(
     coordinatesObject = {},
     searchText,
     skip,
     limit,
-    fields,
+    fields = '-__v',
     sort,
 ) {
-    const meters = coordinatesObject.meters? parseInt(coordinatesObject.meters) / 1000 : 5;
+    const meters = coordinatesObject.meters ? parseInt(coordinatesObject.meters) / 1000 : 5;
 
-    // create query
-    const query = Location.find({
+    // create query nearsphere with search
+    const queryNearSphereWithSearch = {
         geometry: {
             $geoWithin: {
-                $center: [
-                    [coordinatesObject.longitude, coordinatesObject.latitude],
-                    5,
-                ],
+                $center: [[coordinatesObject.longitude, coordinatesObject.latitude], 2.5],
             },
         },
         $text: { $search: searchText },
-    });
+    };
 
-    query.skip(parseInt(skip));
-    query.limit(parseInt(limit));
-    fields ? query.select(fields) : query.select('-__v');
-    query.sort(sort);
+    // query with filters
+    const queryLocation = Location.find(queryNearSphereWithSearch);
+    queryLocation.skip(parseInt(skip));
+    queryLocation.limit(parseInt(limit));
+    queryLocation.select(fields);
+    queryLocation.sort(sort);
 
-    return query.exec();
+    // Get locations results
+    const locations = await queryLocation.exec();
+
+    // Get locations count results from total database
+    const total = await Location.count(queryNearSphere);
+
+    return { data: locations, count: total };
 };
 
-locationScheme.statics.getNearLocations = function(
+locationScheme.statics.getNearLocations = async function(
     coordinatesObject = {},
     skip,
     limit,
-    fields,
+    fields = '-__v',
     sort,
 ) {
     // create query
-    const query = Location.find({
+    const queryNearSphere = {
         geometry: {
             $nearSphere: {
                 $geometry: {
@@ -110,24 +115,33 @@ locationScheme.statics.getNearLocations = function(
                 $maxDistance: parseInt(coordinatesObject.meters) || 5000,
             },
         },
-    });
+    };
 
-    query.skip(parseInt(skip));
-    query.limit(parseInt(limit));
-    fields ? query.select(fields) : query.select('-__v');
-    query.sort(sort);
+    // query with filters
+    const queryLocation = Location.find(queryNearSphere);
+    queryLocation.skip(parseInt(skip));
+    queryLocation.limit(parseInt(limit));
+    queryLocation.select(fields);
+    queryLocation.sort(sort);
 
-    return query.exec();
+    // Get locations results
+    const locations = await queryLocation.exec();
+
+    // Get locations count results from total database
+    const total = await Location.count(queryNearSphere);
+
+    return { data: locations, count: total };
 };
 
-locationScheme.statics.getCity = function(filter, skip, limit, fields, sort) {
+locationScheme.statics.getCity = async function(filter, skip, limit, fields = '-__v', sort) {
     let searchText = '';
     if (filter.city) searchText = filter.city;
     if (filter.tags) {
         searchText = searchText.length === 0 ? filter.tags : `${searchText} ${filter.tags}`;
     }
 
-    const query = Location.find({
+    // create query
+    const queryGetCity = {
         $text: {
             $search: searchText,
             $caseSensitive: false,
@@ -135,58 +149,90 @@ locationScheme.statics.getCity = function(filter, skip, limit, fields, sort) {
         },
         city: new RegExp(filter.city, 'i'),
         tags: { $in: [new RegExp(filter.tags, 'i')] },
-    });
+    };
 
-    query.skip(parseInt(skip));
-    query.limit(parseInt(limit));
-    fields ? query.select(fields) : query.select('-__v');
-    query.sort(sort);
+    // query with filters
+    const queryLocation = Location.find(queryGetCity);
+    queryLocation.skip(parseInt(skip));
+    queryLocation.limit(parseInt(limit));
+    queryLocation.select(fields);
+    queryLocation.sort(sort);
 
-    return query.exec();
+    // query location resutls
+    const locations = await queryLocation.exec();
+
+    // Get locations count results from total database
+    const total = await Location.count(queryGetCity);
+
+    return { data: locations, count: total };
 };
 
-locationScheme.statics.getPlaceByCity = function(filter, skip, limit, fields, sort) {
+locationScheme.statics.getPlaceByCity = async function(filter, skip, limit, fields = '-__v', sort) {
     let searchText = '';
     //if (filter.city) searchText = filter.city;
     //if (filter.name) { searchText = (searchText.length === 0) ? filter.name : `${searchText} ${filter.name}`; }
     if (filter.name) searchText = filter.name;
 
-    const query = Location.find({
+    // create query
+    const queryPlaceByCity = {
         $text: {
             $search: searchText,
             $caseSensitive: false,
             $diacriticSensitive: false,
         },
         city: new RegExp(filter.city, 'i'),
-    });
+    };
 
-    query.skip(parseInt(skip));
-    query.limit(parseInt(limit));
-    fields ? query.select(fields) : query.select('-__v');
-    query.sort(sort);
+    // query with filters
+    const queryLocation = Location.find(queryPlaceByCity);
+    queryLocation.skip(parseInt(skip));
+    queryLocation.limit(parseInt(limit));
+    queryLocation.select(fields);
+    queryLocation.sort(sort);
 
-    return query.exec();
+    // queryLocation location resutls
+    const locations = await queryLocation.exec();
+
+    // Get locations count results from total database
+    const total = await Location.count(queryPlaceByCity);
+
+    return { data: locations, count: total };
 };
 
-locationScheme.statics.getPlacesByName = function(filter, skip, limit, fields, sort) {
+locationScheme.statics.getPlacesByName = async function(
+    filter,
+    skip,
+    limit,
+    fields = '-__v',
+    sort,
+) {
     let searchText = '';
     if (filter.name) searchText = filter.name;
 
-    const query = Location.find({
+    // create query
+    const querySearchPlace = {
         $text: {
             $search: searchText,
             $caseSensitive: false,
             $diacriticSensitive: false,
         },
         name: new RegExp(filter.name, 'i'),
-    });
+    };
 
-    query.skip(parseInt(skip));
-    query.limit(parseInt(limit));
-    fields ? query.select(fields) : query.select('-__v');
-    query.sort(sort);
+    // query with filters
+    const queryLocation = Location.find(querySearchPlace);
+    queryLocation.skip(parseInt(skip));
+    queryLocation.limit(parseInt(limit));
+    queryLocation.select(fields);
+    queryLocation.sort(sort);
 
-    return query.exec();
+    // locations results
+    const locations = await queryLocation.exec();
+
+    // Get locations count results from total database
+    const total = await Location.count(querySearchPlace);
+
+    return { data: locations, count: total };
 };
 
 locationScheme.set('toJSON', {
