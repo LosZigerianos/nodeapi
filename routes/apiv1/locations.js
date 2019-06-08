@@ -269,12 +269,12 @@ const _parseArrayFourSquareToLocations = async arrPlaces => {
                     'Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus.';
                 newLocation.geometry.coordinates = [place.location.lng, place.location.lat]; //[longitude, latitude]
                 newLocation.address = place.location.address;
-                newLocation.postalCode = place.location.postalCode;
+                newLocation.postal_code = place.location.postalCode;
                 newLocation.cc = place.location.cc;
                 newLocation.city = place.location.city;
                 newLocation.state = place.location.state;
                 newLocation.country = place.location.country;
-                newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+                newLocation.formatted_address = place.location.formattedAddress.join(', ');
                 newLocation.tags = place.categories.map(
                     (currentCategory, index, array) => currentCategory.name,
                 );

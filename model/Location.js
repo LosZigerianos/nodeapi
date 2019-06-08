@@ -9,18 +9,18 @@ const locationScheme = mongoose.Schema({
     name: { type: String },
     description: { type: String, default: '' },
     address: { type: String },
-    postalCode: { type: String },
+    postal_code: { type: String },
     cc: { type: String },
     state: { type: String },
     country: { type: String },
-    formattedAddress: { type: String },
+    formatted_address: { type: String },
     geometry: {
         type: { type: String, default: 'Point' },
         coordinates: { type: [Number] }, // [longitude, latitude]
     },
     rating: {
-        totalVotes: { type: Number, default: 0 },
-        totalValues: { type: Number, default: 0 },
+        total_votes: { type: Number, default: 0 },
+        total_values: { type: Number, default: 0 },
         value: { type: Number },
     },
     photos: { type: [String] },

@@ -74,16 +74,16 @@ const uploadData = async function() {
             newLocation.description = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque, cras eros tempor dictumst nostra aptent conubia, a mus habitant libero augue convallis faucibus."
             newLocation.geometry.coordinates = [place.location.lng, place.location.lat];
             newLocation.address = place.location.address;
-            newLocation.postalCode = place.location.postalCode;
+            newLocation.postal_code = place.location.postalCode;
             newLocation.cc = place.location.cc;
             newLocation.city = place.location.city;
             newLocation.state = place.location.state;
             newLocation.country = place.location.country;
-            newLocation.formattedAddress = place.location.formattedAddress.join(', ');
+            newLocation.formatted_address = place.location.formattedAddress.join(', ');
             newLocation.tags = place.categories.map( (currentCategory, index, array) => currentCategory.name );
             newLocation.comments = [];
-            if (newLocation.rating.totalVotes > 0 && newLocation.rating.totalValues > 0) {
-                newLocation.rating.value = newLocation.rating.totalValues / newLocation.rating.totalVotes;
+            if (newLocation.rating.total_votes > 0 && newLocation.rating.total_values > 0) {
+                newLocation.rating.value = newLocation.rating.total_values / newLocation.rating.total_votes;
             } else {
                 newLocation.rating.value = 0;
             }
