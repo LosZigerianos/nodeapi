@@ -196,8 +196,8 @@ http://localhost:3000/apiv1/users/userId/###userId###/followers?fieldsComments=d
 - To choose/show only some fields from **locations** as shown: &fieldsComments=description -_id
 http://localhost:3000/apiv1/users/userId/###userId###/followers?fieldsLocations=name -_id
 
-- (*) To order the list by creationDate from **comments**, you can use: &sortComments=name
-http://localhost:3000/apiv1/users/userId/###userId###/following?sortComments=creationDate
+- (*) To order the list by creation_date from **comments**, you can use: &sortComments=name
+http://localhost:3000/apiv1/users/userId/###userId###/following?sortComments=creation_date
 ```
     
 
@@ -350,8 +350,8 @@ you can add the following filters:
     - To choose/show only some fields as shown: &fields=location description -_id
     http://localhost:3000/apiv1/comments/location/###locationId###?token=###tokenValue###&fields=location description -_id
 
-    - (*) To order the list by name, you can use: &sort=creationDate
-    http://localhost:3000/apiv1/comments/user/###userId###?token=###tokenValue###&sort=creationDate
+    - (*) To order the list by name, you can use: &sort=creation_date
+    http://localhost:3000/apiv1/comments/user/###userId###?token=###tokenValue###&sort=creation_date
 
 
 #### Create a new comment - POST Method

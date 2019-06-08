@@ -7,7 +7,7 @@ const commentScheme = Schema({
     user: { type: Schema.Types.ObjectId, ref: 'User' },
     location: { type: Schema.Types.ObjectId, ref: 'Location' },
     description: { type: String },
-    creationDate: { type: Date, default: Date.now },
+    creation_date: { type: Date, default: Date.now },
 });
 
 commentScheme.index(
@@ -36,7 +36,7 @@ commentScheme.statics.getByUsers = async function(userIdsArray, skip, limit, fie
     return await getComments(filter, skip, limit, fields, sort);
 };
 
-const getComments = async (filter, skip, limit, fields, sort = '-creationDate') => {
+const getComments = async (filter, skip, limit, fields, sort = '-creation_date') => {
     // Create query
     const query = Comment.find(filter);
 

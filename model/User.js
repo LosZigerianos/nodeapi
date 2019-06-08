@@ -19,14 +19,14 @@ const userSchema = Schema({
     provider: { type: String, default: 'local' },
 });
 
-userSchema.index({ fullname: 1, username: 1, email: 1, creationDate: 1, provider: 1 });
+userSchema.index({ fullname: 1, username: 1, email: 1, creation_date: 1, provider: 1 });
 
 userSchema.statics.findByIdAndGetFullData = async function(
     userId,
     skipComments,
     limitComments,
     fieldsComments = '-__v -user',
-    sortComments = '-creationDate',
+    sortComments = '-creation_date',
     fieldsLocations = '-id -__v',
 ) {
     const user = await User.findById(userId).populate({
@@ -36,7 +36,7 @@ userSchema.statics.findByIdAndGetFullData = async function(
         options: {
             sort: sortComments,
             limit: parseInt(limitComments),
-            skip: parseInt(skipComments),
+            skip: parseInt(skipComments)
         },
         // locations inside comments
         populate: { path: constants.LOCATION, model: 'Location', select: fieldsLocations },
@@ -74,7 +74,7 @@ const findByIdAndPopulateDocument = async function(
     skip,
     limit,
     fields = '-__v',
-    sort = '-creationDate',
+    sort = '-creation_date',
 ) {
     const user = await User.findById(userId).populate({
         path: subDocumentToPopulate,
