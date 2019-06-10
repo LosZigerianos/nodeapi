@@ -92,7 +92,7 @@ locationScheme.statics.getNearLocationsWithSearch = async function(
     const locations = await queryLocation.exec();
 
     // Get locations count results from total database
-    const total = await Location.count(queryNearSphere);
+    const total = await Location.count(queryNearSphereWithSearch);
 
     return { data: locations, count: total };
 };
