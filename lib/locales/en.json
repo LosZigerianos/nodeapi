@@ -16,6 +16,7 @@
 	"passwordConfirmation": "Confirm password",
 	"email": "E-mail",
 	"not_results": "No results found",
+	"query_required %s": "Query required: %s",
 	
 	"history": "History",
 	"entertainment": "Entertainment",

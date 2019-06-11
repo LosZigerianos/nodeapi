@@ -571,4 +571,39 @@ router.delete('/userId/:userId/following/delete', jwtAuth(), async (req, res, ne
     }
 });
 
+/**
+ * GET /followers
+ * Return following of a user
+ */
+router.get('/search', jwtAuth(), async (req, res, next) => {
+    i18n.checkLanguage(req);
+
+    const { fields, sort, limit, skip, query: querySearch } = req.query;
+
+    // Validations
+    if (!querySearch && querySearch === undefined) {
+        res.status(400).json({
+            success: true,
+            error: i18n.__('query_required %s', 'query'),
+        });
+        return;
+    }
+
+    // Query empty
+    if (querySearch.length === 0) {
+        res.json({ success: true, data: [] });
+        return;
+    }
+
+    try {
+        // querySearch with data
+        const users = await User.searchFriends(querySearch, fields, sort, limit, skip);
+
+        res.json({ success: true, data: users });
+        
+    } catch (err) {
+        return next(err);
+    }
+});
+
 module.exports = router;

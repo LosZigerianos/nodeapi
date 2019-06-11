@@ -19,7 +19,20 @@ const userSchema = Schema({
     provider: { type: String, default: 'local' },
 });
 
-userSchema.index({ fullname: 1, username: 1, email: 1, creation_date: 1, provider: 1 });
+userSchema.index({ fullname: 'text', username: 'text', email: 1, creation_date: 1, provider: 1 });
+
+userSchema.statics.searchFriends = function(searchText, fields, sort, limit, skip) {
+    const query = User.find({
+        $text: { $search: searchText, $caseSensitive: false, $diacriticSensitive: false },
+    });
+
+    query.select(fields);
+    query.sort(parseInt(sort));
+    query.limit(parseInt(limit));
+    query.skip(parseInt(skip));
+
+    return query.exec();
+};
 
 userSchema.statics.findOneAndGetProfileData = async function(
     userInfo = {},
@@ -36,7 +49,7 @@ userSchema.statics.findOneAndGetProfileData = async function(
         options: {
             sort: sortComments,
             limit: parseInt(limitComments),
-            skip: parseInt(skipComments)
+            skip: parseInt(skipComments),
         },
         // locations inside comments
         populate: { path: constants.LOCATION, model: 'Location', select: fieldsLocations },

@@ -179,6 +179,11 @@ http://localhost:3000/apiv1/users/userId/###userId###/followers?fields=fullname 
 http://localhost:3000/apiv1/users/userId/###userId###/following?sort=fullname
 ```
 
+#### Search Friends - GET Method
+To search friends, make a GET to: /search?query=###searchQuery###
+```http://localhost:3000/apiv1/users/search?query=###searchQuery###```
+**Note: query param is required**
+
 #### User Profile - GET Method
 
 To get User Profile, make a GET to: /profile/###userId###
