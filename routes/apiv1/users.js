@@ -578,7 +578,7 @@ router.delete('/userId/:userId/following/delete', jwtAuth(), async (req, res, ne
 router.get('/search', jwtAuth(), async (req, res, next) => {
     i18n.checkLanguage(req);
 
-    const { fields, sort, limit, skip, query: querySearch } = req.query;
+    const { fields, limit, skip, query: querySearch } = req.query;
 
     // Validations
     if (!querySearch && querySearch === undefined) {
@@ -597,10 +597,9 @@ router.get('/search', jwtAuth(), async (req, res, next) => {
 
     try {
         // querySearch with data
-        const users = await User.searchFriends(querySearch, fields, sort, limit, skip);
+        const users = await User.searchFriends(querySearch, fields, limit, skip);
 
         res.json({ success: true, data: users });
-        
     } catch (err) {
         return next(err);
     }

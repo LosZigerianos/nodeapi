@@ -21,13 +21,37 @@ const userSchema = Schema({
 
 userSchema.index({ fullname: 'text', username: 'text', email: 1, creation_date: 1, provider: 1 });
 
-userSchema.statics.searchFriends = function(searchText, fields, sort, limit, skip) {
-    const query = User.find({
-        $text: { $search: searchText, $caseSensitive: false, $diacriticSensitive: false },
-    });
+userSchema.statics.searchFriends = function(searchText, fields, limit, skip) {
+    const query = User.find(
+        {
+            $or: [
+                {
+                    $text: {
+                        $search: searchText,
+                        $caseSensitive: false,
+                        $diacriticSensitive: false,
+                    },
+                },
+                {
+                    fullname: {
+                        $regex: `^${searchText}`,
+                        $options: 'i',
+                    },
+                },
+                {
+                    username: {
+                        $regex: `^${searchText}`,
+                        $options: 'i',
+                    },
+                },
+            ],
+        },
+        { score: { $meta: 'textScore' } },
+    );
 
+    // order by relevance
+    query.sort({ score: { $meta: 'textScore' } });
     query.select(fields);
-    query.sort(parseInt(sort));
     query.limit(parseInt(limit));
     query.skip(parseInt(skip));
 
@@ -119,6 +143,7 @@ userSchema.methods.toJSON = function() {
     delete user.comments;
     delete user.password;
     delete user.__v;
+    delete user.score;
 
     return user;
 };
@@ -137,7 +162,7 @@ userSchema.methods.toFullInfo = function() {
 
     user.followers = user.followers.length;
     user.following = user.following.length;
-
+    
     delete user.password;
     delete user.__v;
 
