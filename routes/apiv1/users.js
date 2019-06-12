@@ -599,7 +599,7 @@ router.get('/search', jwtAuth(), async (req, res, next) => {
         // querySearch with data
         const users = await User.searchFriends(querySearch, fields, limit, skip);
 
-        res.json({ success: true, data: users });
+        res.json({ success: true, data: users.data, count: users.count });
     } catch (err) {
         return next(err);
     }

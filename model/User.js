@@ -4,7 +4,7 @@ const constants = require('../commons/constants');
 const Schema = mongoose.Schema;
 
 const userSchema = Schema({
-    fullname: { type: String, default: '' },
+    fullname: { type: String, default: '', index: true },
     username: { type: String, unique: true, sparse: true },
     email: { type: String, unique: true, required: true },
     password: { type: String },
@@ -21,41 +21,49 @@ const userSchema = Schema({
 
 userSchema.index({ fullname: 'text', username: 'text', email: 1, creation_date: 1, provider: 1 });
 
-userSchema.statics.searchFriends = function(searchText, fields, limit, skip) {
-    const query = User.find(
-        {
-            $or: [
-                {
-                    $text: {
-                        $search: searchText,
-                        $caseSensitive: false,
-                        $diacriticSensitive: false,
-                    },
+userSchema.statics.searchFriends = async function(searchText, fields, limit, skip) {
+    // create query for searchs
+    const searchQuery = {
+        $or: [
+            {
+                $text: {
+                    $search: searchText,
+                    $caseSensitive: false,
+                    $diacriticSensitive: false,
                 },
-                {
-                    fullname: {
-                        $regex: `^${searchText}`,
-                        $options: 'i',
-                    },
+            },
+            {
+                fullname: {
+                    $regex: `^${searchText}`,
+                    $options: 'i',
                 },
-                {
-                    username: {
-                        $regex: `^${searchText}`,
-                        $options: 'i',
-                    },
+            },
+            {
+                username: {
+                    $regex: `^${searchText}`,
+                    $options: 'i',
                 },
-            ],
-        },
-        { score: { $meta: 'textScore' } },
-    );
+            },
+        ],
+    };
 
-    // order by relevance
-    query.sort({ score: { $meta: 'textScore' } });
-    query.select(fields);
-    query.limit(parseInt(limit));
-    query.skip(parseInt(skip));
+    // get and order by relevance
+    const relevanceSearchQuery = { score: { $meta: 'textScore' } };
 
-    return query.exec();
+    // query with filters
+    const userQuery = User.find(searchQuery, relevanceSearchQuery);
+    userQuery.sort(relevanceSearchQuery);
+    userQuery.select(fields);
+    userQuery.limit(parseInt(limit));
+    userQuery.skip(parseInt(skip));
+
+    // Get locations results
+    const users = await userQuery.exec();
+
+    // Get locations count results from total database
+    const total = await User.count(searchQuery);
+
+    return { data: users, count: total };
 };
 
 userSchema.statics.findOneAndGetProfileData = async function(
@@ -162,7 +170,7 @@ userSchema.methods.toFullInfo = function() {
 
     user.followers = user.followers.length;
     user.following = user.following.length;
-    
+
     delete user.password;
     delete user.__v;
 
