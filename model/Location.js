@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const locationScheme = mongoose.Schema({
     id: { type: String, unique: true },
     city: { type: String },
-    name: { type: String },
+    name: { type: String, index: true },
     description: { type: String, default: '' },
     address: { type: String },
     postal_code: { type: String },
@@ -24,7 +24,7 @@ const locationScheme = mongoose.Schema({
         value: { type: Number },
     },
     photos: { type: [String] },
-    tags: { type: [String] },
+    tags: { type: [String], index: true },
     comments: { type: [String] },
 });
 
@@ -78,7 +78,27 @@ locationScheme.statics.getNearLocationsWithSearch = async function(
                 $center: [[coordinatesObject.longitude, coordinatesObject.latitude], 2.5],
             },
         },
-        $text: { $search: searchText },
+        $or: [
+            {
+                $text: {
+                    $search: searchText,
+                    $caseSensitive: false,
+                    $diacriticSensitive: false,
+                },
+            },
+            {
+                name: {
+                    $regex: `^${searchText}`,
+                    $options: 'i',
+                },
+            },
+            {
+                tags: {
+                    $regex: `^${searchText}`,
+                    $options: 'i',
+                },
+            },
+        ],
     };
 
     // query with filters
