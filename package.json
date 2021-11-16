@@ -9,7 +9,7 @@
     "installDB": "cross-env DEBUG=nodeapi:* node ./install_db"
   },
   "dependencies": {
-    "aws-sdk": "^2.458.0",
+    "aws-sdk": "^2.814.0",
     "axios": "^0.18.0",
     "cloudinary": "^1.14.0",
     "cookie-parser": "~1.4.3",
